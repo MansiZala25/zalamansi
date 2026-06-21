@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansi Zala | Full Stack Developer, WordPress Specialist & Digital Marketer</title>
+    
+    <!-- SEO Optimization -->
+    <meta name="description" content="Portfolio of Mansi Zala, a Full Stack Developer, WordPress Developer, Digital Marketer, and Social Media Manager. Specializing in modern web development, website redesigns, and high-converting Meta Ads campaigns.">
+    <meta name="keywords" content="Mansi Zala, Full Stack Developer, WordPress Developer, Digital Marketer, Social Media Manager, PHP, Laravel, Web Redesign, Meta Ads, Freelance Web Developer Vadodara Mumbai">
+    <meta name="author" content="Mansi Zala">
+    <link rel="canonical" href="https://mansizala.dev">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mansizala.dev/">
+    <meta property="og:title" content="Mansi Zala | Full Stack Developer & Digital Marketer">
+    <meta property="og:description" content="Explore Mansi Zala's portfolio. Building high-performance, responsive business websites and digital marketing strategies that drive growth.">
+    <meta property="og:image" content="https://mansizala.dev/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mansizala.dev/">
+    <meta property="twitter:title" content="Mansi Zala | Full Stack Developer & Digital Marketer">
+    <meta property="twitter:description" content="Explore Mansi Zala's portfolio. Building high-performance, responsive business websites and digital marketing strategies that drive growth.">
+    <meta property="twitter:image" content="https://mansizala.dev/assets/og-image.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-gray-200 font-sans overflow-x-hidden relative">
+
+    <!-- Interactive Canvas Background -->
+    <canvas id="particle-canvas" class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"></canvas>
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold font-display text-white tracking-wider flex items-center gap-2">
+                <span class="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text font-black">MZ</span>
+                <span class="text-xs uppercase tracking-widest text-gray-400 font-normal border-l border-gray-700 pl-2 hidden sm:inline">Portfolio</span>
+            </a>
+            
+            <!-- Desktop Nav Links -->
+            <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <li><a href="#about" class="hover:text-primary transition-colors">About</a></li>
+                <li><a href="#skills" class="hover:text-primary transition-colors">Skills</a></li>
+                <li><a href="#experience" class="hover:text-primary transition-colors">Experience</a></li>
+                <li><a href="#projects" class="hover:text-primary transition-colors">Projects</a></li>
+                <li><a href="#services" class="hover:text-primary transition-colors">Services</a></li>
+                <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+            </ul>
+
+            <!-- CTA & Mobile Nav Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="Mansi_Zala_Resume.pdf" download class="hidden sm:inline-flex items-center gap-2 px-4 py-2 border border-gray-700 rounded-full text-xs font-semibold hover:bg-white hover:text-black hover:border-white transition-all" id="nav-resume-btn">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i> Resume
+                </a>
+                <a href="#contact" class="hidden md:inline-block px-5 py-2.5 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold rounded-full hover:shadow-[0_0_20px_rgba(99,102,241,0.5)] transition-all">
+                    Hire Me
+                </a>
+                <button class="md:hidden text-white hover:text-primary focus:outline-none" id="menu-toggle" aria-label="Toggle navigation menu">
+                    <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-dark bg-opacity-95 border-b border-gray-800 backdrop-blur-xl px-6 py-8">
+            <ul class="flex flex-col gap-6 text-lg font-medium mb-8">
+                <li><a href="#about" class="mobile-nav-link hover:text-primary block">About</a></li>
+                <li><a href="#skills" class="mobile-nav-link hover:text-primary block">Skills</a></li>
+                <li><a href="#experience" class="mobile-nav-link hover:text-primary block">Experience</a></li>
+                <li><a href="#projects" class="mobile-nav-link hover:text-primary block">Projects</a></li>
+                <li><a href="#services" class="mobile-nav-link hover:text-primary block">Services</a></li>
+                <li><a href="#contact" class="mobile-nav-link hover:text-primary block">Contact</a></li>
+            </ul>
+            <div class="flex flex-col gap-4">
+                <a href="Mansi_Zala_Resume.pdf" download class="flex items-center justify-center gap-2 w-full py-3 border border-gray-700 rounded-full text-sm font-semibold hover:bg-white hover:text-black transition-all">
+                    <i data-lucide="download" class="w-4 h-4"></i> Download Resume
+                </a>
+                <a href="#contact" class="mobile-nav-link flex items-center justify-center w-full py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-semibold rounded-full">
+                    Hire Me
+                </a>
+            </div>
+        </div>
+
+        <!-- Header Scroll Progress Indicator -->
+        <div class="h-[2px] bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 w-0" id="scroll-progress"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative z-10">
+
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="min-h-screen flex items-center pt-24 pb-12 relative overflow-hidden">
+            <!-- Glow Accents -->
+            <div class="absolute top-[10%] right-[-5%] w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Intro (Left) -->
+                <div class="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-gray-900/60 border border-gray-800 backdrop-blur-md rounded-full text-xs font-semibold text-blue-400 mb-6 mx-auto lg:mx-0 w-fit">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Available for Full-Time & Freelance Roles
+                    </div>
+                    
+                    <h2 class="text-sm uppercase tracking-[0.2em] font-display text-gray-400 font-bold mb-3">Hi, my name is</h2>
+                    <h1 class="text-5xl md:text-7xl font-bold font-display text-white mb-4 tracking-tight leading-none" id="hero-name">
+                        Mansi Zala
+                    </h1>
+                    
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-300 mb-6 font-display">
+                        Full Stack Developer <span class="text-blue-500">|</span> WordPress Specialist <span class="text-purple-500">|</span> Digital Marketer
+                    </h3>
+                    
+                    <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed">
+                        "Building Modern Websites That Drive Business Growth"
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mb-10">
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-[0_0_30px_rgba(99,102,241,0.6)] hover:-translate-y-0.5 transition-all text-center">
+                            Hire Me
+                        </a>
+                        <a href="#projects" class="w-full sm:w-auto px-8 py-4 bg-gray-900/80 hover:bg-gray-800/80 border border-gray-800 text-white font-semibold rounded-full hover:-translate-y-0.5 transition-all text-center">
+                            View Projects
+                        </a>
+                        <a href="Mansi_Zala_Resume.pdf" download class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 border border-gray-700 hover:border-white text-gray-300 hover:text-white font-semibold rounded-full hover:-translate-y-0.5 transition-all text-center">
+                            <i data-lucide="download" class="w-4 h-4"></i> Download Resume
+                        </a>
+                    </div>
+
+                    <!-- Short quick contact -->
+                    <div class="flex items-center gap-6 justify-center lg:justify-start text-gray-400 text-sm">
+                        <a href="mailto:zalamansi025@gmail.com" class="flex items-center gap-2 hover:text-white transition-colors">
+                            <i data-lucide="mail" class="w-4 h-4 text-blue-400"></i> zalamansi025@gmail.com
+                        </a>
+                        <span class="text-gray-700">|</span>
+                        <a href="https://www.linkedin.com/in/mansizala2509" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="w-4 h-4 text-purple-400"></i> linkedin.com/in/mansizala2509
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Interactive Visual Canvas (Right) -->
+                <div class="lg:col-span-5 flex justify-center items-center relative">
+                    <!-- Glassmorphism Visual Frame -->
+                    <div class="relative w-[300px] h-[300px] md:w-[380px] md:h-[380px] rounded-full flex justify-center items-center z-10">
+                        <div class="absolute inset-0 rounded-full border border-gray-800/80 bg-gradient-to-tr from-blue-500/10 to-purple-500/10 backdrop-blur-md"></div>
+                        <!-- Inner floating elements representing her skills -->
+                        <div class="absolute w-[18px] h-[18px] bg-blue-500 rounded-full top-[10%] left-[20%] blur-[2px] animate-float" style="animation-delay: 0s;"></div>
+                        <div class="absolute w-[24px] h-[24px] bg-purple-500 rounded-full bottom-[15%] right-[10%] blur-[3px] animate-float" style="animation-delay: 1.5s;"></div>
+                        <div class="absolute w-[12px] h-[12px] bg-pink-500 rounded-full top-[50%] right-[5%] blur-[1px] animate-float" style="animation-delay: 0.7s;"></div>
+                        <div class="absolute w-[30px] h-[30px] bg-indigo-600 rounded-full bottom-[10%] left-[15%] blur-[4px] animate-float" style="animation-delay: 2.2s;"></div>
+
+                        <!-- Main visual avatar / representation -->
+                        <div class="w-[82%] h-[82%] rounded-full overflow-hidden border-2 border-gray-800 relative z-20 flex justify-center items-center bg-dark">
+                            <img src="assets/avatar.png" alt="Mansi Zala" class="w-full h-full object-cover object-center" id="avatar-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. STATISTICS SECTION (Moved high for social proof) -->
+        <section id="stats" class="py-12 border-y border-gray-900 bg-gray-950/40 relative z-20">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Stat Item 1 -->
+                    <div class="text-center flex flex-col justify-center">
+                        <h4 class="text-4xl md:text-5xl font-bold font-display text-white mb-2 bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text" id="stat-years">0</h4>
+                        <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold">Years Experience</p>
+                    </div>
+                    <!-- Stat Item 2 -->
+                    <div class="text-center flex flex-col justify-center">
+                        <h4 class="text-4xl md:text-5xl font-bold font-display text-white mb-2 bg-gradient-to-r from-indigo-400 to-purple-500 text-transparent bg-clip-text" id="stat-websites">0</h4>
+                        <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold">Websites Delivered</p>
+                    </div>
+                    <!-- Stat Item 3 -->
+                    <div class="text-center flex flex-col justify-center">
+                        <h4 class="text-4xl md:text-5xl font-bold font-display text-white mb-2 bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text" id="stat-freelance">0</h4>
+                        <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold">Freelance Projects</p>
+                    </div>
+                    <!-- Stat Item 4 -->
+                    <div class="text-center flex flex-col justify-center">
+                        <h4 class="text-4xl md:text-5xl font-bold font-display text-white mb-2 bg-gradient-to-r from-pink-400 to-red-400 text-transparent bg-clip-text" id="stat-campaigns">0</h4>
+                        <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold">Campaigns Managed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT ME SECTION -->
+        <section id="about" class="py-24 relative overflow-hidden">
+            <div class="absolute top-[20%] left-[-10%] w-[300px] h-[300px] bg-indigo-500/5 rounded-full blur-[80px] pointer-events-none"></div>
+
+            <div class="container mx-auto px-6">
+                <!-- Section Title -->
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-xs uppercase tracking-widest font-semibold text-blue-400 mb-2">My Journey</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold font-display text-white">About Mansi Zala</h3>
+                    <div class="h-1 w-12 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    <!-- Bio (Left) -->
+                    <div class="lg:col-span-6 flex flex-col gap-6">
+                        <h4 class="text-2xl font-bold text-white font-display">Who I Am</h4>
+                        <p class="text-gray-400 leading-relaxed text-base">
+                            Motivated and dedicated BCA graduate with experience in web development, website redesign, digital marketing, and social media management. Seeking opportunities to contribute technical and creative skills in website development while helping businesses grow their online presence.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed text-base">
+                            With a strong educational background in Computer Applications from **TeamLease Skills University** (BCA Class of 2023 - 2026), I bridge the gap between technical software architecture and client-facing digital marketing campaigns. Whether it's coding backends with PHP Laravel or executing paid social campaigns, I focus on building modern assets that convert.
+                        </p>
+                        
+                        <!-- Tabs Content or Highlights -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                            <div class="flex items-start gap-3 p-4 bg-gray-950/60 border border-gray-900 rounded-2xl glass-card">
+                                <div class="p-2 bg-blue-500/10 rounded-xl text-blue-400">
+                                    <i data-lucide="code" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-white mb-1">Web Development</h5>
+                                    <p class="text-xs text-gray-500">Custom web applications built with PHP, Laravel, and MySQL.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 p-4 bg-gray-950/60 border border-gray-900 rounded-2xl glass-card">
+                                <div class="p-2 bg-purple-500/10 rounded-xl text-purple-400">
+                                    <i data-lucide="layout" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-white mb-1">WordPress Design</h5>
+                                    <p class="text-xs text-gray-500">Bespoke theme customizations and responsive redesigns.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 p-4 bg-gray-950/60 border border-gray-900 rounded-2xl glass-card">
+                                <div class="p-2 bg-pink-500/10 rounded-xl text-pink-400">
+                                    <i data-lucide="trending-up" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-white mb-1">Meta Ads & Marketing</h5>
+                                    <p class="text-xs text-gray-500">Targeted lead gen campaigns and analytics audits.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 p-4 bg-gray-950/60 border border-gray-900 rounded-2xl glass-card">
+                                <div class="p-2 bg-indigo-500/10 rounded-xl text-indigo-400">
+                                    <i data-lucide="image" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-white mb-1">Social Content</h5>
+                                    <p class="text-xs text-gray-500">Visual design using Canva, copywriting, and scheduling.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Info Grid & Quick Facts (Right) -->
+                    <div class="lg:col-span-6 p-8 bg-gray-950/50 border border-gray-800 rounded-3xl backdrop-blur-md glass-card flex flex-col gap-6">
+                        <h4 class="text-2xl font-bold text-white font-display">Personal Details</h4>
+                        <div class="divide-y divide-gray-900">
+                            <!-- Detail Row -->
+                            <div class="py-4 flex justify-between gap-4 text-sm">
+                                <span class="text-gray-500 font-medium">Name:</span>
+                                <span class="text-white font-semibold">Mansi Zala</span>
+                            </div>
+                            <!-- Detail Row -->
+                            <div class="py-4 flex justify-between gap-4 text-sm">
+                                <span class="text-gray-500 font-medium">Education:</span>
+                                <span class="text-white font-semibold text-right">BCA, TeamLease Skills University (2023 - 2026)</span>
+                            </div>
+                            <!-- Detail Row -->
+                            <div class="py-4 flex justify-between gap-4 text-sm">
+                                <span class="text-gray-500 font-medium">Locations:</span>
+                                <span class="text-white font-semibold">Mumbai, Vadodara</span>
+                            </div>
+                            <!-- Detail Row -->
+                            <div class="py-4 flex justify-between gap-4 text-sm">
+                                <span class="text-gray-500 font-medium">Specialties:</span>
+                                <span class="text-white font-semibold text-right">Full Stack Web Dev, Meta Ads, SMM</span>
+                            </div>
+                            <!-- Detail Row -->
+                            <div class="py-4 flex justify-between gap-4 text-sm">
+                                <span class="text-gray-500 font-medium">Freelance Status:</span>
+                                <span class="text-emerald-400 font-bold flex items-center gap-1.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> Active / Open
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Language section embedded in About -->
+                        <div class="mt-4 pt-6 border-t border-gray-900">
+                            <h5 class="text-sm uppercase tracking-wider text-gray-500 font-bold mb-4">Languages Spoken</h5>
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="text-center p-3 bg-gray-900/40 rounded-2xl border border-gray-900">
+                                    <div class="font-bold text-white text-base">English</div>
+                                    <div class="text-xs text-blue-400 mt-1 font-semibold">Fluent</div>
+                                </div>
+                                <div class="text-center p-3 bg-gray-900/40 rounded-2xl border border-gray-900">
+                                    <div class="font-bold text-white text-base">Hindi</div>
+                                    <div class="text-xs text-purple-400 mt-1 font-semibold">Conversational</div>
+                                </div>
+                                <div class="text-center p-3 bg-gray-900/40 rounded-2xl border border-gray-900">
+                                    <div class="font-bold text-white text-base">Gujarati</div>
+                                    <div class="text-xs text-pink-400 mt-1 font-semibold">Native</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SKILLS SECTION -->
+        <section id="skills" class="py-24 bg-gray-950/20 relative z-20 border-y border-gray-900">
+            <div class="absolute top-[30%] right-[-5%] w-[350px] h-[350px] bg-blue-500/5 rounded-full blur-[90px] pointer-events-none"></div>
+
+            <div class="container mx-auto px-6">
+                <!-- Section Title -->
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-xs uppercase tracking-widest font-semibold text-blue-400 mb-2">Technical & Creative Core</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold font-display text-white">Expertise & Skillsets</h3>
+                    <div class="h-1 w-12 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Web Development Category -->
+                    <div class="p-8 bg-gray-950/70 border border-gray-800 rounded-3xl glass-card flex flex-col gap-6">
+                        <div class="flex items-center gap-3">
+                            <div class="p-3 bg-blue-500/10 text-blue-400 rounded-2xl">
+                                <i data-lucide="code-2" class="w-6 h-6"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-white font-display">Web Development</h4>
+                        </div>
+                        <p class="text-xs text-gray-500 leading-relaxed -mt-3">
+                            Building reliable, scalable backend APIs, secure relational databases, and clean modern custom WordPress builds.
+                        </p>
+                        
+                        <div class="flex flex-col gap-5 mt-2">
+                            <!-- Skill 1 -->
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-1.5">
+                                    <span class="text-gray-300">WordPress</span>
+                                    <span class="text-blue-400">95%</span>
+                                </div>
+                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-[95%]" data-skill-level="95%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 2 -->
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-1.5">
+                                    <span class="text-gray-300">PHP & Laravel</span>
+                                    <span class="text-blue-400">88%</span>
+                                </div>
+                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-[88%]" data-skill-level="88%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 3 -->
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-1.5">
+                                    <span class="text-gray-300">MySQL Database</span>
+                                    <span class="text-blue-400">82%</span>
+                                </div>
+                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-[82%]" data-skill-level="82%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 4 -->
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-1.5">
+                                    <span class="text-gray-300">WP Theme Customization & Redesign</span>
+                                    <span class="text-blue-400">90%</span>
+                                </div>
+                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-[90%]" data-skill-level="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Digital Marketing Category -->
+                    <div class="p-8 bg-gray-950/70 border border-gray-800 rounded-3xl glass-card flex flex-col gap-6">
+                        <div class="flex items-center gap-3">
+                            <div class="p-3 bg-purple-500/10 text-purple-400 rounded-2xl">
+                                <i data-lucide="megaphone" class="w-6 h-6"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-white font-display">Digital Marketing</h4>
+                        </div>
+                        <p class="text-xs text-gray-500 leading-relaxed -mt-3">
+                            Managing high-ROI ads campaigns, social content Calendars, tracking conversions, and scaling search organic traffic.
+                        </p>
+                        
+                        <div class="flex flex-col gap-5 mt-2">
+                            <!-- Skill 1 -->
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-1.5">
+                                    <span class="text-gray-300">Meta Ads Management</span>
+                                    <span class="text-purple-400">90%</span>
+                                </div>
+                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-[90%]" data-skill-level="90%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 2 -->
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-1.5">
+                                    <span class="text-gray-300">Social Media Marketing (SMM)</span>
+                                    <span class="text-purple-400">88%</span>
+                                </div>
+                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-[88%]" data-skill-level="88%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 3 -->
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-1.5">
+                                    <span class="text-gray-300">Content Creation & Planning</span>
+                                    <span class="text-purple-400">85%</span>
+                                </div>
+                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-[85%]" data-skill-level="85%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 4 -->
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-1.5">
+                                    <span class="text-gray-300">SEO Strategy & Auditing</span>
+                                    <span class="text-purple-400">80%</span>
+                                </div>
+                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-[80%]" data-skill-level="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Tools Category -->
+                    <div class="p-8 bg-gray-950/70 border border-gray-800 rounded-3xl glass-card flex flex-col gap-6">
+                        <div class="flex items-center gap-3">
+                            <div class="p-3 bg-pink-500/10 text-pink-400 rounded-2xl">
+                                <i data-lucide="palette" class="w-6 h-6"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-white font-display">Design & Branding</h4>
+                        </div>
+                        <p class="text-xs text-gray-500 leading-relaxed -mt-3">
+                            Developing visual identities, banners, and vector assets that capture brand values and convert visitors.
+                        </p>
+                        
+                        <div class="flex flex-col gap-5 mt-2">
+                            <!-- Skill 1 -->
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-1.5">
+                                    <span class="text-gray-300">Canva</span>
+                                    <span class="text-pink-400">95%</span>
+                                </div>
+                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-pink-500 to-red-400 rounded-full w-[95%]" data-skill-level="95%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 2 -->
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-1.5">
+                                    <span class="text-gray-300">Banner Design</span>
+                                    <span class="text-pink-400">90%</span>
+                                </div>
+                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-pink-500 to-red-400 rounded-full w-[90%]" data-skill-level="90%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 3 -->
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-1.5">
+                                    <span class="text-gray-300">Logo Design</span>
+                                    <span class="text-pink-400">85%</span>
+                                </div>
+                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-pink-500 to-red-400 rounded-full w-[85%]" data-skill-level="85%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 4 -->
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-1.5">
+                                    <span class="text-gray-300">Responsive UI Layouts</span>
+                                    <span class="text-pink-400">88%</span>
+                                </div>
+                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-pink-500 to-red-400 rounded-full w-[88%]" data-skill-level="88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. EXPERIENCE TIMELINE SECTION -->
+        <section id="experience" class="py-24 relative overflow-hidden">
+            <div class="absolute bottom-[20%] left-[-10%] w-[350px] h-[350px] bg-purple-500/5 rounded-full blur-[90px] pointer-events-none"></div>
+
+            <div class="container mx-auto px-6">
+                <!-- Section Title -->
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-xs uppercase tracking-widest font-semibold text-blue-400 mb-2">My Career Path</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold font-display text-white">Professional Timeline</h3>
+                    <div class="h-1 w-12 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <!-- Timeline Container -->
+                <div class="relative max-w-4xl mx-auto mt-12">
+                    <!-- Vertical line in center (desktop) / left (mobile) -->
+                    <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-[2px] bg-gray-800 -translate-x-1/2">
+                        <div class="h-0 w-full bg-gradient-to-b from-blue-500 via-indigo-500 to-purple-500 rounded-full" id="timeline-progress-line"></div>
+                    </div>
+
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 md:mb-20">
+                        <!-- Node indicator -->
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-blue-500 border-4 border-dark rounded-full -translate-x-1/2 top-1.5 shadow-[0_0_10px_rgba(56,189,248,0.8)] z-20"></div>
+                        
+                        <!-- Left Block: Content (Shows on Left for Desktop) -->
+                        <div class="pl-12 md:pl-0 md:pr-12 md:text-right flex flex-col items-start md:items-end timeline-content-left">
+                            <span class="inline-block px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-bold rounded-full mb-3">2026 - PRESENT</span>
+                            <h4 class="text-xl font-bold text-white font-display">Seer IT Solutions</h4>
+                            <p class="text-sm font-semibold text-gray-300 mb-2">Full Stack Developer</p>
+                            <p class="text-xs text-gray-500 italic mb-3">Vadodara, Gujarat (1 Year)</p>
+                        </div>
+                        
+                        <!-- Right Block: Achievements/Details -->
+                        <div class="pl-12 md:pl-8 flex flex-col justify-center timeline-content-right">
+                            <div class="p-6 bg-gray-950/60 border border-gray-800 rounded-2xl backdrop-blur-md glass-card">
+                                <ul class="flex flex-col gap-3 text-sm text-gray-400">
+                                    <li class="flex items-start gap-2">
+                                        <span class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-1.5 shrink-0"></span>
+                                        <span>Developing and redesigning robust responsive business websites to optimize client digital footprint.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-1.5 shrink-0"></span>
+                                        <span>Configuring & managing active **Meta Ads campaigns** to direct targeted traffic and lead funnels.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-1.5 shrink-0"></span>
+                                        <span>Improving overall web accessibility, visual user experience (UX) layout, and SEO load speed.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-1.5 shrink-0"></span>
+                                        <span>Supporting digital analytics campaigns and graphic media content alignment.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 md:mb-20">
+                        <!-- Node indicator -->
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-purple-500 border-4 border-dark rounded-full -translate-x-1/2 top-1.5 shadow-[0_0_10px_rgba(168,85,247,0.8)] z-20"></div>
+                        
+                        <!-- Left Block: Content (Blank/Swap roles on Desktop to alternate) -->
+                        <div class="hidden md:block pl-8 timeline-content-left order-2">
+                            <span class="inline-block px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-bold rounded-full mb-3">2025 - 2026 MAY</span>
+                            <h4 class="text-xl font-bold text-white font-display">VEA Impex</h4>
+                            <p class="text-sm font-semibold text-gray-300 mb-2">Web Developer & Digital Marketing Executive</p>
+                            <p class="text-xs text-gray-500 italic mb-3">Vadodara, Gujarat (1 Year)</p>
+                        </div>
+                        
+                        <!-- Right Block: Achievements/Details (Left side on desktop due to order) -->
+                        <div class="pl-12 md:pl-0 md:pr-8 flex flex-col justify-center timeline-content-right md:order-1 md:text-right md:items-end">
+                            <!-- Show metadata on left block for mobile, hide on desktop since it's order-2 -->
+                            <div class="md:hidden">
+                                <span class="inline-block px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-bold rounded-full mb-3">2025 - 2026 MAY</span>
+                                <h4 class="text-xl font-bold text-white font-display">VEA Impex</h4>
+                                <p class="text-sm font-semibold text-gray-300 mb-2">Web Developer & Digital Marketing Executive</p>
+                                <p class="text-xs text-gray-500 italic mb-3">Vadodara, Gujarat (1 Year)</p>
+                            </div>
+                            <div class="p-6 bg-gray-950/60 border border-gray-800 rounded-2xl backdrop-blur-md glass-card text-left">
+                                <ul class="flex flex-col gap-3 text-sm text-gray-400">
+                                    <li class="flex items-start gap-2">
+                                        <span class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-1.5 shrink-0"></span>
+                                        <span>Programmed and hosted fully functional catalog websites for product exports.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-1.5 shrink-0"></span>
+                                        <span>Customized theme files and layout systems to establish a completely responsive structure.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-1.5 shrink-0"></span>
+                                        <span>Resolved regular website updates, system enhancements, and technical support requests.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item relative grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Node indicator -->
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-pink-500 border-4 border-dark rounded-full -translate-x-1/2 top-1.5 shadow-[0_0_10px_rgba(236,72,153,0.8)] z-20"></div>
+                        
+                        <!-- Left Block: Content -->
+                        <div class="pl-12 md:pl-0 md:pr-12 md:text-right flex flex-col items-start md:items-end timeline-content-left">
+                            <span class="inline-block px-3 py-1 bg-pink-500/10 text-pink-400 text-xs font-bold rounded-full mb-3">2024 - PRESENT</span>
+                            <h4 class="text-xl font-bold text-white font-display">Freelance Projects</h4>
+                            <p class="text-sm font-semibold text-gray-300 mb-2">WordPress Developer & Graphic Branding Designer</p>
+                            <p class="text-xs text-gray-500 italic mb-3">Remote / Client-Direct</p>
+                        </div>
+                        
+                        <!-- Right Block: Achievements/Details -->
+                        <div class="pl-12 md:pl-8 flex flex-col justify-center timeline-content-right">
+                            <div class="p-6 bg-gray-950/60 border border-gray-800 rounded-2xl backdrop-blur-md glass-card">
+                                <ul class="flex flex-col gap-3 text-sm text-gray-400">
+                                    <li class="flex items-start gap-2">
+                                        <span class="w-1.5 h-1.5 bg-pink-400 rounded-full mt-1.5 shrink-0"></span>
+                                        <span>Constructed bespoke, SEO-optimized business websites using WordPress, WooCommerce, and standard builder APIs.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="w-1.5 h-1.5 bg-pink-400 rounded-full mt-1.5 shrink-0"></span>
+                                        <span>Engineered clean visual logos, flyers, banners, and digital marketing materials using Canva.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="w-1.5 h-1.5 bg-pink-400 rounded-full mt-1.5 shrink-0"></span>
+                                        <span>Provided digital advice, social layout styling guides, and organic posting content plans to small companies.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FEATURED PROJECTS SECTION -->
+        <section id="projects" class="py-24 bg-gray-950/20 border-y border-gray-900 relative z-20">
+            <div class="absolute top-[40%] right-[-10%] w-[300px] h-[300px] bg-pink-500/5 rounded-full blur-[80px] pointer-events-none"></div>
+
+            <div class="container mx-auto px-6">
+                <!-- Section Title -->
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-xs uppercase tracking-widest font-semibold text-blue-400 mb-2">My Work Showcase</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold font-display text-white">Featured Projects</h3>
+                    <div class="h-1 w-12 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-wrap items-center justify-center gap-3 mb-12" id="project-filters">
+                    <button class="px-5 py-2 rounded-full border border-gray-800 text-xs font-semibold hover:border-white transition-all text-white bg-white/10 active-filter" data-filter="all">All Projects</button>
+                    <button class="px-5 py-2 rounded-full border border-gray-800 text-xs font-semibold hover:border-white transition-all text-gray-400 hover:text-white" data-filter="development">Web Development</button>
+                    <button class="px-5 py-2 rounded-full border border-gray-800 text-xs font-semibold hover:border-white transition-all text-gray-400 hover:text-white" data-filter="wordpress">WordPress</button>
+                    <button class="px-5 py-2 rounded-full border border-gray-800 text-xs font-semibold hover:border-white transition-all text-gray-400 hover:text-white" data-filter="marketing">Digital Marketing</button>
+                    <button class="px-5 py-2 rounded-full border border-gray-800 text-xs font-semibold hover:border-white transition-all text-gray-400 hover:text-white" data-filter="design">Branding & Canva</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                    
+                    <!-- Project 1 -->
+                    <div class="project-card group relative p-6 bg-gray-950/70 border border-gray-800 rounded-3xl backdrop-blur-md glass-card flex flex-col gap-4 overflow-hidden" data-category="development">
+                        <div class="aspect-video w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-blue-900 to-indigo-950 relative border border-gray-900 flex items-center justify-center">
+                            <i data-lucide="monitor" class="w-16 h-16 text-blue-500/20 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60"></div>
+                            <span class="absolute bottom-4 left-4 px-3 py-1 bg-blue-500/20 text-blue-400 text-[10px] font-bold tracking-widest uppercase rounded-full">Development</span>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">VEA Impex Website Redesign</h4>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                Redesigned a responsive catalog export website. Rewrote UI templates for mobile optimization and integrated relational databases for seamless product display.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-[10px] font-semibold">
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">PHP Laravel</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">MySQL</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Responsive UX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card group relative p-6 bg-gray-950/70 border border-gray-800 rounded-3xl backdrop-blur-md glass-card flex flex-col gap-4 overflow-hidden" data-category="wordpress">
+                        <div class="aspect-video w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-indigo-900 to-purple-950 relative border border-gray-900 flex items-center justify-center">
+                            <i data-lucide="layout" class="w-16 h-16 text-indigo-500/20 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60"></div>
+                            <span class="absolute bottom-4 left-4 px-3 py-1 bg-purple-500/20 text-purple-400 text-[10px] font-bold tracking-widest uppercase rounded-full">WordPress</span>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">WordPress Business Websites</h4>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                Designed and developed premium customized WordPress sites for regional companies, maximizing load speeds, configuring search indexing, and launching layouts.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-[10px] font-semibold">
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">WordPress API</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Elementor Pro</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Custom CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card group relative p-6 bg-gray-950/70 border border-gray-800 rounded-3xl backdrop-blur-md glass-card flex flex-col gap-4 overflow-hidden" data-category="marketing">
+                        <div class="aspect-video w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-purple-900 to-pink-950 relative border border-gray-900 flex items-center justify-center">
+                            <i data-lucide="trending-up" class="w-16 h-16 text-purple-500/20 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60"></div>
+                            <span class="absolute bottom-4 left-4 px-3 py-1 bg-pink-500/20 text-pink-400 text-[10px] font-bold tracking-widest uppercase rounded-full">Marketing</span>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">Meta Ads Campaign Management</h4>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                Handled budget setup and pixel tracking for active Meta/Facebook ads campaigns. Managed visual content layout to capture prospective customer leads.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-[10px] font-semibold">
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Meta Ads Manager</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Pixel Tracking</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Copywriting</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card group relative p-6 bg-gray-950/70 border border-gray-800 rounded-3xl backdrop-blur-md glass-card flex flex-col gap-4 overflow-hidden" data-category="marketing">
+                        <div class="aspect-video w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-pink-900 to-red-950 relative border border-gray-900 flex items-center justify-center">
+                            <i data-lucide="instagram" class="w-16 h-16 text-pink-500/20 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60"></div>
+                            <span class="absolute bottom-4 left-4 px-3 py-1 bg-pink-500/20 text-pink-400 text-[10px] font-bold tracking-widest uppercase rounded-full">SMM</span>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">Social Media Management Projects</h4>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                Configured organic posting flows, designed grids, coordinated layout formats, and grew brand engagement for various commerce services.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-[10px] font-semibold">
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Instagram Insights</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Canva Graphics</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">SEO Copy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card group relative p-6 bg-gray-950/70 border border-gray-800 rounded-3xl backdrop-blur-md glass-card flex flex-col gap-4 overflow-hidden" data-category="wordpress">
+                        <div class="aspect-video w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-blue-900 to-purple-950 relative border border-gray-900 flex items-center justify-center">
+                            <i data-lucide="globe" class="w-16 h-16 text-blue-500/20 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60"></div>
+                            <span class="absolute bottom-4 left-4 px-3 py-1 bg-indigo-500/20 text-indigo-400 text-[10px] font-bold tracking-widest uppercase rounded-full">Freelance</span>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">Freelance Website Projects</h4>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                Handled direct-client requirements to deliver portfolio websites, eCommerce storefronts, and responsive landing pages utilizing WordPress and customized PHP.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-[10px] font-semibold">
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">WordPress CMS</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">WooCommerce</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">PHP Custom</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card group relative p-6 bg-gray-950/70 border border-gray-800 rounded-3xl backdrop-blur-md glass-card flex flex-col gap-4 overflow-hidden" data-category="design">
+                        <div class="aspect-video w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-purple-900 to-pink-950 relative border border-gray-900 flex items-center justify-center">
+                            <i data-lucide="palette" class="w-16 h-16 text-pink-500/20 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60"></div>
+                            <span class="absolute bottom-4 left-4 px-3 py-1 bg-pink-500/20 text-pink-400 text-[10px] font-bold tracking-widest uppercase rounded-full">Design</span>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">Logo & Banner Graphic Designs</h4>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                Crafted corporate and freelance brand identities. Developed vector-based logos and promotional social media banner ads utilizing premium styles in Canva.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-[10px] font-semibold">
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Canva Pro</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Vector Logo</span>
+                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Typography</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SERVICES SECTION -->
+        <section id="services" class="py-24 relative overflow-hidden">
+            <div class="absolute top-[10%] left-[-5%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="container mx-auto px-6">
+                <!-- Section Title -->
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-xs uppercase tracking-widest font-semibold text-blue-400 mb-2">What I Offer</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold font-display text-white">Professional Services</h3>
+                    <div class="h-1 w-12 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Service 1 -->
+                    <div class="p-8 bg-gray-950/60 border border-gray-800 hover:border-blue-500/50 rounded-3xl transition-all duration-300 glass-card flex flex-col gap-4 group">
+                        <div class="p-4 bg-blue-500/10 text-blue-400 rounded-2xl w-fit group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="code" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white font-display">Website Development</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Developing robust, fast-loading, dynamic websites from scratch using backend PHP Laravel and relational databases. Built with modular code for easy maintenance.
+                        </p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="p-8 bg-gray-950/60 border border-gray-800 hover:border-indigo-500/50 rounded-3xl transition-all duration-300 glass-card flex flex-col gap-4 group">
+                        <div class="p-4 bg-indigo-500/10 text-indigo-400 rounded-2xl w-fit group-hover:bg-indigo-500 group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="wordpress" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white font-display">WordPress Website Design</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Crafting bespoke WordPress websites, custom child theme setups, WooCommerce integration, and performance plugins to align with business requirements.
+                        </p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="p-8 bg-gray-950/60 border border-gray-800 hover:border-purple-500/50 rounded-3xl transition-all duration-300 glass-card flex flex-col gap-4 group">
+                        <div class="p-4 bg-purple-500/10 text-purple-400 rounded-2xl w-fit group-hover:bg-purple-500 group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white font-display">Website Redesign</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Transforming outdated layouts into premium responsive interfaces. Optimizing accessibility and performance to elevate conversion and search index rankings.
+                        </p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="p-8 bg-gray-950/60 border border-gray-800 hover:border-pink-500/50 rounded-3xl transition-all duration-300 glass-card flex flex-col gap-4 group">
+                        <div class="p-4 bg-pink-500/10 text-pink-400 rounded-2xl w-fit group-hover:bg-pink-500 group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="target" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white font-display">Landing Page Development</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Coding specific high-performance landing pages designed to maximize advertising leads. Focused on UX, clear call-to-actions, and fast mobile rendering.
+                        </p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="p-8 bg-gray-950/60 border border-gray-800 hover:border-red-500/50 rounded-3xl transition-all duration-300 glass-card flex flex-col gap-4 group">
+                        <div class="p-4 bg-red-500/10 text-red-400 rounded-2xl w-fit group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="trending-up" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white font-display">Meta Ads Management</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Planning and structuring targeted Instagram/Facebook marketing funnels, pixel triggers, customer demographics, and ad analytical metrics to drive sales.
+                        </p>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="p-8 bg-gray-950/60 border border-gray-800 hover:border-emerald-500/50 rounded-3xl transition-all duration-300 glass-card flex flex-col gap-4 group">
+                        <div class="p-4 bg-emerald-500/10 text-emerald-400 rounded-2xl w-fit group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="palette" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white font-display">Logo & Banner Design</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Creating modern vectors, brand kits, business cards, flyers, and social content posts via Canva to build a coherent visual identity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. CONTACT SECTION -->
+        <section id="contact" class="py-24 bg-gray-950/20 border-t border-gray-900 relative z-20">
+            <div class="absolute bottom-0 right-[5%] w-[400px] h-[400px] bg-indigo-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="container mx-auto px-6">
+                <!-- Section Title -->
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-xs uppercase tracking-widest font-semibold text-blue-400 mb-2">Get In Touch</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold font-display text-white">Let's Connect</h3>
+                    <div class="h-1 w-12 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
+                    <!-- Contact Cards (Left) -->
+                    <div class="lg:col-span-5 flex flex-col gap-6">
+                        <h4 class="text-xl font-bold text-white font-display mb-2">Contact Details</h4>
+                        
+                        <!-- Card 1 -->
+                        <div class="flex items-center gap-4 p-5 bg-gray-950/70 border border-gray-800 rounded-2xl glass-card">
+                            <div class="p-3 bg-blue-500/10 text-blue-400 rounded-xl">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-semibold uppercase">Call / WhatsApp</p>
+                                <a href="tel:+917758940589" class="text-white font-bold hover:text-blue-400 transition-colors text-sm">+91 77589 40589</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="flex items-center gap-4 p-5 bg-gray-950/70 border border-gray-800 rounded-2xl glass-card">
+                            <div class="p-3 bg-purple-500/10 text-purple-400 rounded-xl">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-semibold uppercase">Send an Email</p>
+                                <a href="mailto:zalamansi025@gmail.com" class="text-white font-bold hover:text-purple-400 transition-colors text-sm">zalamansi025@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="flex items-center gap-4 p-5 bg-gray-950/70 border border-gray-800 rounded-2xl glass-card">
+                            <div class="p-3 bg-pink-500/10 text-pink-400 rounded-xl">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-semibold uppercase">LinkedIn Profile</p>
+                                <a href="https://www.linkedin.com/in/mansizala2509" target="_blank" rel="noopener noreferrer" class="text-white font-bold hover:text-pink-400 transition-colors text-sm">linkedin.com/in/mansizala2509</a>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 (Locations) -->
+                        <div class="flex items-center gap-4 p-5 bg-gray-950/70 border border-gray-800 rounded-2xl glass-card">
+                            <div class="p-3 bg-indigo-500/10 text-indigo-400 rounded-xl">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-semibold uppercase">Operating Locations</p>
+                                <span class="text-white text-sm font-bold">Mumbai (MH) & Vadodara (GJ), India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form (Right) -->
+                    <div class="lg:col-span-7 p-8 bg-gray-950/70 border border-gray-800 rounded-3xl glass-card backdrop-blur-md">
+                        <h4 class="text-xl font-bold text-white font-display mb-6">Drop a Message</h4>
+                        <form id="contact-form" class="flex flex-col gap-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="flex flex-col gap-2">
+                                    <label for="name" class="text-xs text-gray-400 font-semibold uppercase">Full Name</label>
+                                    <input type="text" id="name" name="name" required class="px-4 py-3 bg-gray-900/60 border border-gray-800 focus:border-blue-500/80 rounded-xl text-white outline-none transition-colors text-sm">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label for="email" class="text-xs text-gray-400 font-semibold uppercase">Email Address</label>
+                                    <input type="email" id="email" name="email" required class="px-4 py-3 bg-gray-900/60 border border-gray-800 focus:border-blue-500/80 rounded-xl text-white outline-none transition-colors text-sm">
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label for="subject" class="text-xs text-gray-400 font-semibold uppercase">Subject</label>
+                                <input type="text" id="subject" name="subject" required class="px-4 py-3 bg-gray-900/60 border border-gray-800 focus:border-blue-500/80 rounded-xl text-white outline-none transition-colors text-sm">
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label for="message" class="text-xs text-gray-400 font-semibold uppercase">Your Message</label>
+                                <textarea id="message" name="message" rows="4" required class="px-4 py-3 bg-gray-900/60 border border-gray-800 focus:border-blue-500/80 rounded-xl text-white outline-none transition-colors text-sm resize-none"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] text-white font-semibold rounded-xl transition-all text-sm flex items-center justify-center gap-2">
+                                <i data-lucide="send" class="w-4 h-4"></i> Send Message
+                            </button>
+                            <p id="form-status" class="text-xs text-center font-semibold mt-2 hidden"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 10. FOOTER -->
+    <footer class="py-12 border-t border-gray-900 bg-gray-950/40 relative z-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <span class="text-xl font-bold font-display text-white tracking-wider">MZ</span>
+                <span class="text-xs text-gray-500">© 2026 Mansi Zala. All rights reserved.</span>
+            </div>
+            
+            <!-- Quick links -->
+            <ul class="flex flex-wrap items-center justify-center gap-6 text-xs text-gray-500 font-medium">
+                <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+                <li><a href="#skills" class="hover:text-white transition-colors">Skills</a></li>
+                <li><a href="#experience" class="hover:text-white transition-colors">Experience</a></li>
+                <li><a href="#projects" class="hover:text-white transition-colors">Projects</a></li>
+                <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+
+            <!-- Social Links -->
+            <div class="flex items-center gap-4">
+                <a href="https://www.linkedin.com/in/mansizala2509" target="_blank" rel="noopener noreferrer" class="p-2 bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border border-gray-800 rounded-full transition-all" aria-label="LinkedIn">
+                    <i data-lucide="linkedin" class="w-4 h-4"></i>
+                </a>
+                <a href="mailto:zalamansi025@gmail.com" class="p-2 bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border border-gray-800 rounded-full transition-all" aria-label="Email">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                </a>
+                <a href="tel:+917758940589" class="p-2 bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border border-gray-800 rounded-full transition-all" aria-label="Phone">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CDN Script Loads (GSAP + ScrollTrigger + Lucide Icons) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom logic script -->
+    <script src="script.js"></script>
+</body>
+</html>
