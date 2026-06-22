@@ -1,315 +1,353 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mansi Zala | Full Stack Developer, WordPress Specialist & Digital Marketer</title>
-    
+
     <!-- SEO Optimization -->
-    <meta name="description" content="Portfolio of Mansi Zala, a Full Stack Developer, WordPress Developer, Digital Marketer, and Social Media Manager. Specializing in modern web development, website redesigns, and high-converting Meta Ads campaigns.">
-    <meta name="keywords" content="Mansi Zala, Full Stack Developer, WordPress Developer, Digital Marketer, Social Media Manager, PHP, Laravel, Web Redesign, Meta Ads, Freelance Web Developer Vadodara Mumbai">
+    <meta name="description"
+        content="Official portfolio of Mansi Zala, a Full Stack Developer, WordPress Specialist, and Digital Marketer. Discover projects in PHP Laravel development, wordpress child themes, landing pages, Meta Ads campaigns, and SEO services.">
+    <meta name="keywords"
+        content="Mansi Zala, Full Stack Developer, WordPress Developer, Digital Marketer, Social Media Manager, PHP, Laravel, Web Redesign, Meta Ads, Freelance Web Developer Vadodara Mumbai Gujarat">
     <meta name="author" content="Mansi Zala">
-    <link rel="canonical" href="https://mansizala.dev">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mansizala.dev/">
     <meta property="og:title" content="Mansi Zala | Full Stack Developer & Digital Marketer">
-    <meta property="og:description" content="Explore Mansi Zala's portfolio. Building high-performance, responsive business websites and digital marketing strategies that drive growth.">
-    <meta property="og:image" content="https://mansizala.dev/assets/og-image.jpg">
+    <meta property="og:description"
+        content="Building premium, high-performance business websites and digital marketing funnels that drive online sales and user conversions.">
+    <meta property="og:image" content="https://mansizala.dev/assets/avatar.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mansizala.dev/">
     <meta property="twitter:title" content="Mansi Zala | Full Stack Developer & Digital Marketer">
-    <meta property="twitter:description" content="Explore Mansi Zala's portfolio. Building high-performance, responsive business websites and digital marketing strategies that drive growth.">
-    <meta property="twitter:image" content="https://mansizala.dev/assets/og-image.jpg">
+    <meta property="twitter:description"
+        content="Building premium, high-performance business websites and digital marketing funnels that drive online sales and user conversions.">
+    <meta property="twitter:image" content="https://mansizala.dev/assets/avatar.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-dark text-gray-200 font-sans overflow-x-hidden relative">
 
-    <!-- Interactive Canvas Background -->
-    <canvas id="particle-canvas" class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"></canvas>
+<body>
 
-    <!-- Header / Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
-        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#" class="text-2xl font-bold font-display text-white tracking-wider flex items-center gap-2">
-                <span class="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text font-black">MZ</span>
-                <span class="text-xs uppercase tracking-widest text-gray-400 font-normal border-l border-gray-700 pl-2 hidden sm:inline">Portfolio</span>
-            </a>
-            
-            <!-- Desktop Nav Links -->
-            <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <li><a href="#about" class="hover:text-primary transition-colors">About</a></li>
-                <li><a href="#skills" class="hover:text-primary transition-colors">Skills</a></li>
-                <li><a href="#experience" class="hover:text-primary transition-colors">Experience</a></li>
-                <li><a href="#projects" class="hover:text-primary transition-colors">Projects</a></li>
-                <li><a href="#services" class="hover:text-primary transition-colors">Services</a></li>
-                <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
-            </ul>
+    <!-- Background Blobs (Premium Visual Backdrop) -->
+    <div class="bg-blobs-container">
+        <div class="bg-blob blob-1"></div>
+        <div class="bg-blob blob-2"></div>
+        <div class="bg-blob blob-3"></div>
+    </div>
 
-            <!-- CTA & Mobile Nav Toggle -->
-            <div class="flex items-center gap-4">
-                <a href="Mansi_Zala_Resume.pdf" download class="hidden sm:inline-flex items-center gap-2 px-4 py-2 border border-gray-700 rounded-full text-xs font-semibold hover:bg-white hover:text-black hover:border-white transition-all" id="nav-resume-btn">
-                    <i data-lucide="download" class="w-3.5 h-3.5"></i> Resume
+    <!-- Navigation Header -->
+    <header id="header">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#hero" class="logo">
+                    mansizala<span style="color: var(--color-accent);">.</span>
                 </a>
-                <a href="#contact" class="hidden md:inline-block px-5 py-2.5 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold rounded-full hover:shadow-[0_0_20px_rgba(99,102,241,0.5)] transition-all">
-                    Hire Me
-                </a>
-                <button class="md:hidden text-white hover:text-primary focus:outline-none" id="menu-toggle" aria-label="Toggle navigation menu">
-                    <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
-                </button>
-            </div>
-        </nav>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-dark bg-opacity-95 border-b border-gray-800 backdrop-blur-xl px-6 py-8">
-            <ul class="flex flex-col gap-6 text-lg font-medium mb-8">
-                <li><a href="#about" class="mobile-nav-link hover:text-primary block">About</a></li>
-                <li><a href="#skills" class="mobile-nav-link hover:text-primary block">Skills</a></li>
-                <li><a href="#experience" class="mobile-nav-link hover:text-primary block">Experience</a></li>
-                <li><a href="#projects" class="mobile-nav-link hover:text-primary block">Projects</a></li>
-                <li><a href="#services" class="mobile-nav-link hover:text-primary block">Services</a></li>
-                <li><a href="#contact" class="mobile-nav-link hover:text-primary block">Contact</a></li>
-            </ul>
-            <div class="flex flex-col gap-4">
-                <a href="Mansi_Zala_Resume.pdf" download class="flex items-center justify-center gap-2 w-full py-3 border border-gray-700 rounded-full text-sm font-semibold hover:bg-white hover:text-black transition-all">
-                    <i data-lucide="download" class="w-4 h-4"></i> Download Resume
-                </a>
-                <a href="#contact" class="mobile-nav-link flex items-center justify-center w-full py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-semibold rounded-full">
-                    Hire Me
-                </a>
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">skills</a></li>
+                    <li><a href="#services" class="nav-link">services</a></li>
+                    <li><a href="#portfolio" class="nav-link">projects</a></li>
+                    <li><a href="#contact" class="nav-link">lets talk</a></li>
+                </ul>
+
+                <!-- Action Controls -->
+                <div class="nav-actions">
+                    <button class="theme-switch" id="theme-toggle" aria-label="Toggle dark mode">
+                        <i data-lucide="moon" id="theme-icon"></i>
+                    </button>
+
+                    <a href="Mansi_Zala_Resume.pdf" download class="btn btn-secondary"
+                        style="padding: 0.6rem 1.25rem; font-size: 0.8rem; display: none; min-width: 90px;"
+                        id="resume-download-nav">
+                        <i data-lucide="download" style="width: 14px; height: 14px;"></i> Resume
+                    </a>
+
+                    <a href="#contact" class="btn btn-primary"
+                        style="padding: 0.6rem 1.25rem; font-size: 0.8rem; display: none; min-width: 90px;"
+                        id="hire-btn-nav">
+                        Hire Me
+                    </a>
+
+                    <!-- Mobile Navigation Toggle Button -->
+                    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </div>
-
-        <!-- Header Scroll Progress Indicator -->
-        <div class="h-[2px] bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 w-0" id="scroll-progress"></div>
+        <!-- Scroll Progress Line -->
+        <div class="scroll-progress-line" id="scroll-progress"></div>
     </header>
 
     <!-- Main Content -->
-    <main class="relative z-10">
+    <main>
 
         <!-- 1. HERO SECTION -->
-        <section id="hero" class="min-h-screen flex items-center pt-24 pb-12 relative overflow-hidden">
-            <!-- Glow Accents -->
-            <div class="absolute top-[10%] right-[-5%] w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
-            <div class="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <section id="hero">
+            <!-- Perspective tech grid backdrop (masked to fade) -->
+            <div class="hero-grid-overlay"></div>
 
-            <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- Text Intro (Left) -->
-                <div class="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-gray-900/60 border border-gray-800 backdrop-blur-md rounded-full text-xs font-semibold text-blue-400 mb-6 mx-auto lg:mx-0 w-fit">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                        Available for Full-Time & Freelance Roles
+            <div class="container">
+                <div class="hero-grid">
+                    <!-- Intro & Stats (Left Column) -->
+                    <div class="hero-content reveal-element">
+                        <div class="hero-badge-row">
+                            <span class="hero-badge">
+                                <span class="pulse"></span>
+                                OPEN TO FREELANCE PROJECTS
+                            </span>
+                            <span class="hero-location-text">
+                                <i data-lucide="map-pin"
+                                    style="width: 13px; height: 13px; vertical-align: middle; margin-right: 2px;"></i>
+                                Mumbai, Maharashtra &amp; Vadodara, Gujarat
+                            </span>
+                        </div>
+
+                        <h1 class="hero-editorial-title">
+                            <span class="hero-line-1">Full-Stack</span>
+                            <span class="hero-line-2">Developer</span>
+                            <span class="hero-line-3">&amp; Digital Marketing</span>
+                        </h1>
+
+                        <p class="hero-desc">
+                            Building intelligent full-stack applications, integrating AI models, and optimizing
+                            WordPress platforms. Specializing in responsive systems, custom code structures, and
+                            targeted lead campaigns.
+                        </p>
+
+                        <!-- CTA Controls -->
+                        <div class="hero-ctas">
+                            <a href="#contact" class="btn btn-primary btn-pill">
+                                Start a Project <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                            </a>
+                            <a href="Mansi_Zala_Resume.pdf" download class="btn btn-outline btn-pill">
+                                Download Resume
+                            </a>
+                        </div>
+
+                        <!-- Integrated Stats Cards shifted under left column CTA buttons -->
+                        <div class="hero-stats-row">
+                            <!-- Stat Card 1 -->
+                            <div class="hero-stat-card">
+                                <div class="stat-num" id="stat-experience" data-val="1">0</div>
+                                <p class="stat-label">Years Experience</p>
+                            </div>
+                            <span class="stat-divider"></span>
+                            <!-- Stat Card 2 -->
+                            <div class="hero-stat-card">
+                                <div class="stat-num" id="stat-projects" data-val="20">0</div>
+                                <p class="stat-label">Projects Completed</p>
+                            </div>
+                            <span class="stat-divider"></span>
+                            <!-- Stat Card 3 -->
+                            <div class="hero-stat-card">
+                                <div class="stat-num" id="stat-clients" data-val="10">0</div>
+                                <p class="stat-label">Happy Clients</p>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <h2 class="text-sm uppercase tracking-[0.2em] font-display text-gray-400 font-bold mb-3">Hi, my name is</h2>
-                    <h1 class="text-5xl md:text-7xl font-bold font-display text-white mb-4 tracking-tight leading-none" id="hero-name">
-                        Mansi Zala
-                    </h1>
-                    
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-300 mb-6 font-display">
-                        Full Stack Developer <span class="text-blue-500">|</span> WordPress Specialist <span class="text-purple-500">|</span> Digital Marketer
-                    </h3>
-                    
-                    <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed">
-                        "Building Modern Websites That Drive Business Growth"
-                    </p>
 
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mb-10">
-                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-[0_0_30px_rgba(99,102,241,0.6)] hover:-translate-y-0.5 transition-all text-center">
-                            Hire Me
-                        </a>
-                        <a href="#projects" class="w-full sm:w-auto px-8 py-4 bg-gray-900/80 hover:bg-gray-800/80 border border-gray-800 text-white font-semibold rounded-full hover:-translate-y-0.5 transition-all text-center">
-                            View Projects
-                        </a>
-                        <a href="Mansi_Zala_Resume.pdf" download class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 border border-gray-700 hover:border-white text-gray-300 hover:text-white font-semibold rounded-full hover:-translate-y-0.5 transition-all text-center">
-                            <i data-lucide="download" class="w-4 h-4"></i> Download Resume
-                        </a>
-                    </div>
+                    <!-- Visual mockup card & metrics (Right Column) -->
+                    <div class="hero-mockup-wrapper reveal-element" style="animation-delay: 0.2s;">
+                        <div class="floating-network-container">
 
-                    <!-- Short quick contact -->
-                    <div class="flex items-center gap-6 justify-center lg:justify-start text-gray-400 text-sm">
-                        <a href="mailto:zalamansi025@gmail.com" class="flex items-center gap-2 hover:text-white transition-colors">
-                            <i data-lucide="mail" class="w-4 h-4 text-blue-400"></i> zalamansi025@gmail.com
-                        </a>
-                        <span class="text-gray-700">|</span>
-                        <a href="https://www.linkedin.com/in/mansizala2509" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-colors">
-                            <i data-lucide="linkedin" class="w-4 h-4 text-purple-400"></i> linkedin.com/in/mansizala2509
-                        </a>
-                    </div>
-                </div>
+                            <!-- Floating Central Card (Holographic AI Processor) -->
+                            <div class="ai-processor-card glass-card">
+                                <div class="card-chip-pattern"></div>
+                                <div class="card-badge"><i data-lucide="cpu" style="width: 14px; height: 14px;"></i> AI
+                                    ENGINE</div>
+                                <div class="card-title">agent_core_v3.bin</div>
+                                <div class="card-meta">
+                                    <div class="meta-item">
+                                        <span class="lbl">TYPE</span>
+                                        <span class="val">NEURAL NET</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <span class="lbl">VERSION</span>
+                                        <span class="val">3.2.0-STABLE</span>
+                                    </div>
+                                </div>
+                                <div class="card-glow-indicator"></div>
+                            </div>
 
-                <!-- Interactive Visual Canvas (Right) -->
-                <div class="lg:col-span-5 flex justify-center items-center relative">
-                    <!-- Glassmorphism Visual Frame -->
-                    <div class="relative w-[300px] h-[300px] md:w-[380px] md:h-[380px] rounded-full flex justify-center items-center z-10">
-                        <div class="absolute inset-0 rounded-full border border-gray-800/80 bg-gradient-to-tr from-blue-500/10 to-purple-500/10 backdrop-blur-md"></div>
-                        <!-- Inner floating elements representing her skills -->
-                        <div class="absolute w-[18px] h-[18px] bg-blue-500 rounded-full top-[10%] left-[20%] blur-[2px] animate-float" style="animation-delay: 0s;"></div>
-                        <div class="absolute w-[24px] h-[24px] bg-purple-500 rounded-full bottom-[15%] right-[10%] blur-[3px] animate-float" style="animation-delay: 1.5s;"></div>
-                        <div class="absolute w-[12px] h-[12px] bg-pink-500 rounded-full top-[50%] right-[5%] blur-[1px] animate-float" style="animation-delay: 0.7s;"></div>
-                        <div class="absolute w-[30px] h-[30px] bg-indigo-600 rounded-full bottom-[10%] left-[15%] blur-[4px] animate-float" style="animation-delay: 2.2s;"></div>
+                            <!-- Orbiting Metric Bubbles (matching layout spots in Nil's mockup) -->
+                            <!-- Bubble 1: Top Left -->
+                            <div class="floating-metric-bubble bubble-top-left glass-card">
+                                <div class="bubble-icon"
+                                    style="background-color: rgba(37, 99, 235, 0.08); color: var(--color-primary);"><i
+                                        data-lucide="brain"></i></div>
+                                <span class="bubble-text">gemma-2b</span>
+                            </div>
 
-                        <!-- Main visual avatar / representation -->
-                        <div class="w-[82%] h-[82%] rounded-full overflow-hidden border-2 border-gray-800 relative z-20 flex justify-center items-center bg-dark">
-                            <img src="assets/avatar.png" alt="Mansi Zala" class="w-full h-full object-cover object-center" id="avatar-img">
+                            <!-- Bubble 2: Top Right -->
+                            <div class="floating-metric-bubble bubble-top-right glass-card">
+                                <div class="bubble-icon"
+                                    style="background-color: rgba(6, 182, 212, 0.08); color: var(--color-accent);"><i
+                                        data-lucide="database"></i></div>
+                                <span class="bubble-text">rag: active</span>
+                            </div>
+
+                            <!-- Bubble 3: Center Right -->
+                            <div class="floating-metric-bubble bubble-center-right glass-card">
+                                <div class="bubble-icon"
+                                    style="background-color: rgba(16, 185, 129, 0.08); color: #10b981;"><i
+                                        data-lucide="check"></i></div>
+                                <span class="bubble-text">accuracy: 99.2%</span>
+                            </div>
+
+                            <!-- Bubble 4: Bottom Right -->
+                            <div class="floating-metric-bubble bubble-bottom-right glass-card">
+                                <div class="bubble-icon"
+                                    style="background-color: rgba(245, 158, 11, 0.08); color: #f59e0b;"><i
+                                        data-lucide="activity"></i></div>
+                                <span class="bubble-text">latency: 24ms</span>
+                            </div>
+
+                            <!-- Bubble 5: Bottom Left -->
+                            <div class="floating-metric-bubble bubble-bottom-left glass-card">
+                                <div class="bubble-icon"
+                                    style="background-color: rgba(37, 99, 235, 0.08); color: var(--color-primary);"><i
+                                        data-lucide="link"></i></div>
+                                <span class="bubble-text">api: 200 OK</span>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 7. STATISTICS SECTION (Moved high for social proof) -->
-        <section id="stats" class="py-12 border-y border-gray-900 bg-gray-950/40 relative z-20">
-            <div class="container mx-auto px-6">
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Stat Item 1 -->
-                    <div class="text-center flex flex-col justify-center">
-                        <h4 class="text-4xl md:text-5xl font-bold font-display text-white mb-2 bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text" id="stat-years">0</h4>
-                        <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold">Years Experience</p>
-                    </div>
-                    <!-- Stat Item 2 -->
-                    <div class="text-center flex flex-col justify-center">
-                        <h4 class="text-4xl md:text-5xl font-bold font-display text-white mb-2 bg-gradient-to-r from-indigo-400 to-purple-500 text-transparent bg-clip-text" id="stat-websites">0</h4>
-                        <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold">Websites Delivered</p>
-                    </div>
-                    <!-- Stat Item 3 -->
-                    <div class="text-center flex flex-col justify-center">
-                        <h4 class="text-4xl md:text-5xl font-bold font-display text-white mb-2 bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text" id="stat-freelance">0</h4>
-                        <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold">Freelance Projects</p>
-                    </div>
-                    <!-- Stat Item 4 -->
-                    <div class="text-center flex flex-col justify-center">
-                        <h4 class="text-4xl md:text-5xl font-bold font-display text-white mb-2 bg-gradient-to-r from-pink-400 to-red-400 text-transparent bg-clip-text" id="stat-campaigns">0</h4>
-                        <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold">Campaigns Managed</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 2. ABOUT ME SECTION -->
-        <section id="about" class="py-24 relative overflow-hidden">
-            <div class="absolute top-[20%] left-[-10%] w-[300px] h-[300px] bg-indigo-500/5 rounded-full blur-[80px] pointer-events-none"></div>
-
-            <div class="container mx-auto px-6">
-                <!-- Section Title -->
-                <div class="max-w-3xl mx-auto text-center mb-16">
-                    <h2 class="text-xs uppercase tracking-widest font-semibold text-blue-400 mb-2">My Journey</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold font-display text-white">About Mansi Zala</h3>
-                    <div class="h-1 w-12 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <!-- 3. ABOUT SECTION -->
+        <section id="about">
+            <div class="container">
+                <div class="about-grid">
                     <!-- Bio (Left) -->
-                    <div class="lg:col-span-6 flex flex-col gap-6">
-                        <h4 class="text-2xl font-bold text-white font-display">Who I Am</h4>
-                        <p class="text-gray-400 leading-relaxed text-base">
-                            Motivated and dedicated BCA graduate with experience in web development, website redesign, digital marketing, and social media management. Seeking opportunities to contribute technical and creative skills in website development while helping businesses grow their online presence.
+                    <div class="about-info reveal-element">
+                        <span class="section-tag">About Me</span>
+                        <h3 class="section-title">Creative Developer &amp; Digital Strategist</h3>
+                        <p class="about-bio">
+                            I am a motivated and dedicated BCA graduate with hands-on experience in full-stack web
+                            development, website redesign, digital marketing, and social media advertising. I specialize
+                            in bridging the gap between technical software architecture and high-converting marketing
+                            campaigns.
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-base">
-                            With a strong educational background in Computer Applications from **TeamLease Skills University** (BCA Class of 2023 - 2026), I bridge the gap between technical software architecture and client-facing digital marketing campaigns. Whether it's coding backends with PHP Laravel or executing paid social campaigns, I focus on building modern assets that convert.
+                        <p class="about-bio">
+                            My approach focuses on building clean, user-friendly layouts with modern code standard
+                            structures. Whether it's crafting customizable WordPress child themes, developing complex
+                            backend solutions, or running optimized social media lead-generation funnels, I strive to
+                            help business brands achieve measurable growth online.
                         </p>
-                        
-                        <!-- Tabs Content or Highlights -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                            <div class="flex items-start gap-3 p-4 bg-gray-950/60 border border-gray-900 rounded-2xl glass-card">
-                                <div class="p-2 bg-blue-500/10 rounded-xl text-blue-400">
-                                    <i data-lucide="code" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h5 class="text-sm font-bold text-white mb-1">Web Development</h5>
-                                    <p class="text-xs text-gray-500">Custom web applications built with PHP, Laravel, and MySQL.</p>
-                                </div>
+
+                        <!-- Personal Data Cards -->
+                        <div class="about-details">
+                            <div class="about-detail-item">
+                                <span class="about-detail-label">Location</span>
+                                <span class="about-detail-value">Gujarat, India</span>
                             </div>
-                            <div class="flex items-start gap-3 p-4 bg-gray-950/60 border border-gray-900 rounded-2xl glass-card">
-                                <div class="p-2 bg-purple-500/10 rounded-xl text-purple-400">
-                                    <i data-lucide="layout" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h5 class="text-sm font-bold text-white mb-1">WordPress Design</h5>
-                                    <p class="text-xs text-gray-500">Bespoke theme customizations and responsive redesigns.</p>
-                                </div>
+                            <div class="about-detail-item">
+                                <span class="about-detail-label">Degree</span>
+                                <span class="about-detail-value">BCA (2023 - 2026)</span>
                             </div>
-                            <div class="flex items-start gap-3 p-4 bg-gray-950/60 border border-gray-900 rounded-2xl glass-card">
-                                <div class="p-2 bg-pink-500/10 rounded-xl text-pink-400">
-                                    <i data-lucide="trending-up" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h5 class="text-sm font-bold text-white mb-1">Meta Ads & Marketing</h5>
-                                    <p class="text-xs text-gray-500">Targeted lead gen campaigns and analytics audits.</p>
-                                </div>
+                            <div class="about-detail-item">
+                                <span class="about-detail-label">Status</span>
+                                <span class="about-detail-value" style="color: #10b981;">Available / Open</span>
                             </div>
-                            <div class="flex items-start gap-3 p-4 bg-gray-950/60 border border-gray-900 rounded-2xl glass-card">
-                                <div class="p-2 bg-indigo-500/10 rounded-xl text-indigo-400">
-                                    <i data-lucide="image" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h5 class="text-sm font-bold text-white mb-1">Social Content</h5>
-                                    <p class="text-xs text-gray-500">Visual design using Canva, copywriting, and scheduling.</p>
-                                </div>
+                            <div class="about-detail-item">
+                                <span class="about-detail-label">Interests</span>
+                                <span class="about-detail-value">SMM, Web Development, Ads</span>
+                            </div>
+                        </div>
+
+                        <!-- Language Badges -->
+                        <div style="margin-top: 2rem;">
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.75rem;">
+                                Languages Spoken</h4>
+                            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                                <span class="glass-card"
+                                    style="padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 600; border-radius: var(--radius-sm);">English
+                                    (Fluent)</span>
+                                <span class="glass-card"
+                                    style="padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 600; border-radius: var(--radius-sm);">Hindi
+                                    (Conversational)</span>
+                                <span class="glass-card"
+                                    style="padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 600; border-radius: var(--radius-sm);">Gujarati
+                                    (Native)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Personal Info Grid & Quick Facts (Right) -->
-                    <div class="lg:col-span-6 p-8 bg-gray-950/50 border border-gray-800 rounded-3xl backdrop-blur-md glass-card flex flex-col gap-6">
-                        <h4 class="text-2xl font-bold text-white font-display">Personal Details</h4>
-                        <div class="divide-y divide-gray-900">
-                            <!-- Detail Row -->
-                            <div class="py-4 flex justify-between gap-4 text-sm">
-                                <span class="text-gray-500 font-medium">Name:</span>
-                                <span class="text-white font-semibold">Mansi Zala</span>
-                            </div>
-                            <!-- Detail Row -->
-                            <div class="py-4 flex justify-between gap-4 text-sm">
-                                <span class="text-gray-500 font-medium">Education:</span>
-                                <span class="text-white font-semibold text-right">BCA, TeamLease Skills University (2023 - 2026)</span>
-                            </div>
-                            <!-- Detail Row -->
-                            <div class="py-4 flex justify-between gap-4 text-sm">
-                                <span class="text-gray-500 font-medium">Locations:</span>
-                                <span class="text-white font-semibold">Mumbai, Vadodara</span>
-                            </div>
-                            <!-- Detail Row -->
-                            <div class="py-4 flex justify-between gap-4 text-sm">
-                                <span class="text-gray-500 font-medium">Specialties:</span>
-                                <span class="text-white font-semibold text-right">Full Stack Web Dev, Meta Ads, SMM</span>
-                            </div>
-                            <!-- Detail Row -->
-                            <div class="py-4 flex justify-between gap-4 text-sm">
-                                <span class="text-gray-500 font-medium">Freelance Status:</span>
-                                <span class="text-emerald-400 font-bold flex items-center gap-1.5">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> Active / Open
-                                </span>
-                            </div>
-                        </div>
+                    <!-- Career Timeline (Right) -->
+                    <div class="reveal-element" style="animation-delay: 0.2s;">
+                        <span class="section-tag"
+                            style="background-color: rgba(6, 182, 212, 0.08); color: var(--color-accent);">Career
+                            Journey</span>
+                        <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 2rem;">Timeline Highlights
+                        </h3>
 
-                        <!-- Language section embedded in About -->
-                        <div class="mt-4 pt-6 border-t border-gray-900">
-                            <h5 class="text-sm uppercase tracking-wider text-gray-500 font-bold mb-4">Languages Spoken</h5>
-                            <div class="grid grid-cols-3 gap-4">
-                                <div class="text-center p-3 bg-gray-900/40 rounded-2xl border border-gray-900">
-                                    <div class="font-bold text-white text-base">English</div>
-                                    <div class="text-xs text-blue-400 mt-1 font-semibold">Fluent</div>
+                        <div class="timeline-wrapper">
+                            <div class="timeline-line">
+                                <div class="timeline-progress" id="timeline-progress"></div>
+                            </div>
+
+                            <!-- Timeline Item 1 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-meta">
+                                    <span class="timeline-date">2026 - Present</span>
+                                    <h4 class="timeline-title">Full Stack Developer</h4>
+                                    <h5 class="timeline-subtitle">Seer IT Solutions</h5>
                                 </div>
-                                <div class="text-center p-3 bg-gray-900/40 rounded-2xl border border-gray-900">
-                                    <div class="font-bold text-white text-base">Hindi</div>
-                                    <div class="text-xs text-purple-400 mt-1 font-semibold">Conversational</div>
+                                <p class="timeline-desc">
+                                    Developing responsive client applications, implementing databases with MySQL,
+                                    optimizing web loading speeds, and managing active Meta Ads campaigns.
+                                </p>
+                            </div>
+
+                            <!-- Timeline Item 2 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-meta">
+                                    <span class="timeline-date">2025 - 2026</span>
+                                    <h4 class="timeline-title">Web Dev &amp; Marketing Executive</h4>
+                                    <h5 class="timeline-subtitle">VEA Impex</h5>
                                 </div>
-                                <div class="text-center p-3 bg-gray-900/40 rounded-2xl border border-gray-900">
-                                    <div class="font-bold text-white text-base">Gujarati</div>
-                                    <div class="text-xs text-pink-400 mt-1 font-semibold">Native</div>
+                                <p class="timeline-desc">
+                                    Programmed, customized, and hosted corporate catalog portals. Oversaw search index
+                                    optimization and system backup assets.
+                                </p>
+                            </div>
+
+                            <!-- Timeline Item 3 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-meta">
+                                    <span class="timeline-date">2024 - Present</span>
+                                    <h4 class="timeline-title">WordPress Freelancer</h4>
+                                    <h5 class="timeline-subtitle">Remote / Client Direct</h5>
                                 </div>
+                                <p class="timeline-desc">
+                                    Constructing custom business websites and landing layouts. Creating corporate
+                                    branding guidelines and social graphics using Canva.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -317,182 +355,124 @@
             </div>
         </section>
 
-        <!-- 3. SKILLS SECTION -->
-        <section id="skills" class="py-24 bg-gray-950/20 relative z-20 border-y border-gray-900">
-            <div class="absolute top-[30%] right-[-5%] w-[350px] h-[350px] bg-blue-500/5 rounded-full blur-[90px] pointer-events-none"></div>
-
-            <div class="container mx-auto px-6">
-                <!-- Section Title -->
-                <div class="max-w-3xl mx-auto text-center mb-16">
-                    <h2 class="text-xs uppercase tracking-widest font-semibold text-blue-400 mb-2">Technical & Creative Core</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold font-display text-white">Expertise & Skillsets</h3>
-                    <div class="h-1 w-12 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+        <!-- 4. SKILLS SECTION -->
+        <section id="skills" style="background-color: var(--bg-secondary); transition: background-color 0.4s ease;">
+            <div class="container">
+                <div style="text-align: center; max-width: 600px; margin: 0 auto 3rem auto;" class="reveal-element">
+                    <span class="section-tag">Expertise</span>
+                    <h3 class="section-title">Technical Skillsets</h3>
+                    <p class="section-desc" style="margin-bottom: 0;">
+                        An overview of my core technologies, development frameworks, and advertising media platforms.
+                    </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="skills-grid">
                     <!-- Web Development Category -->
-                    <div class="p-8 bg-gray-950/70 border border-gray-800 rounded-3xl glass-card flex flex-col gap-6">
-                        <div class="flex items-center gap-3">
-                            <div class="p-3 bg-blue-500/10 text-blue-400 rounded-2xl">
-                                <i data-lucide="code-2" class="w-6 h-6"></i>
-                            </div>
-                            <h4 class="text-xl font-bold text-white font-display">Web Development</h4>
-                        </div>
-                        <p class="text-xs text-gray-500 leading-relaxed -mt-3">
-                            Building reliable, scalable backend APIs, secure relational databases, and clean modern custom WordPress builds.
-                        </p>
-                        
-                        <div class="flex flex-col gap-5 mt-2">
+                    <div class="glass-card skills-category reveal-element">
+                        <h4><i data-lucide="code-2"></i> Web Development</h4>
+                        <div class="skills-list">
                             <!-- Skill 1 -->
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-gray-300">WordPress</span>
-                                    <span class="text-blue-400">95%</span>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name">WordPress Customization</span>
+                                    <span class="skill-percent">95%</span>
                                 </div>
-                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
-                                    <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-[95%]" data-skill-level="95%"></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" data-percent="95%"></div>
                                 </div>
                             </div>
                             <!-- Skill 2 -->
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-gray-300">PHP & Laravel</span>
-                                    <span class="text-blue-400">88%</span>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name">PHP / Laravel</span>
+                                    <span class="skill-percent">88%</span>
                                 </div>
-                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
-                                    <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-[88%]" data-skill-level="88%"></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" data-percent="88%"></div>
                                 </div>
                             </div>
                             <!-- Skill 3 -->
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-gray-300">MySQL Database</span>
-                                    <span class="text-blue-400">82%</span>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name">MySQL Database</span>
+                                    <span class="skill-percent">82%</span>
                                 </div>
-                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
-                                    <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-[82%]" data-skill-level="82%"></div>
-                                </div>
-                            </div>
-                            <!-- Skill 4 -->
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-gray-300">WP Theme Customization & Redesign</span>
-                                    <span class="text-blue-400">90%</span>
-                                </div>
-                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
-                                    <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-[90%]" data-skill-level="90%"></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" data-percent="82%"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Digital Marketing Category -->
-                    <div class="p-8 bg-gray-950/70 border border-gray-800 rounded-3xl glass-card flex flex-col gap-6">
-                        <div class="flex items-center gap-3">
-                            <div class="p-3 bg-purple-500/10 text-purple-400 rounded-2xl">
-                                <i data-lucide="megaphone" class="w-6 h-6"></i>
-                            </div>
-                            <h4 class="text-xl font-bold text-white font-display">Digital Marketing</h4>
-                        </div>
-                        <p class="text-xs text-gray-500 leading-relaxed -mt-3">
-                            Managing high-ROI ads campaigns, social content Calendars, tracking conversions, and scaling search organic traffic.
-                        </p>
-                        
-                        <div class="flex flex-col gap-5 mt-2">
+                    <!-- Front End Technologies -->
+                    <div class="glass-card skills-category reveal-element" style="animation-delay: 0.1s;">
+                        <h4><i data-lucide="monitor"></i> Front End Core</h4>
+                        <div class="skills-list">
                             <!-- Skill 1 -->
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-gray-300">Meta Ads Management</span>
-                                    <span class="text-purple-400">90%</span>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5 / CSS3</span>
+                                    <span class="skill-percent">95%</span>
                                 </div>
-                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
-                                    <div class="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-[90%]" data-skill-level="90%"></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" data-percent="95%"></div>
                                 </div>
                             </div>
                             <!-- Skill 2 -->
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-gray-300">Social Media Marketing (SMM)</span>
-                                    <span class="text-purple-400">88%</span>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript (ES6+)</span>
+                                    <span class="skill-percent">85%</span>
                                 </div>
-                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
-                                    <div class="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-[88%]" data-skill-level="88%"></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" data-percent="85%"></div>
                                 </div>
                             </div>
                             <!-- Skill 3 -->
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-gray-300">Content Creation & Planning</span>
-                                    <span class="text-purple-400">85%</span>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name">Responsive UI Layouts</span>
+                                    <span class="skill-percent">90%</span>
                                 </div>
-                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
-                                    <div class="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-[85%]" data-skill-level="85%"></div>
-                                </div>
-                            </div>
-                            <!-- Skill 4 -->
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-gray-300">SEO Strategy & Auditing</span>
-                                    <span class="text-purple-400">80%</span>
-                                </div>
-                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
-                                    <div class="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-[80%]" data-skill-level="80%"></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" data-percent="90%"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Design Tools Category -->
-                    <div class="p-8 bg-gray-950/70 border border-gray-800 rounded-3xl glass-card flex flex-col gap-6">
-                        <div class="flex items-center gap-3">
-                            <div class="p-3 bg-pink-500/10 text-pink-400 rounded-2xl">
-                                <i data-lucide="palette" class="w-6 h-6"></i>
-                            </div>
-                            <h4 class="text-xl font-bold text-white font-display">Design & Branding</h4>
-                        </div>
-                        <p class="text-xs text-gray-500 leading-relaxed -mt-3">
-                            Developing visual identities, banners, and vector assets that capture brand values and convert visitors.
-                        </p>
-                        
-                        <div class="flex flex-col gap-5 mt-2">
+                    <!-- Digital Marketing & Design -->
+                    <div class="glass-card skills-category reveal-element" style="animation-delay: 0.2s;">
+                        <h4><i data-lucide="megaphone"></i> Marketing &amp; Design</h4>
+                        <div class="skills-list">
                             <!-- Skill 1 -->
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-gray-300">Canva</span>
-                                    <span class="text-pink-400">95%</span>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name">Meta Ads Campaigns</span>
+                                    <span class="skill-percent">90%</span>
                                 </div>
-                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
-                                    <div class="h-full bg-gradient-to-r from-pink-500 to-red-400 rounded-full w-[95%]" data-skill-level="95%"></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" data-percent="90%"></div>
                                 </div>
                             </div>
                             <!-- Skill 2 -->
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-gray-300">Banner Design</span>
-                                    <span class="text-pink-400">90%</span>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name">SEO Audits &amp; Optimization</span>
+                                    <span class="skill-percent">85%</span>
                                 </div>
-                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
-                                    <div class="h-full bg-gradient-to-r from-pink-500 to-red-400 rounded-full w-[90%]" data-skill-level="90%"></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" data-percent="85%"></div>
                                 </div>
                             </div>
                             <!-- Skill 3 -->
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-gray-300">Logo Design</span>
-                                    <span class="text-pink-400">85%</span>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-info">
+                                    <span class="skill-name">Social Media &amp; Canva Graphics</span>
+                                    <span class="skill-percent">92%</span>
                                 </div>
-                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
-                                    <div class="h-full bg-gradient-to-r from-pink-500 to-red-400 rounded-full w-[85%]" data-skill-level="85%"></div>
-                                </div>
-                            </div>
-                            <!-- Skill 4 -->
-                            <div>
-                                <div class="flex justify-between text-sm font-semibold mb-1.5">
-                                    <span class="text-gray-300">Responsive UI Layouts</span>
-                                    <span class="text-pink-400">88%</span>
-                                </div>
-                                <div class="h-2 bg-gray-900 rounded-full overflow-hidden">
-                                    <div class="h-full bg-gradient-to-r from-pink-500 to-red-400 rounded-full w-[88%]" data-skill-level="88%"></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" data-percent="92%"></div>
                                 </div>
                             </div>
                         </div>
@@ -501,467 +481,400 @@
             </div>
         </section>
 
-        <!-- 4. EXPERIENCE TIMELINE SECTION -->
-        <section id="experience" class="py-24 relative overflow-hidden">
-            <div class="absolute bottom-[20%] left-[-10%] w-[350px] h-[350px] bg-purple-500/5 rounded-full blur-[90px] pointer-events-none"></div>
-
-            <div class="container mx-auto px-6">
-                <!-- Section Title -->
-                <div class="max-w-3xl mx-auto text-center mb-16">
-                    <h2 class="text-xs uppercase tracking-widest font-semibold text-blue-400 mb-2">My Career Path</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold font-display text-white">Professional Timeline</h3>
-                    <div class="h-1 w-12 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+        <!-- 5. SERVICES SECTION -->
+        <section id="services">
+            <div class="container">
+                <div style="text-align: center; max-width: 600px; margin: 0 auto 3rem auto;" class="reveal-element">
+                    <span class="section-tag">Solutions</span>
+                    <h3 class="section-title">What I Offer</h3>
+                    <p class="section-desc" style="margin-bottom: 0;">
+                        Effective technical solutions tailored to grow your digital footprint and conversions.
+                    </p>
                 </div>
 
-                <!-- Timeline Container -->
-                <div class="relative max-w-4xl mx-auto mt-12">
-                    <!-- Vertical line in center (desktop) / left (mobile) -->
-                    <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-[2px] bg-gray-800 -translate-x-1/2">
-                        <div class="h-0 w-full bg-gradient-to-b from-blue-500 via-indigo-500 to-purple-500 rounded-full" id="timeline-progress-line"></div>
-                    </div>
-
-                    <!-- Timeline Item 1 -->
-                    <div class="timeline-item relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 md:mb-20">
-                        <!-- Node indicator -->
-                        <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-blue-500 border-4 border-dark rounded-full -translate-x-1/2 top-1.5 shadow-[0_0_10px_rgba(56,189,248,0.8)] z-20"></div>
-                        
-                        <!-- Left Block: Content (Shows on Left for Desktop) -->
-                        <div class="pl-12 md:pl-0 md:pr-12 md:text-right flex flex-col items-start md:items-end timeline-content-left">
-                            <span class="inline-block px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-bold rounded-full mb-3">2026 - PRESENT</span>
-                            <h4 class="text-xl font-bold text-white font-display">Seer IT Solutions</h4>
-                            <p class="text-sm font-semibold text-gray-300 mb-2">Full Stack Developer</p>
-                            <p class="text-xs text-gray-500 italic mb-3">Vadodara, Gujarat (1 Year)</p>
-                        </div>
-                        
-                        <!-- Right Block: Achievements/Details -->
-                        <div class="pl-12 md:pl-8 flex flex-col justify-center timeline-content-right">
-                            <div class="p-6 bg-gray-950/60 border border-gray-800 rounded-2xl backdrop-blur-md glass-card">
-                                <ul class="flex flex-col gap-3 text-sm text-gray-400">
-                                    <li class="flex items-start gap-2">
-                                        <span class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-1.5 shrink-0"></span>
-                                        <span>Developing and redesigning robust responsive business websites to optimize client digital footprint.</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-1.5 shrink-0"></span>
-                                        <span>Configuring & managing active **Meta Ads campaigns** to direct targeted traffic and lead funnels.</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-1.5 shrink-0"></span>
-                                        <span>Improving overall web accessibility, visual user experience (UX) layout, and SEO load speed.</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-1.5 shrink-0"></span>
-                                        <span>Supporting digital analytics campaigns and graphic media content alignment.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Timeline Item 2 -->
-                    <div class="timeline-item relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 md:mb-20">
-                        <!-- Node indicator -->
-                        <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-purple-500 border-4 border-dark rounded-full -translate-x-1/2 top-1.5 shadow-[0_0_10px_rgba(168,85,247,0.8)] z-20"></div>
-                        
-                        <!-- Left Block: Content (Blank/Swap roles on Desktop to alternate) -->
-                        <div class="hidden md:block pl-8 timeline-content-left order-2">
-                            <span class="inline-block px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-bold rounded-full mb-3">2025 - 2026 MAY</span>
-                            <h4 class="text-xl font-bold text-white font-display">VEA Impex</h4>
-                            <p class="text-sm font-semibold text-gray-300 mb-2">Web Developer & Digital Marketing Executive</p>
-                            <p class="text-xs text-gray-500 italic mb-3">Vadodara, Gujarat (1 Year)</p>
-                        </div>
-                        
-                        <!-- Right Block: Achievements/Details (Left side on desktop due to order) -->
-                        <div class="pl-12 md:pl-0 md:pr-8 flex flex-col justify-center timeline-content-right md:order-1 md:text-right md:items-end">
-                            <!-- Show metadata on left block for mobile, hide on desktop since it's order-2 -->
-                            <div class="md:hidden">
-                                <span class="inline-block px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-bold rounded-full mb-3">2025 - 2026 MAY</span>
-                                <h4 class="text-xl font-bold text-white font-display">VEA Impex</h4>
-                                <p class="text-sm font-semibold text-gray-300 mb-2">Web Developer & Digital Marketing Executive</p>
-                                <p class="text-xs text-gray-500 italic mb-3">Vadodara, Gujarat (1 Year)</p>
-                            </div>
-                            <div class="p-6 bg-gray-950/60 border border-gray-800 rounded-2xl backdrop-blur-md glass-card text-left">
-                                <ul class="flex flex-col gap-3 text-sm text-gray-400">
-                                    <li class="flex items-start gap-2">
-                                        <span class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-1.5 shrink-0"></span>
-                                        <span>Programmed and hosted fully functional catalog websites for product exports.</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-1.5 shrink-0"></span>
-                                        <span>Customized theme files and layout systems to establish a completely responsive structure.</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-1.5 shrink-0"></span>
-                                        <span>Resolved regular website updates, system enhancements, and technical support requests.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Timeline Item 3 -->
-                    <div class="timeline-item relative grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- Node indicator -->
-                        <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-pink-500 border-4 border-dark rounded-full -translate-x-1/2 top-1.5 shadow-[0_0_10px_rgba(236,72,153,0.8)] z-20"></div>
-                        
-                        <!-- Left Block: Content -->
-                        <div class="pl-12 md:pl-0 md:pr-12 md:text-right flex flex-col items-start md:items-end timeline-content-left">
-                            <span class="inline-block px-3 py-1 bg-pink-500/10 text-pink-400 text-xs font-bold rounded-full mb-3">2024 - PRESENT</span>
-                            <h4 class="text-xl font-bold text-white font-display">Freelance Projects</h4>
-                            <p class="text-sm font-semibold text-gray-300 mb-2">WordPress Developer & Graphic Branding Designer</p>
-                            <p class="text-xs text-gray-500 italic mb-3">Remote / Client-Direct</p>
-                        </div>
-                        
-                        <!-- Right Block: Achievements/Details -->
-                        <div class="pl-12 md:pl-8 flex flex-col justify-center timeline-content-right">
-                            <div class="p-6 bg-gray-950/60 border border-gray-800 rounded-2xl backdrop-blur-md glass-card">
-                                <ul class="flex flex-col gap-3 text-sm text-gray-400">
-                                    <li class="flex items-start gap-2">
-                                        <span class="w-1.5 h-1.5 bg-pink-400 rounded-full mt-1.5 shrink-0"></span>
-                                        <span>Constructed bespoke, SEO-optimized business websites using WordPress, WooCommerce, and standard builder APIs.</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="w-1.5 h-1.5 bg-pink-400 rounded-full mt-1.5 shrink-0"></span>
-                                        <span>Engineered clean visual logos, flyers, banners, and digital marketing materials using Canva.</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="w-1.5 h-1.5 bg-pink-400 rounded-full mt-1.5 shrink-0"></span>
-                                        <span>Provided digital advice, social layout styling guides, and organic posting content plans to small companies.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. FEATURED PROJECTS SECTION -->
-        <section id="projects" class="py-24 bg-gray-950/20 border-y border-gray-900 relative z-20">
-            <div class="absolute top-[40%] right-[-10%] w-[300px] h-[300px] bg-pink-500/5 rounded-full blur-[80px] pointer-events-none"></div>
-
-            <div class="container mx-auto px-6">
-                <!-- Section Title -->
-                <div class="max-w-3xl mx-auto text-center mb-16">
-                    <h2 class="text-xs uppercase tracking-widest font-semibold text-blue-400 mb-2">My Work Showcase</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold font-display text-white">Featured Projects</h3>
-                    <div class="h-1 w-12 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
-                </div>
-
-                <!-- Filter Controls -->
-                <div class="flex flex-wrap items-center justify-center gap-3 mb-12" id="project-filters">
-                    <button class="px-5 py-2 rounded-full border border-gray-800 text-xs font-semibold hover:border-white transition-all text-white bg-white/10 active-filter" data-filter="all">All Projects</button>
-                    <button class="px-5 py-2 rounded-full border border-gray-800 text-xs font-semibold hover:border-white transition-all text-gray-400 hover:text-white" data-filter="development">Web Development</button>
-                    <button class="px-5 py-2 rounded-full border border-gray-800 text-xs font-semibold hover:border-white transition-all text-gray-400 hover:text-white" data-filter="wordpress">WordPress</button>
-                    <button class="px-5 py-2 rounded-full border border-gray-800 text-xs font-semibold hover:border-white transition-all text-gray-400 hover:text-white" data-filter="marketing">Digital Marketing</button>
-                    <button class="px-5 py-2 rounded-full border border-gray-800 text-xs font-semibold hover:border-white transition-all text-gray-400 hover:text-white" data-filter="design">Branding & Canva</button>
-                </div>
-
-                <!-- Projects Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-                    
-                    <!-- Project 1 -->
-                    <div class="project-card group relative p-6 bg-gray-950/70 border border-gray-800 rounded-3xl backdrop-blur-md glass-card flex flex-col gap-4 overflow-hidden" data-category="development">
-                        <div class="aspect-video w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-blue-900 to-indigo-950 relative border border-gray-900 flex items-center justify-center">
-                            <i data-lucide="monitor" class="w-16 h-16 text-blue-500/20 group-hover:scale-110 transition-transform duration-500"></i>
-                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60"></div>
-                            <span class="absolute bottom-4 left-4 px-3 py-1 bg-blue-500/20 text-blue-400 text-[10px] font-bold tracking-widest uppercase rounded-full">Development</span>
-                        </div>
-                        
-                        <div>
-                            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">VEA Impex Website Redesign</h4>
-                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
-                                Redesigned a responsive catalog export website. Rewrote UI templates for mobile optimization and integrated relational databases for seamless product display.
-                            </p>
-                            <div class="flex flex-wrap gap-2 text-[10px] font-semibold">
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">PHP Laravel</span>
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">MySQL</span>
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Responsive UX</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card group relative p-6 bg-gray-950/70 border border-gray-800 rounded-3xl backdrop-blur-md glass-card flex flex-col gap-4 overflow-hidden" data-category="wordpress">
-                        <div class="aspect-video w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-indigo-900 to-purple-950 relative border border-gray-900 flex items-center justify-center">
-                            <i data-lucide="layout" class="w-16 h-16 text-indigo-500/20 group-hover:scale-110 transition-transform duration-500"></i>
-                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60"></div>
-                            <span class="absolute bottom-4 left-4 px-3 py-1 bg-purple-500/20 text-purple-400 text-[10px] font-bold tracking-widest uppercase rounded-full">WordPress</span>
-                        </div>
-                        
-                        <div>
-                            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">WordPress Business Websites</h4>
-                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
-                                Designed and developed premium customized WordPress sites for regional companies, maximizing load speeds, configuring search indexing, and launching layouts.
-                            </p>
-                            <div class="flex flex-wrap gap-2 text-[10px] font-semibold">
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">WordPress API</span>
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Elementor Pro</span>
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Custom CSS</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-card group relative p-6 bg-gray-950/70 border border-gray-800 rounded-3xl backdrop-blur-md glass-card flex flex-col gap-4 overflow-hidden" data-category="marketing">
-                        <div class="aspect-video w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-purple-900 to-pink-950 relative border border-gray-900 flex items-center justify-center">
-                            <i data-lucide="trending-up" class="w-16 h-16 text-purple-500/20 group-hover:scale-110 transition-transform duration-500"></i>
-                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60"></div>
-                            <span class="absolute bottom-4 left-4 px-3 py-1 bg-pink-500/20 text-pink-400 text-[10px] font-bold tracking-widest uppercase rounded-full">Marketing</span>
-                        </div>
-                        
-                        <div>
-                            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">Meta Ads Campaign Management</h4>
-                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
-                                Handled budget setup and pixel tracking for active Meta/Facebook ads campaigns. Managed visual content layout to capture prospective customer leads.
-                            </p>
-                            <div class="flex flex-wrap gap-2 text-[10px] font-semibold">
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Meta Ads Manager</span>
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Pixel Tracking</span>
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Copywriting</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 4 -->
-                    <div class="project-card group relative p-6 bg-gray-950/70 border border-gray-800 rounded-3xl backdrop-blur-md glass-card flex flex-col gap-4 overflow-hidden" data-category="marketing">
-                        <div class="aspect-video w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-pink-900 to-red-950 relative border border-gray-900 flex items-center justify-center">
-                            <i data-lucide="instagram" class="w-16 h-16 text-pink-500/20 group-hover:scale-110 transition-transform duration-500"></i>
-                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60"></div>
-                            <span class="absolute bottom-4 left-4 px-3 py-1 bg-pink-500/20 text-pink-400 text-[10px] font-bold tracking-widest uppercase rounded-full">SMM</span>
-                        </div>
-                        
-                        <div>
-                            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">Social Media Management Projects</h4>
-                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
-                                Configured organic posting flows, designed grids, coordinated layout formats, and grew brand engagement for various commerce services.
-                            </p>
-                            <div class="flex flex-wrap gap-2 text-[10px] font-semibold">
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Instagram Insights</span>
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Canva Graphics</span>
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">SEO Copy</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 5 -->
-                    <div class="project-card group relative p-6 bg-gray-950/70 border border-gray-800 rounded-3xl backdrop-blur-md glass-card flex flex-col gap-4 overflow-hidden" data-category="wordpress">
-                        <div class="aspect-video w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-blue-900 to-purple-950 relative border border-gray-900 flex items-center justify-center">
-                            <i data-lucide="globe" class="w-16 h-16 text-blue-500/20 group-hover:scale-110 transition-transform duration-500"></i>
-                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60"></div>
-                            <span class="absolute bottom-4 left-4 px-3 py-1 bg-indigo-500/20 text-indigo-400 text-[10px] font-bold tracking-widest uppercase rounded-full">Freelance</span>
-                        </div>
-                        
-                        <div>
-                            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">Freelance Website Projects</h4>
-                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
-                                Handled direct-client requirements to deliver portfolio websites, eCommerce storefronts, and responsive landing pages utilizing WordPress and customized PHP.
-                            </p>
-                            <div class="flex flex-wrap gap-2 text-[10px] font-semibold">
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">WordPress CMS</span>
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">WooCommerce</span>
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">PHP Custom</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 6 -->
-                    <div class="project-card group relative p-6 bg-gray-950/70 border border-gray-800 rounded-3xl backdrop-blur-md glass-card flex flex-col gap-4 overflow-hidden" data-category="design">
-                        <div class="aspect-video w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-purple-900 to-pink-950 relative border border-gray-900 flex items-center justify-center">
-                            <i data-lucide="palette" class="w-16 h-16 text-pink-500/20 group-hover:scale-110 transition-transform duration-500"></i>
-                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60"></div>
-                            <span class="absolute bottom-4 left-4 px-3 py-1 bg-pink-500/20 text-pink-400 text-[10px] font-bold tracking-widest uppercase rounded-full">Design</span>
-                        </div>
-                        
-                        <div>
-                            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">Logo & Banner Graphic Designs</h4>
-                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
-                                Crafted corporate and freelance brand identities. Developed vector-based logos and promotional social media banner ads utilizing premium styles in Canva.
-                            </p>
-                            <div class="flex flex-wrap gap-2 text-[10px] font-semibold">
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Canva Pro</span>
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Vector Logo</span>
-                                <span class="px-2.5 py-1 bg-gray-900 text-gray-400 rounded-lg border border-gray-800">Typography</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. SERVICES SECTION -->
-        <section id="services" class="py-24 relative overflow-hidden">
-            <div class="absolute top-[10%] left-[-5%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
-
-            <div class="container mx-auto px-6">
-                <!-- Section Title -->
-                <div class="max-w-3xl mx-auto text-center mb-16">
-                    <h2 class="text-xs uppercase tracking-widest font-semibold text-blue-400 mb-2">What I Offer</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold font-display text-white">Professional Services</h3>
-                    <div class="h-1 w-12 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
-                </div>
-
-                <!-- Services Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
+                <div class="services-grid">
                     <!-- Service 1 -->
-                    <div class="p-8 bg-gray-950/60 border border-gray-800 hover:border-blue-500/50 rounded-3xl transition-all duration-300 glass-card flex flex-col gap-4 group">
-                        <div class="p-4 bg-blue-500/10 text-blue-400 rounded-2xl w-fit group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
-                            <i data-lucide="code" class="w-6 h-6"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-white font-display">Website Development</h4>
-                        <p class="text-sm text-gray-400 leading-relaxed">
-                            Developing robust, fast-loading, dynamic websites from scratch using backend PHP Laravel and relational databases. Built with modular code for easy maintenance.
+                    <div class="glass-card service-card reveal-element">
+                        <div class="service-icon"><i data-lucide="code"></i></div>
+                        <h4 class="service-title">Website Development</h4>
+                        <p class="service-desc">
+                            Developing robust, fast-loading, dynamic websites from scratch using backend PHP Laravel and
+                            relational databases. Built with modular code for easy maintenance.
                         </p>
                     </div>
 
                     <!-- Service 2 -->
-                    <div class="p-8 bg-gray-950/60 border border-gray-800 hover:border-indigo-500/50 rounded-3xl transition-all duration-300 glass-card flex flex-col gap-4 group">
-                        <div class="p-4 bg-indigo-500/10 text-indigo-400 rounded-2xl w-fit group-hover:bg-indigo-500 group-hover:text-white transition-colors duration-300">
-                            <i data-lucide="wordpress" class="w-6 h-6"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-white font-display">WordPress Website Design</h4>
-                        <p class="text-sm text-gray-400 leading-relaxed">
-                            Crafting bespoke WordPress websites, custom child theme setups, WooCommerce integration, and performance plugins to align with business requirements.
+                    <div class="glass-card service-card reveal-element" style="animation-delay: 0.05s;">
+                        <div class="service-icon"><i data-lucide="layout"></i></div>
+                        <h4 class="service-title">WordPress Development</h4>
+                        <p class="service-desc">
+                            Crafting bespoke WordPress websites, custom child theme setups, WooCommerce integration, and
+                            performance plugins to align with business requirements.
                         </p>
                     </div>
 
                     <!-- Service 3 -->
-                    <div class="p-8 bg-gray-950/60 border border-gray-800 hover:border-purple-500/50 rounded-3xl transition-all duration-300 glass-card flex flex-col gap-4 group">
-                        <div class="p-4 bg-purple-500/10 text-purple-400 rounded-2xl w-fit group-hover:bg-purple-500 group-hover:text-white transition-colors duration-300">
-                            <i data-lucide="refresh-cw" class="w-6 h-6"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-white font-display">Website Redesign</h4>
-                        <p class="text-sm text-gray-400 leading-relaxed">
-                            Transforming outdated layouts into premium responsive interfaces. Optimizing accessibility and performance to elevate conversion and search index rankings.
+                    <div class="glass-card service-card reveal-element" style="animation-delay: 0.1s;">
+                        <div class="service-icon"><i data-lucide="refresh-cw"></i></div>
+                        <h4 class="service-title">Website Redesign</h4>
+                        <p class="service-desc">
+                            Transforming outdated layouts into premium responsive interfaces. Optimizing accessibility
+                            and performance to elevate conversion and search index rankings.
                         </p>
                     </div>
 
                     <!-- Service 4 -->
-                    <div class="p-8 bg-gray-950/60 border border-gray-800 hover:border-pink-500/50 rounded-3xl transition-all duration-300 glass-card flex flex-col gap-4 group">
-                        <div class="p-4 bg-pink-500/10 text-pink-400 rounded-2xl w-fit group-hover:bg-pink-500 group-hover:text-white transition-colors duration-300">
-                            <i data-lucide="target" class="w-6 h-6"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-white font-display">Landing Page Development</h4>
-                        <p class="text-sm text-gray-400 leading-relaxed">
-                            Coding specific high-performance landing pages designed to maximize advertising leads. Focused on UX, clear call-to-actions, and fast mobile rendering.
+                    <div class="glass-card service-card reveal-element" style="animation-delay: 0.15s;">
+                        <div class="service-icon"><i data-lucide="smartphone"></i></div>
+                        <h4 class="service-title">Landing Page Design</h4>
+                        <p class="service-desc">
+                            Coding specific high-performance landing pages designed to maximize advertising leads.
+                            Focused on UX, clear call-to-actions, and fast mobile rendering.
                         </p>
                     </div>
 
                     <!-- Service 5 -->
-                    <div class="p-8 bg-gray-950/60 border border-gray-800 hover:border-red-500/50 rounded-3xl transition-all duration-300 glass-card flex flex-col gap-4 group">
-                        <div class="p-4 bg-red-500/10 text-red-400 rounded-2xl w-fit group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">
-                            <i data-lucide="trending-up" class="w-6 h-6"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-white font-display">Meta Ads Management</h4>
-                        <p class="text-sm text-gray-400 leading-relaxed">
-                            Planning and structuring targeted Instagram/Facebook marketing funnels, pixel triggers, customer demographics, and ad analytical metrics to drive sales.
+                    <div class="glass-card service-card reveal-element" style="animation-delay: 0.2s;">
+                        <div class="service-icon"><i data-lucide="target"></i></div>
+                        <h4 class="service-title">Meta Ads Management</h4>
+                        <p class="service-desc">
+                            Planning and structuring targeted Instagram/Facebook marketing funnels, pixel triggers,
+                            customer demographics, and ad analytical metrics to drive sales.
                         </p>
                     </div>
 
                     <!-- Service 6 -->
-                    <div class="p-8 bg-gray-950/60 border border-gray-800 hover:border-emerald-500/50 rounded-3xl transition-all duration-300 glass-card flex flex-col gap-4 group">
-                        <div class="p-4 bg-emerald-500/10 text-emerald-400 rounded-2xl w-fit group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300">
-                            <i data-lucide="palette" class="w-6 h-6"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-white font-display">Logo & Banner Design</h4>
-                        <p class="text-sm text-gray-400 leading-relaxed">
-                            Creating modern vectors, brand kits, business cards, flyers, and social content posts via Canva to build a coherent visual identity.
+                    <div class="glass-card service-card reveal-element" style="animation-delay: 0.25s;">
+                        <div class="service-icon"><i data-lucide="megaphone"></i></div>
+                        <h4 class="service-title">Social Media Management</h4>
+                        <p class="service-desc">
+                            Coordinating organic brand social grids, scheduling publication flows, designing graphics on
+                            Canva, and analyzing audience engagement parameters.
+                        </p>
+                    </div>
+
+                    <!-- Service 7 -->
+                    <div class="glass-card service-card reveal-element" style="animation-delay: 0.3s;">
+                        <div class="service-icon"><i data-lucide="shield-check"></i></div>
+                        <h4 class="service-title">Website Maintenance</h4>
+                        <p class="service-desc">
+                            Resolving regular software updates, layout configuration fixes, performance checks, backups
+                            administration, and technical support requests.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 9. CONTACT SECTION -->
-        <section id="contact" class="py-24 bg-gray-950/20 border-t border-gray-900 relative z-20">
-            <div class="absolute bottom-0 right-[5%] w-[400px] h-[400px] bg-indigo-500/5 rounded-full blur-[120px] pointer-events-none"></div>
-
-            <div class="container mx-auto px-6">
-                <!-- Section Title -->
-                <div class="max-w-3xl mx-auto text-center mb-16">
-                    <h2 class="text-xs uppercase tracking-widest font-semibold text-blue-400 mb-2">Get In Touch</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold font-display text-white">Let's Connect</h3>
-                    <div class="h-1 w-12 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+        <!-- 6. PORTFOLIO SECTION -->
+        <section id="portfolio" style="background-color: var(--bg-secondary); transition: background-color 0.4s ease;">
+            <div class="container">
+                <div style="text-align: center; max-width: 600px; margin: 0 auto 2.5rem auto;" class="reveal-element">
+                    <span class="section-tag">Showcase</span>
+                    <h3 class="section-title">Featured Projects</h3>
+                    <p class="section-desc" style="margin-bottom: 0;">
+                        Explore a collection of websites, landing layouts, and marketing campaigns designed for brand
+                        scaling.
+                    </p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
-                    <!-- Contact Cards (Left) -->
-                    <div class="lg:col-span-5 flex flex-col gap-6">
-                        <h4 class="text-xl font-bold text-white font-display mb-2">Contact Details</h4>
-                        
-                        <!-- Card 1 -->
-                        <div class="flex items-center gap-4 p-5 bg-gray-950/70 border border-gray-800 rounded-2xl glass-card">
-                            <div class="p-3 bg-blue-500/10 text-blue-400 rounded-xl">
-                                <i data-lucide="phone" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs text-gray-500 font-semibold uppercase">Call / WhatsApp</p>
-                                <a href="tel:+917758940589" class="text-white font-bold hover:text-blue-400 transition-colors text-sm">+91 77589 40589</a>
+                <!-- Filters -->
+                <div class="portfolio-filters reveal-element" id="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="development">Development</button>
+                    <button class="filter-btn" data-filter="wordpress">WordPress</button>
+                    <button class="filter-btn" data-filter="marketing">Marketing</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                </div>
+
+                <!-- Grid -->
+                <div class="portfolio-grid" id="portfolio-grid">
+
+                    <!-- Card 1 -->
+                    <div class="glass-card portfolio-card reveal-element" data-category="development">
+                        <div class="portfolio-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
+                                alt="VEA Impex Website Redesign">
+                            <div class="portfolio-overlay">
+                                <i data-lucide="external-link"></i>
                             </div>
                         </div>
-
-                        <!-- Card 2 -->
-                        <div class="flex items-center gap-4 p-5 bg-gray-950/70 border border-gray-800 rounded-2xl glass-card">
-                            <div class="p-3 bg-purple-500/10 text-purple-400 rounded-xl">
-                                <i data-lucide="mail" class="w-5 h-5"></i>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Development</span>
+                            <h4 class="portfolio-card-title">VEA Impex Redesign</h4>
+                            <p class="portfolio-card-desc">
+                                Redesigned a responsive catalog export website. Rewrote UI templates for mobile
+                                optimization and integrated relational databases.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">PHP Laravel</span>
+                                <span class="portfolio-tag">MySQL</span>
+                                <span class="portfolio-tag">CSS Grid</span>
                             </div>
-                            <div>
-                                <p class="text-xs text-gray-500 font-semibold uppercase">Send an Email</p>
-                                <a href="mailto:zalamansi025@gmail.com" class="text-white font-bold hover:text-purple-400 transition-colors text-sm">zalamansi025@gmail.com</a>
-                            </div>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div class="flex items-center gap-4 p-5 bg-gray-950/70 border border-gray-800 rounded-2xl glass-card">
-                            <div class="p-3 bg-pink-500/10 text-pink-400 rounded-xl">
-                                <i data-lucide="linkedin" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs text-gray-500 font-semibold uppercase">LinkedIn Profile</p>
-                                <a href="https://www.linkedin.com/in/mansizala2509" target="_blank" rel="noopener noreferrer" class="text-white font-bold hover:text-pink-400 transition-colors text-sm">linkedin.com/in/mansizala2509</a>
-                            </div>
-                        </div>
-
-                        <!-- Card 4 (Locations) -->
-                        <div class="flex items-center gap-4 p-5 bg-gray-950/70 border border-gray-800 rounded-2xl glass-card">
-                            <div class="p-3 bg-indigo-500/10 text-indigo-400 rounded-xl">
-                                <i data-lucide="map-pin" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs text-gray-500 font-semibold uppercase">Operating Locations</p>
-                                <span class="text-white text-sm font-bold">Mumbai (MH) & Vadodara (GJ), India</span>
+                            <div class="portfolio-links">
+                                <a href="#contact" class="btn btn-secondary"><i data-lucide="info"
+                                        style="width: 14px; height: 14px;"></i> Details</a>
+                                <a href="https://veaimpex.com" target="_blank" rel="noopener" class="btn btn-primary"><i
+                                        data-lucide="eye" style="width: 14px; height: 14px;"></i> Demo</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Contact Form (Right) -->
-                    <div class="lg:col-span-7 p-8 bg-gray-950/70 border border-gray-800 rounded-3xl glass-card backdrop-blur-md">
-                        <h4 class="text-xl font-bold text-white font-display mb-6">Drop a Message</h4>
-                        <form id="contact-form" class="flex flex-col gap-6">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div class="flex flex-col gap-2">
-                                    <label for="name" class="text-xs text-gray-400 font-semibold uppercase">Full Name</label>
-                                    <input type="text" id="name" name="name" required class="px-4 py-3 bg-gray-900/60 border border-gray-800 focus:border-blue-500/80 rounded-xl text-white outline-none transition-colors text-sm">
+                    <!-- Card 2 -->
+                    <div class="glass-card portfolio-card reveal-element" data-category="wordpress"
+                        style="animation-delay: 0.1s;">
+                        <div class="portfolio-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=600&q=80"
+                                alt="WordPress Business Websites">
+                            <div class="portfolio-overlay">
+                                <i data-lucide="external-link"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">WordPress</span>
+                            <h4 class="portfolio-card-title">WP Corporate Portals</h4>
+                            <p class="portfolio-card-desc">
+                                Developed customized Elementor-based setups for companies, featuring layout styling,
+                                custom API widgets, and page load optimization.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">WordPress API</span>
+                                <span class="portfolio-tag">Elementor Pro</span>
+                                <span class="portfolio-tag">Custom CSS</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#contact" class="btn btn-secondary"><i data-lucide="info"
+                                        style="width: 14px; height: 14px;"></i> Details</a>
+                                <a href="https://seeritsolutions.com" target="_blank" rel="noopener"
+                                    class="btn btn-primary"><i data-lucide="eye" style="width: 14px; height: 14px;"></i>
+                                    Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="glass-card portfolio-card reveal-element" data-category="marketing"
+                        style="animation-delay: 0.2s;">
+                        <div class="portfolio-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80"
+                                alt="Meta Ads Campaigns">
+                            <div class="portfolio-overlay">
+                                <i data-lucide="external-link"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Marketing</span>
+                            <h4 class="portfolio-card-title">Meta Ads Campaigns</h4>
+                            <p class="portfolio-card-desc">
+                                Managed business marketing lead captures. Handled conversion pixel setups, target
+                                scaling parameters, and visual copywriting assets.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Meta Ads Manager</span>
+                                <span class="portfolio-tag">Pixel Setup</span>
+                                <span class="portfolio-tag">Funnels</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#contact" class="btn btn-secondary"><i data-lucide="info"
+                                        style="width: 14px; height: 14px;"></i> Details</a>
+                                <a href="https://facebook.com/ads/library" target="_blank" rel="noopener"
+                                    class="btn btn-primary"><i data-lucide="eye" style="width: 14px; height: 14px;"></i>
+                                    Ads Library</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="glass-card portfolio-card reveal-element" data-category="wordpress"
+                        style="animation-delay: 0.3s;">
+                        <div class="portfolio-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=600&q=80"
+                                alt="Freelance WooCommerce Stores">
+                            <div class="portfolio-overlay">
+                                <i data-lucide="external-link"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">WordPress / Freelance</span>
+                            <h4 class="portfolio-card-title">E-Commerce Stores</h4>
+                            <p class="portfolio-card-desc">
+                                Set up WooCommerce business portals featuring payment gateways, customizable grids,
+                                discount parameters, and client dashboards.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">WooCommerce</span>
+                                <span class="portfolio-tag">PayPal/Razorpay</span>
+                                <span class="portfolio-tag">SEO Pack</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#contact" class="btn btn-secondary"><i data-lucide="info"
+                                        style="width: 14px; height: 14px;"></i> Details</a>
+                                <a href="#contact" class="btn btn-primary"><i data-lucide="eye"
+                                        style="width: 14px; height: 14px;"></i> Inquiry</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="glass-card portfolio-card reveal-element" data-category="design"
+                        style="animation-delay: 0.4s;">
+                        <div class="portfolio-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80"
+                                alt="Logo & Graphic Branding Designs">
+                            <div class="portfolio-overlay">
+                                <i data-lucide="external-link"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Design</span>
+                            <h4 class="portfolio-card-title">Logo &amp; Brand Guidelines</h4>
+                            <p class="portfolio-card-desc">
+                                Designed modern client identity assets, typographical brochures, social banner cards,
+                                and graphic materials utilizing Canva.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Canva Pro</span>
+                                <span class="portfolio-tag">Branding Kit</span>
+                                <span class="portfolio-tag">Vector Styles</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#contact" class="btn btn-secondary"><i data-lucide="info"
+                                        style="width: 14px; height: 14px;"></i> Details</a>
+                                <a href="#contact" class="btn btn-primary"><i data-lucide="eye"
+                                        style="width: 14px; height: 14px;"></i> View Kit</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="glass-card portfolio-card reveal-element" data-category="marketing"
+                        style="animation-delay: 0.5s;">
+                        <div class="portfolio-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80"
+                                alt="Social Media Management">
+                            <div class="portfolio-overlay">
+                                <i data-lucide="external-link"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">Marketing</span>
+                            <h4 class="portfolio-card-title">Social Media Management</h4>
+                            <p class="portfolio-card-desc">
+                                Organized visual posting calendars, coordinated content schedules, designed templates,
+                                and tracked branding organic reach.
+                            </p>
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Instagram insights</span>
+                                <span class="portfolio-tag">SMM Calendar</span>
+                                <span class="portfolio-tag">Analytics</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#contact" class="btn btn-secondary"><i data-lucide="info"
+                                        style="width: 14px; height: 14px;"></i> Details</a>
+                                <a href="#contact" class="btn btn-primary"><i data-lucide="eye"
+                                        style="width: 14px; height: 14px;"></i> View Reels</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CONTACT SECTION -->
+        <section id="contact" style="background-color: var(--bg-secondary); transition: background-color 0.4s ease;">
+            <div class="container">
+                <div style="text-align: center; max-width: 600px; margin: 0 auto 3rem auto;" class="reveal-element">
+                    <span class="section-tag">Connection</span>
+                    <h3 class="section-title">Let's Work Together</h3>
+                    <p class="section-desc" style="margin-bottom: 0;">
+                        Got an upcoming project, redesign request, or advertising campaign inquiry? Get in touch today.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Cards (Left) -->
+                    <div class="contact-info reveal-element">
+                        <h4 class="contact-info-title">Contact Channels</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                            Feel free to contact me directly via phone, WhatsApp, email, or LinkedIn. I usually respond
+                            within 12 hours.
+                        </p>
+
+                        <div class="contact-cards">
+                            <!-- Call/WhatsApp Card -->
+                            <a href="https://wa.me/917758940589" target="_blank" rel="noopener"
+                                class="glass-card contact-item-card">
+                                <div class="contact-icon"><i data-lucide="phone"></i></div>
+                                <div>
+                                    <p class="contact-item-label">WhatsApp / Call</p>
+                                    <p class="contact-item-value">+91 77589 40589</p>
                                 </div>
-                                <div class="flex flex-col gap-2">
-                                    <label for="email" class="text-xs text-gray-400 font-semibold uppercase">Email Address</label>
-                                    <input type="email" id="email" name="email" required class="px-4 py-3 bg-gray-900/60 border border-gray-800 focus:border-blue-500/80 rounded-xl text-white outline-none transition-colors text-sm">
+                            </a>
+
+                            <!-- Email Card -->
+                            <a href="mailto:zalamansi025@gmail.com" class="glass-card contact-item-card">
+                                <div class="contact-icon"><i data-lucide="mail"></i></div>
+                                <div>
+                                    <p class="contact-item-label">Send Email</p>
+                                    <p class="contact-item-value">zalamansi025@gmail.com</p>
+                                </div>
+                            </a>
+
+                            <!-- LinkedIn Card -->
+                            <a href="https://www.linkedin.com/in/mansizala2509" target="_blank" rel="noopener"
+                                class="glass-card contact-item-card">
+                                <div class="contact-icon"><i data-lucide="linkedin"></i></div>
+                                <div>
+                                    <p class="contact-item-label">LinkedIn Profile</p>
+                                    <p class="contact-item-value">linkedin.com/in/mansizala2509</p>
+                                </div>
+                            </a>
+
+                            <!-- Location Card -->
+                            <div class="glass-card contact-item-card">
+                                <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                                <div>
+                                    <p class="contact-item-label">Based In</p>
+                                    <p class="contact-item-value">Gujarat / Mumbai, India</p>
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-2">
-                                <label for="subject" class="text-xs text-gray-400 font-semibold uppercase">Subject</label>
-                                <input type="text" id="subject" name="subject" required class="px-4 py-3 bg-gray-900/60 border border-gray-800 focus:border-blue-500/80 rounded-xl text-white outline-none transition-colors text-sm">
+                        </div>
+                    </div>
+
+                    <!-- Form (Right) -->
+                    <div class="glass-card contact-form-wrapper reveal-element" style="animation-delay: 0.2s;">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1.5rem;">Drop Me a Message</h4>
+
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">Full Name</label>
+                                    <input type="text" id="form-name" placeholder="John Doe" required
+                                        class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email">Email Address</label>
+                                    <input type="email" id="form-email" placeholder="john@example.com" required
+                                        class="form-input">
+                                </div>
                             </div>
-                            <div class="flex flex-col gap-2">
-                                <label for="message" class="text-xs text-gray-400 font-semibold uppercase">Your Message</label>
-                                <textarea id="message" name="message" rows="4" required class="px-4 py-3 bg-gray-900/60 border border-gray-800 focus:border-blue-500/80 rounded-xl text-white outline-none transition-colors text-sm resize-none"></textarea>
+                            <div class="form-group">
+                                <label for="form-subject">Subject</label>
+                                <input type="text" id="form-subject" placeholder="WordPress custom redesign query"
+                                    required class="form-input">
                             </div>
-                            
-                            <button type="submit" class="w-full py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] text-white font-semibold rounded-xl transition-all text-sm flex items-center justify-center gap-2">
-                                <i data-lucide="send" class="w-4 h-4"></i> Send Message
+                            <div class="form-group">
+                                <label for="form-message">Your Message</label>
+                                <textarea id="form-message" rows="5"
+                                    placeholder="Describe your web design project or lead campaigns goals..." required
+                                    class="form-input"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i data-lucide="send" style="width: 16px; height: 16px;"></i> Send Message
                             </button>
-                            <p id="form-status" class="text-xs text-center font-semibold mt-2 hidden"></p>
+
+                            <p class="form-status" id="form-status"></p>
                         </form>
                     </div>
                 </div>
@@ -970,44 +883,54 @@
 
     </main>
 
-    <!-- 10. FOOTER -->
-    <footer class="py-12 border-t border-gray-900 bg-gray-950/40 relative z-20">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-2">
-                <span class="text-xl font-bold font-display text-white tracking-wider">MZ</span>
-                <span class="text-xs text-gray-500">© 2026 Mansi Zala. All rights reserved.</span>
-            </div>
-            
-            <!-- Quick links -->
-            <ul class="flex flex-wrap items-center justify-center gap-6 text-xs text-gray-500 font-medium">
-                <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
-                <li><a href="#skills" class="hover:text-white transition-colors">Skills</a></li>
-                <li><a href="#experience" class="hover:text-white transition-colors">Experience</a></li>
-                <li><a href="#projects" class="hover:text-white transition-colors">Projects</a></li>
-                <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
-            </ul>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div style="text-align: center;">
+                    <a href="#hero" class="logo" style="justify-content: center; margin-bottom: 0.5rem;">mansizala</a>
+                    <p class="footer-copy">&copy; 2026 Mansi Zala. All rights reserved.</p>
+                </div>
 
-            <!-- Social Links -->
-            <div class="flex items-center gap-4">
-                <a href="https://www.linkedin.com/in/mansizala2509" target="_blank" rel="noopener noreferrer" class="p-2 bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border border-gray-800 rounded-full transition-all" aria-label="LinkedIn">
-                    <i data-lucide="linkedin" class="w-4 h-4"></i>
-                </a>
-                <a href="mailto:zalamansi025@gmail.com" class="p-2 bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border border-gray-800 rounded-full transition-all" aria-label="Email">
-                    <i data-lucide="mail" class="w-4 h-4"></i>
-                </a>
-                <a href="tel:+917758940589" class="p-2 bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border border-gray-800 rounded-full transition-all" aria-label="Phone">
-                    <i data-lucide="phone" class="w-4 h-4"></i>
-                </a>
+                <!-- Quick links -->
+                <ul class="footer-nav">
+                    <li><a href="#about" class="footer-nav-link">About</a></li>
+                    <li><a href="#skills" class="footer-nav-link">skills</a></li>
+                    <li><a href="#services" class="footer-nav-link">services</a></li>
+                    <li><a href="#portfolio" class="footer-nav-link">projects</a></li>
+                    <li><a href="#contact" class="footer-nav-link">lets talk</a></li>
+                </ul>
+
+                <!-- Socials -->
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/mansizala2509" target="_blank" rel="noopener"
+                        class="footer-social-btn" aria-label="LinkedIn">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="mailto:zalamansi025@gmail.com" class="footer-social-btn" aria-label="Email">
+                        <i data-lucide="mail"></i>
+                    </a>
+                    <a href="https://wa.me/917758940589" target="_blank" rel="noopener" class="footer-social-btn"
+                        aria-label="WhatsApp">
+                        <i data-lucide="phone"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top">
+        <i data-lucide="arrow-up"></i>
+    </button>
 
     <!-- CDN Script Loads (GSAP + ScrollTrigger + Lucide Icons) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Custom logic script -->
     <script src="script.js"></script>
 </body>
+
 </html>
