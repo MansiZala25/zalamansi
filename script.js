@@ -311,7 +311,7 @@ function initCircularOrbit() {
     const center = document.querySelector(".center-hub");
     if (orbitCards.length === 0 || !center) return;
 
-    const radius = 240; // Orbital circle radius
+    let radius = window.innerWidth < 768 ? (window.innerWidth < 480 ? 110 : 155) : 240;
     const total = orbitCards.length;
 
     let baseAngle = 0;
@@ -324,6 +324,10 @@ function initCircularOrbit() {
             card.style.transform = `translate(${x}px, ${y}px)`;
         });
     }
+
+    window.addEventListener("resize", () => {
+        radius = window.innerWidth < 768 ? (window.innerWidth < 480 ? 110 : 155) : 240;
+    });
 
     // Continuously rotate orbital cards slowly
     function rotateOrbit() {

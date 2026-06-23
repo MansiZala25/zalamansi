@@ -1461,3 +1461,112 @@ textarea.connect-field {
     margin-top: 1rem;
     padding: 0.8rem 2rem;
 }
+
+/* ==========================================================================
+   RESPONSIVENESS & MOBILE OPTIMIZATIONS OVERRIDES
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Hero Blob Image Scale */
+    .organic-blob-card {
+        width: 260px;
+        height: 260px;
+        max-width: 100%;
+    }
+    
+    .hero-blob-wrapper {
+        height: auto;
+        min-height: 380px;
+    }
+
+    .floating-asset {
+        padding: 0.6rem 1rem;
+        font-size: 0.72rem;
+    }
+    
+    .asset-1 { left: -5%; }
+    .asset-2 { right: -5%; }
+    
+    /* Tagline Wrap */
+    .hero-status-wrapper {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    /* About Stats stack */
+    .story-stats-row {
+        flex-direction: column;
+        gap: 1.25rem !important;
+    }
+
+    /* Services Circular Orbit Scaling */
+    .services-circular-wrapper {
+        height: 420px;
+        margin-top: 2rem;
+    }
+    
+    .center-hub {
+        width: 110px;
+        height: 110px;
+        font-size: 0.85rem;
+        border-width: 3px;
+    }
+    
+    .center-hub span {
+        font-size: 0.55rem;
+        margin-top: 0.1rem;
+    }
+
+    .orbiting-service-card {
+        width: 120px;
+        padding: 0.75rem;
+        border-radius: 12px;
+    }
+
+    .orbit-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .orbit-title {
+        font-size: 0.72rem;
+        line-height: 1.2;
+    }
+
+    /* Skills panel mobile adjustments */
+    .skill-pane {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .pane-title {
+        font-size: 1.45rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further scaling for small mobile screens */
+    .organic-blob-card {
+        width: 210px;
+        height: 210px;
+    }
+    
+    .floating-asset {
+        display: none; /* Hide floating icons to avoid overlapping text on tiny devices */
+    }
+
+    .skills-heading {
+        font-size: 2.25rem;
+    }
+    
+    .pane-title {
+        font-size: 1.25rem;
+    }
+    
+    .skill-category-tab {
+        padding: 1rem;
+        font-size: 0.85rem;
+        border-radius: 12px;
+    }
+}
