@@ -499,14 +499,27 @@ function initMagneticCards() {
 
 function initCursorGlow() {
     const glow = document.getElementById("cursor-glow");
-    if (!glow) return;
+    const devCursor = document.getElementById("dev-cursor");
+    const cursorSym = devCursor ? devCursor.querySelector(".cursor-sym") : null;
+
+    if (!glow && !devCursor) return;
 
     document.addEventListener("mousemove", (e) => {
-        gsap.to(glow, {
-            x: e.clientX,
-            y: e.clientY,
-            duration: 0.15
-        });
+        if (glow) {
+            gsap.to(glow, {
+                x: e.clientX,
+                y: e.clientY,
+                duration: 0.15
+            });
+        }
+
+        if (devCursor) {
+            gsap.to(devCursor, {
+                x: e.clientX,
+                y: e.clientY,
+                duration: 0.08
+            });
+        }
 
         // Set card hover lighting coordinates mapping variables
         const cards = document.querySelectorAll(".glass-card");
@@ -516,6 +529,23 @@ function initCursorGlow() {
             const y = e.clientY - rect.top;
             card.style.setProperty('--mouse-x', `${x}px`);
             card.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
+
+    // Hover effect on links and buttons
+    const hoverables = document.querySelectorAll("a, button, .skill-category-tab, .glass-card, .center-hub, .orbiting-service-card");
+    hoverables.forEach(item => {
+        item.addEventListener("mouseenter", () => {
+            if (devCursor) {
+                devCursor.classList.add("cursor-hover");
+                if (cursorSym) cursorSym.textContent = "{ }";
+            }
+        });
+        item.addEventListener("mouseleave", () => {
+            if (devCursor) {
+                devCursor.classList.remove("cursor-hover");
+                if (cursorSym) cursorSym.textContent = "</>";
+            }
         });
     });
 }

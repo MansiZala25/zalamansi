@@ -207,9 +207,6 @@ h1, h2, h3, h4, h5, h6 {
     100% { transform: scaleX(0); transform-origin: right; }
 }
 
-/* ==========================================================================
-   CUSTOM CURSOR GLOW & INTERACTIVE HIGHLIGHTS
-   ========================================================================== */
 .cursor-glow {
     width: 300px;
     height: 300px;
@@ -221,9 +218,56 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
+.dev-cursor {
+    width: 34px;
+    height: 34px;
+    background: rgba(8, 31, 77, 0.05);
+    border: 2px solid var(--color-accent);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                height 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                background-color 0.3s ease, 
+                border-color 0.3s ease;
+}
+
+.cursor-sym {
+    font-family: monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.dev-cursor.cursor-hover {
+    width: 52px;
+    height: 52px;
+    background-color: rgba(29, 78, 216, 0.1);
+    border-color: var(--color-sky);
+}
+
+.dev-cursor.cursor-hover .cursor-sym {
+    color: var(--color-sky);
+    transform: scale(1.15);
+}
+
 @media (min-width: 1024px) {
     .cursor-glow {
         display: block;
+    }
+    .dev-cursor {
+        display: flex;
+    }
+    body, a, button, .skill-category-tab, .why-feature-block, .glass-card, .connect-field {
+        cursor: none !important;
     }
 }
 
