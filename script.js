@@ -534,8 +534,8 @@ function initThreeCursor() {
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.shadowBlur = 15;
-        ctx.shadowColor = 'rgba(56, 189, 248, 0.8)';
-        ctx.fillStyle = 'rgba(56, 189, 248, 0.95)';
+        ctx.shadowColor = 'rgba(30, 58, 138, 0.8)';
+        ctx.fillStyle = 'rgba(30, 58, 138, 0.95)';
         ctx.fillText(sym, 64, 64);
         return new THREE.CanvasTexture(c);
     });
