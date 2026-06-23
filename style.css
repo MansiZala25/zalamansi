@@ -321,20 +321,78 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Logo Dot Style */
+.logo-dot {
+    color: #EA580C;
+    margin-left: 2px;
+}
+
+/* Status Info Wrapper */
+.hero-status-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: #22C55E;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px #22C55E;
+}
+
+.status-pill {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: 0.72rem;
+    color: #EA580C;
+    background-color: rgba(234, 88, 12, 0.08);
+    border: 1px solid rgba(234, 88, 12, 0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+}
+
+.status-location {
+    color: var(--text-muted);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
 /* Left Hero Typography */
 .hero-huge-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.75rem;
-    line-height: 1.1;
+    line-height: 1.15;
     font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--color-primary);
     margin-bottom: 2rem;
 }
 
-.hero-huge-title .text-gradient {
-    font-family: 'EB Garamond', serif;
-    font-weight: 800;
+.hero-huge-title .title-solid {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.hero-huge-title .title-italic {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: #EA580C;
+    font-weight: 500;
+}
+
+.hero-huge-title .title-outline {
+    font-family: 'Cormorant Garamond', serif;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--color-primary);
+    font-weight: 400;
 }
 
 @media (min-width: 768px) {
