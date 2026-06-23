@@ -98,60 +98,127 @@ function initLenis() {
 /* ==========================================================================
    THREE.JS ANIMATED GRADIENT MESH BACKGROUND
    ========================================================================== */
+/* ==========================================================================
+   THREE.JS ANIMATED INTERACTIVE 3D CODE MATRIX NETWORK
+   ========================================================================== */
 function initThreeMesh() {
     const container = document.getElementById('mesh-canvas');
     if (!container || typeof THREE === "undefined") return;
 
-    let scene, camera, renderer, geometry, material, mesh;
-    let lights = [];
-    const clock = new THREE.Clock();
+    let scene, camera, renderer;
+    let particles = [];
+    let linesGeometry, linePositions, lineColors;
+    let lineMesh;
+    const maxParticles = 65;
+    const minDistance = 110;
+    
+    let mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
+
+    // Function to generate glowing code characters canvas textures
+    function createTextTexture(text) {
+        const canvas = document.createElement('canvas');
+        canvas.width = 64;
+        canvas.height = 64;
+        const ctx = canvas.getContext('2d');
+        
+        ctx.clearRect(0, 0, 64, 64);
+        ctx.font = 'bold 22px monospace';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        
+        ctx.shadowBlur = 12;
+        ctx.shadowColor = 'rgba(56, 189, 248, 0.9)';
+        ctx.fillStyle = 'rgba(56, 189, 248, 0.95)';
+        ctx.fillText(text, 32, 32);
+        
+        return new THREE.CanvasTexture(canvas);
+    }
+
+    const symbols = ['</>', '{ }', '[ ]', '1 0', '=>', 'git', '&&', '||', 'func', 'var'];
 
     function init() {
         scene = new THREE.Scene();
 
-        camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 1, 1000);
-        camera.position.z = 220;
+        camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 1, 1000);
+        camera.position.z = 250;
 
-        // Plane geometry with segments to create waves
-        geometry = new THREE.PlaneGeometry(600, 400, 24, 24);
-
-        // White material with high roughness to reflect light colors
-        material = new THREE.MeshLambertMaterial({
-            color: 0xffffff,
+        // Generate Materials for each symbol
+        const materials = symbols.map(sym => new THREE.MeshBasicMaterial({
+            map: createTextTexture(sym),
+            transparent: true,
             side: THREE.DoubleSide,
-            flatShading: true
+            blending: THREE.AdditiveBlending,
+            depthWrite: false
+        }));
+
+        const planeGeom = new THREE.PlaneGeometry(16, 16);
+
+        // Spawn particles (meshes)
+        const bounds = 250;
+        for (let i = 0; i < maxParticles; i++) {
+            const mat = materials[Math.floor(Math.random() * materials.length)];
+            const mesh = new THREE.Mesh(planeGeom, mat);
+            
+            mesh.position.set(
+                (Math.random() - 0.5) * bounds * 2,
+                (Math.random() - 0.5) * bounds * 2,
+                (Math.random() - 0.5) * bounds * 2
+            );
+
+            mesh.rotation.set(
+                Math.random() * Math.PI,
+                Math.random() * Math.PI,
+                0
+            );
+
+            // Downward and drifting float velocity
+            mesh.userData = {
+                velocity: new THREE.Vector3(
+                    (Math.random() - 0.5) * 0.2,
+                    -0.3 - Math.random() * 0.4,
+                    (Math.random() - 0.5) * 0.2
+                ),
+                rotSpeed: new THREE.Vector3(
+                    (Math.random() - 0.5) * 0.01,
+                    (Math.random() - 0.5) * 0.01,
+                    (Math.random() - 0.5) * 0.01
+                )
+            };
+
+            scene.add(mesh);
+            particles.push(mesh);
+        }
+
+        // Lines Geometry setup
+        linesGeometry = new THREE.BufferGeometry();
+        const maxConnections = maxParticles * maxParticles * 3;
+        linePositions = new Float32Array(maxConnections);
+        lineColors = new Float32Array(maxConnections);
+
+        linesGeometry.setAttribute('position', new THREE.BufferAttribute(linePositions, 3));
+        linesGeometry.setAttribute('color', new THREE.BufferAttribute(lineColors, 3));
+
+        const lineMaterial = new THREE.LineBasicMaterial({
+            vertexColors: true,
+            transparent: true,
+            blending: THREE.AdditiveBlending
         });
 
-        mesh = new THREE.Mesh(geometry, material);
-        mesh.rotation.x = -Math.PI / 3;
-        mesh.position.y = -50;
-        scene.add(mesh);
+        lineMesh = new THREE.LineSegments(linesGeometry, lineMaterial);
+        scene.add(lineMesh);
 
-        // Colorful lights rotating to form a liquid mesh gradient
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.45);
-        scene.add(ambientLight);
-
-        // Accent Blue
-        const blueLight = new THREE.PointLight(0x1D4ED8, 2.5, 500);
-        scene.add(blueLight);
-        lights.push({ obj: blueLight, angle: 0, speed: 0.8, radius: 150, height: 80 });
-
-        // Sky Blue
-        const skyLight = new THREE.PointLight(0x38BDF8, 2.0, 500);
-        scene.add(skyLight);
-        lights.push({ obj: skyLight, angle: Math.PI * 0.7, speed: 0.6, radius: 120, height: 60 });
-
-        // Deep Navy Light
-        const navyLight = new THREE.PointLight(0x081F4D, 3.0, 600);
-        scene.add(navyLight);
-        lights.push({ obj: navyLight, angle: Math.PI * 1.4, speed: 0.5, radius: 180, height: 100 });
-
-        renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         renderer.setSize(container.clientWidth, container.clientHeight);
         container.appendChild(renderer.domElement);
 
         window.addEventListener('resize', onWindowResize);
+        document.addEventListener('mousemove', onMouseMove);
+    }
+
+    function onMouseMove(e) {
+        mouse.targetX = (e.clientX / window.innerWidth - 0.5) * 60;
+        mouse.targetY = (e.clientY / window.innerHeight - 0.5) * 60;
     }
 
     function onWindowResize() {
@@ -163,27 +230,83 @@ function initThreeMesh() {
     function animate() {
         requestAnimationFrame(animate);
 
-        const elapsedTime = clock.getElapsedTime();
+        // Camera parallax movement
+        mouse.x += (mouse.targetX - mouse.x) * 0.05;
+        mouse.y += (mouse.targetY - mouse.y) * 0.05;
+        camera.position.x = mouse.x;
+        camera.position.y = -mouse.y;
+        camera.lookAt(scene.position);
 
-        // 1. Move Light orbits
-        lights.forEach(light => {
-            light.angle += light.speed * 0.01;
-            light.obj.position.x = Math.cos(light.angle) * light.radius;
-            light.obj.position.y = Math.sin(light.angle * 1.5) * light.height;
-            light.obj.position.z = Math.sin(light.angle) * 50 + 50;
+        let vertexIdx = 0;
+        let colorIdx = 0;
+        let numConnected = 0;
+
+        const bounds = 250;
+
+        // Move and rotate particles
+        particles.forEach(p => {
+            p.position.add(p.userData.velocity);
+            p.rotation.x += p.userData.rotSpeed.x;
+            p.rotation.y += p.userData.rotSpeed.y;
+
+            // Wrap vertical bounds
+            if (p.position.y < -bounds) {
+                p.position.y = bounds;
+                p.position.x = (Math.random() - 0.5) * bounds * 2;
+            }
+            if (p.position.x < -bounds) p.position.x = bounds;
+            if (p.position.x > bounds) p.position.x = -bounds;
         });
 
-        // 2. Animate vertices to create waves
-        const pos = geometry.attributes.position;
-        for (let i = 0; i < pos.count; i++) {
-            const x = pos.getX(i);
-            const y = pos.getY(i);
-            // mathematical noise
-            const z = Math.sin(x / 60 + elapsedTime * 0.8) * Math.cos(y / 60 + elapsedTime * 0.5) * 16;
-            pos.setZ(i, z);
+        // Draw dynamic network connections
+        for (let i = 0; i < maxParticles; i++) {
+            const p1 = particles[i];
+            const x1 = p1.position.x;
+            const y1 = p1.position.y;
+            const z1 = p1.position.z;
+
+            for (let j = i + 1; j < maxParticles; j++) {
+                const p2 = particles[j];
+                const x2 = p2.position.x;
+                const y2 = p2.position.y;
+                const z2 = p2.position.z;
+
+                const dx = x1 - x2;
+                const dy = y1 - y2;
+                const dz = z1 - z2;
+                const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+
+                if (dist < minDistance) {
+                    const alpha = (1.0 - (dist / minDistance)) * 0.22;
+
+                    linePositions[vertexIdx++] = x1;
+                    linePositions[vertexIdx++] = y1;
+                    linePositions[vertexIdx++] = z1;
+                    linePositions[vertexIdx++] = x2;
+                    linePositions[vertexIdx++] = y2;
+                    linePositions[vertexIdx++] = z2;
+
+                    // Mapped to blue/sky colors (29, 78, 216)
+                    const r = (29 / 255) * alpha;
+                    const g = (78 / 255) * alpha;
+                    const b = (216 / 255) * alpha;
+
+                    lineColors[colorIdx++] = r;
+                    lineColors[colorIdx++] = g;
+                    lineColors[colorIdx++] = b;
+
+                    lineColors[colorIdx++] = r;
+                    lineColors[colorIdx++] = g;
+                    lineColors[colorIdx++] = b;
+
+                    numConnected++;
+                }
+            }
         }
-        pos.needsUpdate = true;
-        geometry.computeVertexNormals();
+
+        lineMesh.geometry.setDrawRange(0, numConnected * 2);
+        lineMesh.geometry.attributes.position.needsUpdate = true;
+        lineMesh.geometry.attributes.color.needsUpdate = true;
 
         renderer.render(scene, camera);
     }
