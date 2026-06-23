@@ -1,343 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="lenis-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MansiVerse | Full Stack Developer & Digital Marketer Portfolio</title>
-
+    <title>Mansi Zala | Premium Developer & Digital Marketer Portfolio</title>
+    
     <!-- SEO Optimization -->
-    <meta name="description"
-        content="Welcome to MansiVerse, the professional portfolio of Mansi Zala - Full Stack Developer, WordPress Specialist & Digital Marketer. Crafting premium web solutions and growing brands digitally.">
-    <meta name="keywords"
-        content="Mansi Zala, MansiVerse, Full Stack Developer, WordPress Developer, Digital Marketing, Meta Ads, Social Media Marketing, Web Redesign, Mumbai, Vadodara">
+    <meta name="description" content="Official portfolio of Mansi Zala, a Full Stack Developer, WordPress Specialist & Digital Marketer. Building premium web systems that convert users and scale business brands digitally.">
+    <meta name="keywords" content="Mansi Zala, Full Stack Developer, WordPress Developer, Digital Marketing, Meta Ads, SMM, Web Redesign, Mumbai, Vadodara">
     <meta name="author" content="Mansi Zala">
-
+    
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="MansiVerse | Full Stack Developer & Digital Marketer">
-    <meta property="og:description"
-        content="Build premium, modern websites and scale brands digitally with Mansi Zala.">
+    <meta property="og:title" content="Mansi Zala | Premium Full Stack Developer & Marketer">
+    <meta property="og:description" content="Explore bespoke web systems and advertising campaign funnels designed for scaling business brands online.">
     <meta property="og:type" content="website">
 
-    <!-- AOS Library CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <!-- FontAwesome for Social Icons -->
+    <!-- FontAwesome Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Custom Style Sheet -->
+    
+    <!-- Main Style Sheet -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress-bar" id="scroll-progress"></div>
-
-    <!-- Custom Cursor -->
-    <div class="custom-cursor" id="custom-cursor"></div>
-    <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
-
-    <!-- Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-flex">
-            <a href="#home" class="nav-brand">Mansi<span>Zala</span></a>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#journey" class="nav-link">Journey</a></li>
-                <li><a href="#expertise" class="nav-link">Expertise</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#connect" class="nav-link">Connect</a></li>
-            </ul>
-            <div class="nav-cta">
-                <a href="#connect" class="btn btn-primary">Let's Build Together</a>
-            </div>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-nav" id="mobile-nav">
-        <a href="#home" class="mobile-nav-link">Home</a>
-        <a href="#journey" class="mobile-nav-link">Journey</a>
-        <a href="#expertise" class="mobile-nav-link">Expertise</a>
-        <a href="#services" class="mobile-nav-link">Services</a>
-        <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
-        <a href="#connect" class="mobile-nav-link">Connect</a>
-        <a href="#connect" class="btn btn-primary" style="margin-top: 1rem;">Let's Build Together</a>
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-logo">MANSIZALA</div>
     </div>
 
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Interactive Cursor Background Glow -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
     <!-- 1. HERO SECTION -->
-    <section id="home">
-        <!-- Three.js Canvas Container -->
-        <div class="particles-bg" id="particles-js"></div>
+    <section id="hero-split">
+        <!-- Animated WebGL Canvas Container -->
+        <div class="mesh-canvas-container" id="mesh-canvas"></div>
+        
         <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <div class="hero-badge-row" data-aos="fade-down" data-aos-duration="1000">
-                        <span class="hero-badge-main">
-                            <span class="hero-badge-dot"></span>
-                            FULL STACK DEVELOPER • DIGITAL MARKETER
-                        </span>
-                    </div>
-                    <h1 class="hero-heading" data-aos="fade-right" data-aos-duration="1200">
-                        Building Modern <span class="text-gradient">Websites</span> & Growing <span
-                            class="highlight-brand">Brands</span> Digitally<span class="typewriter-cursor">|</span>
+            <div class="hero-grid-split">
+                <div class="hero-content-col">
+                    <span class="section-tag" style="opacity: 0; transform: translateY(20px);" id="hero-tag-anim">Hello &amp; Welcome</span>
+                    <h1 class="hero-huge-title" id="hero-title-anim">
+                        <span>HELLO,</span>
+                        <span>I'M</span>
+                        <span class="text-gradient">MANSI ZALA</span>
                     </h1>
-                    <p class="hero-desc" data-aos="fade-up" data-aos-duration="1400">
-                        Create high-converting websites, redesign WordPress platforms, manage digital marketing
-                        campaigns, and help businesses establish a powerful online presence.
-                    </p>
-                    <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1600">
-                        <a href="#portfolio" class="btn btn-primary">Explore My Work</a>
-                        <a href="#connect" class="btn btn-secondary">Hire Me Today</a>
+                    <div class="hero-sub-typewriter" id="hero-typewriter-anim">
+                        <span class="typewriter-text"></span><span class="typewriter-cursor">|</span>
                     </div>
-                    <div class="hero-socials" data-aos="fade-up" data-aos-duration="1800">
-                        <a href="https://linkedin.com/in/mansizala2509" target="_blank" rel="noopener"
-                            class="social-icon-btn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="mailto:zalamansi025@gmail.com" class="social-icon-btn"><i
-                                class="fa-regular fa-envelope"></i></a>
-                        <a href="https://wa.me/917758940589" target="_blank" rel="noopener" class="social-icon-btn"><i
-                                class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://github.com/MansiZala25" target="_blank" rel="noopener"
-                            class="social-icon-btn"><i class="fa-brands fa-github"></i></a>
+                    <div class="hero-action-buttons" id="hero-btn-anim">
+                        <a href="#featured-projects" class="btn btn-primary">Explore My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Let's Work Together</a>
                     </div>
                 </div>
-                <div class="hero-mockup-wrapper" data-aos="zoom-in" data-aos-duration="1500">
-                    <div class="avatar-wrapper">
-                        <div class="avatar-glow"></div>
-                        <div class="avatar-img-card">
-                            <img src="assets/avatar.png" alt="Mansi Zala" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
-                        </div>
-                        <div class="floating-dev-card floating-dev-card-1 glass-card">
-                            <h4 class="card-title-sm">Code</h4>
-                            <p class="card-text-sm">Laravel & WordPress</p>
-                        </div>
-                        <div class="floating-dev-card floating-dev-card-2 glass-card">
-                            <h4 class="card-title-sm">Market</h4>
-                            <p class="card-text-sm">Meta Ads Specialist</p>
-                        </div>
+                
+                <div class="hero-blob-wrapper" id="hero-blob-anim">
+                    <div class="organic-blob-card">
+                        <img src="assets/avatar.png" alt="Mansi Zala">
+                    </div>
+                    <!-- Surrounding Floating Tech Nodes -->
+                    <div class="floating-asset asset-1 glass-card">
+                        <i class="fa-solid fa-code"></i> Full-Stack
+                    </div>
+                    <div class="floating-asset asset-2 glass-card">
+                        <i class="fa-brands fa-wordpress"></i> WordPress
+                    </div>
+                    <div class="floating-asset asset-3 glass-card">
+                        <i class="fa-solid fa-chart-line"></i> Meta Ads
+                    </div>
+                    <div class="floating-asset asset-4 glass-card">
+                        <i class="fa-solid fa-share-nodes"></i> Branding
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 2. ACHIEVEMENT SECTION -->
-    <section id="achievements" class="glass-section" style="padding: 4rem 0; background-color: var(--bg-secondary);">
-        <div class="container">
-            <div class="achievements-grid">
-                <div class="counter-card glass-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="counter-number" data-target="1">0</div>
-                    <div class="counter-label">Years Experience</div>
-                </div>
-                <div class="counter-card glass-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="counter-number" data-target="20">0</div>
-                    <div class="counter-label">Projects Completed</div>
-                </div>
-                <div class="counter-card glass-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="counter-number" data-target="10">0</div>
-                    <div class="counter-label">Clients Served</div>
-                </div>
-                <div class="counter-card glass-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="counter-number" data-target="100">0</div>
-                    <div class="counter-label">Dedication Rate (%)</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. ABOUT SECTION -->
-    <section id="journey">
-        <div class="container">
-            <div class="about-grid">
-                <div data-aos="fade-right">
-                    <span class="section-badge">My Digital Journey</span>
-                    <h2 class="section-title">Bridging Code and Digital Performance</h2>
-                    <p class="about-story">
-                        I am a motivated BCA graduate specializing in Full Stack Development, Website Development,
-                        WordPress Redesign, Digital Marketing, Social Media Management, and Freelance Solutions.
-                        Passionate about helping businesses grow online through technology and creativity.
-                    </p>
-                    <p class="about-story">
-                        With an intersectional skill set spanning backend programming and target performance marketing,
-                        I build clean, optimized web structures and design targeted lead generation funnels that help
-                        business brands acquire customers.
-                    </p>
-                    <a href="#connect" class="btn btn-primary">Start a Project</a>
-                </div>
-                <div class="about-cards-container">
-                    <div class="about-glass-card glass-card" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="about-card-icon"><i class="fa-solid fa-code"></i></div>
-                        <h4 class="about-card-title">Web Dev</h4>
-                        <div class="about-card-tags">
-                            <span>• PHP</span>
-                            <span>• Laravel</span>
-                            <span>• MySQL</span>
-                        </div>
-                    </div>
-                    <div class="about-glass-card glass-card" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="about-card-icon"><i class="fa-brands fa-wordpress"></i></div>
-                        <h4 class="about-card-title">WordPress</h4>
-                        <div class="about-card-tags">
-                            <span>• Custom Themes</span>
-                            <span>• Website Redesign</span>
-                            <span>• Maintenance</span>
-                        </div>
-                    </div>
-                    <div class="about-glass-card glass-card" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="about-card-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                        <h4 class="about-card-title">Marketing</h4>
-                        <div class="about-card-tags">
-                            <span>• Meta Ads</span>
-                            <span>• Brand Growth</span>
-                            <span>• Funnel Design</span>
-                        </div>
-                    </div>
-                    <div class="about-glass-card glass-card" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="about-card-icon"><i class="fa-solid fa-pen-nib"></i></div>
-                        <h4 class="about-card-title">Design</h4>
-                        <div class="about-card-tags">
-                            <span>• Canva Assets</span>
-                            <span>• Banner Design</span>
-                            <span>• Logo Design</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. EXPERIENCE SECTION -->
-    <section id="experience" style="background-color: var(--bg-secondary);">
-        <div class="container">
-            <div style="text-align: center;">
-                <span class="section-badge">Career Highlights</span>
-                <h2 class="section-title">My Professional Timeline</h2>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-item left-timeline" data-aos="fade-right">
-                    <div class="timeline-content">
-                        <span class="timeline-date">2025 - Present</span>
-                        <h3 class="timeline-title">Full Stack Developer</h3>
-                        <h4 class="timeline-company">Seer IT Solutions</h4>
-                        <ul class="timeline-list">
-                            <li>Business website development and architecture.</li>
-                            <li>Corporate WordPress redesign and layout optimization.</li>
-                            <li>Meta Ads campaigns structure & performance lead tracking.</li>
-                            <li>Technical speed optimization and responsive layout audits.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item right-timeline" data-aos="fade-left">
-                    <div class="timeline-content">
-                        <span class="timeline-date">2024 - 2025</span>
-                        <h3 class="timeline-title">Web Developer & Marketer</h3>
-                        <h4 class="timeline-company">VEA Impex</h4>
-                        <ul class="timeline-list">
-                            <li>Corporate catalog site design and maintenance.</li>
-                            <li>Customization and theme integrations on PHP frameworks.</li>
-                            <li>Content strategy creation, copy materials, and digital graphics.</li>
-                            <li>Responsive design implementation for mobile web optimization.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. SKILLS SECTION -->
-    <section id="expertise">
-        <div class="container">
-            <div style="text-align: center;">
-                <span class="section-badge">Technical Arsenal</span>
-                <h2 class="section-title">Areas of Expertise</h2>
-                <p class="section-desc">Highly polished skills in modern software engineering and marketing structures.
+    <!-- 2. WHO I AM (Horizontal Storyteller Layout) -->
+    <section id="horizontal-about">
+        <div class="horizontal-scroll-container" id="horizontal-scroll-container">
+            <!-- Slide 1 -->
+            <div class="story-panel">
+                <span class="section-tag" style="color: #38BDF8; border-color: rgba(56, 189, 248, 0.2); background: rgba(56, 189, 248, 0.05);">Who I Am</span>
+                <h2 class="story-big-text">I DON'T JUST BUILD WEBSITES.<br>I HELP BUSINESSES GROW ONLINE.</h2>
+                <p class="story-body">
+                    As a motivated BCA graduate specializing in Full Stack Development and performance advertising, I believe your digital presence should actively generate customers, not just serve as a static brochure.
                 </p>
+                <div style="font-size: 0.9rem; color: rgba(255,255,255,0.45);">Scroll Down or Swipe to continue story →</div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="story-panel">
+                <span class="section-tag" style="color: #38BDF8; border-color: rgba(56, 189, 248, 0.2); background: rgba(56, 189, 248, 0.05);">My Dual Strategy</span>
+                <h2 class="story-big-text">CODE &amp; MARKETING INTEGRATION</h2>
+                <div class="story-grid-details">
+                    <div class="story-detail-card">
+                        <h3>Full Stack Logic</h3>
+                        <p>Structuring modular, secure codebases using PHP, Laravel, and MySQL database backends alongside optimized responsive frontends.</p>
+                    </div>
+                    <div class="story-detail-card">
+                        <h3>Digital Performance</h3>
+                        <p>Constructing targeted Meta Ads funnels, landing page optimization audits, and brand content strategies to drive lead acquisitions.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="story-panel">
+                <span class="section-tag" style="color: #38BDF8; border-color: rgba(56, 189, 248, 0.2); background: rgba(56, 189, 248, 0.05);">Solutions Matrix</span>
+                <h2 class="story-big-text">BESPOKE CLIENT FREELANCE OUTCOMES</h2>
+                <div class="story-grid-details">
+                    <div class="story-detail-card">
+                        <h3>WordPress Specialty</h3>
+                        <p>Redesigning outdated CMS frameworks into dynamic layouts featuring customized child theme configurations.</p>
+                    </div>
+                    <div class="story-detail-card">
+                        <h3>Social &amp; Canva Design</h3>
+                        <p>Designing modern logo symbols, marketing campaign banners, and structured organic grids via Canva Pro.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. EXPERIENCE JOURNEY (Timeline) -->
+    <section id="experience-journey">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <span class="section-tag">Career highlights</span>
+                <h2 class="section-headline" style="margin: 0 auto;">My Professional Chronology</h2>
             </div>
 
-            <div class="skills-container">
-                <div class="skills-category-card glass-card" data-aos="fade-right">
-                    <h3 class="skills-category-title"><i class="fa-solid fa-code-branch"></i> Development & CMS</h3>
-                    <div class="skill-item">
-                        <div class="skill-info-row">
-                            <span class="skill-name">HTML5 / CSS3 / JS</span>
-                            <span class="skill-percent">95%</span>
-                        </div>
-                        <div class="skill-progress-track">
-                            <div class="skill-progress-bar-fill" data-width="95%"></div>
-                        </div>
+            <div class="journey-timeline-wrapper">
+                <div class="journey-progress-line">
+                    <div class="journey-progress-fill" id="journey-progress-fill"></div>
+                </div>
+                
+                <!-- Node 1 -->
+                <div class="journey-node glass-section-trigger" data-node="1">
+                    <div class="journey-card glass-card">
+                        <span class="journey-date-badge">2025 - 2026 June</span>
+                        <h3 class="journey-title-card">Full Stack Developer</h3>
+                        <h4 class="journey-org">Seer IT Solutions</h4>
+                        <ul class="journey-bullets">
+                            <li>Developed database architectures and web backends using PHP/MySQL.</li>
+                            <li>Executed full redesign procedures for corporate marketing portals.</li>
+                            <li>Structured high-ROI advertising campaigns on Meta Ads Manager.</li>
+                            <li>Optimized responsive rendering and resolved speed bottlenecks.</li>
+                        </ul>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-info-row">
-                            <span class="skill-name">PHP & Laravel Framework</span>
-                            <span class="skill-percent">88%</span>
-                        </div>
-                        <div class="skill-progress-track">
-                            <div class="skill-progress-bar-fill" data-width="88%"></div>
-                        </div>
+                </div>
+
+                <!-- Node 2 -->
+                <div class="journey-node glass-section-trigger" data-node="2">
+                    <div class="journey-card glass-card">
+                        <span class="journey-date-badge">2024 - 2025</span>
+                        <h3 class="journey-title-card">Junior Web Developer &amp; Marketer</h3>
+                        <h4 class="journey-org">VEA Impex</h4>
+                        <ul class="journey-bullets">
+                            <li>Maintained corporate pharmaceutical catalog site and custom templates.</li>
+                            <li>Engineered custom page flows to enhance user navigation metrics.</li>
+                            <li>Managed basic organic digital content assets and graphic banners.</li>
+                        </ul>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-info-row">
-                            <span class="skill-name">WordPress Development & Redesign</span>
-                            <span class="skill-percent">92%</span>
-                        </div>
-                        <div class="skill-progress-track">
-                            <div class="skill-progress-bar-fill" data-width="92%"></div>
-                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. EXPERTISE WALL -->
+    <section id="expertise-wall">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <span class="section-tag">Technical Arsenal</span>
+                <h2 class="section-headline" style="margin: 0 auto;">Floating Expertise Grid</h2>
+            </div>
+            
+            <div class="expertise-wall-grid">
+                <div class="skill-wall-card glass-card"><div class="skill-card-icon"><i class="fa-brands fa-html5"></i></div><span class="skill-card-title">HTML5</span></div>
+                <div class="skill-wall-card glass-card"><div class="skill-card-icon"><i class="fa-brands fa-css3-alt"></i></div><span class="skill-card-title">CSS3</span></div>
+                <div class="skill-wall-card glass-card"><div class="skill-card-icon"><i class="fa-brands fa-js"></i></div><span class="skill-card-title">JavaScript</span></div>
+                <div class="skill-wall-card glass-card"><div class="skill-card-icon"><i class="fa-brands fa-php"></i></div><span class="skill-card-title">PHP</span></div>
+                <div class="skill-wall-card glass-card"><div class="skill-card-icon"><i class="fa-brands fa-laravel"></i></div><span class="skill-card-title">Laravel</span></div>
+                <div class="skill-wall-card glass-card"><div class="skill-card-icon"><i class="fa-solid fa-database"></i></div><span class="skill-card-title">MySQL</span></div>
+                <div class="skill-wall-card glass-card"><div class="skill-card-icon"><i class="fa-brands fa-wordpress"></i></div><span class="skill-card-title">WordPress</span></div>
+                <div class="skill-wall-card glass-card"><div class="skill-card-icon"><i class="fa-solid fa-bullhorn"></i></div><span class="skill-card-title">Digital Marketing</span></div>
+                <div class="skill-wall-card glass-card"><div class="skill-card-icon"><i class="fa-brands fa-facebook"></i></div><span class="skill-card-title">Meta Ads</span></div>
+                <div class="skill-wall-card glass-card"><div class="skill-card-icon"><i class="fa-solid fa-chart-simple"></i></div><span class="skill-card-title">SMM</span></div>
+                <div class="skill-wall-card glass-card"><div class="skill-card-icon"><i class="fa-solid fa-pen-nib"></i></div><span class="skill-card-title">Canva Design</span></div>
+                <div class="skill-wall-card glass-card"><div class="skill-card-icon"><i class="fa-solid fa-arrows-rotate"></i></div><span class="skill-card-title">Web Redesign</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SERVICES ECOSYSTEM -->
+    <section id="services-ecosystem" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span class="section-tag">Services Ecosystem</span>
+                <h2 class="section-headline" style="margin: 0 auto;">Circular Orbit Offerings</h2>
+            </div>
+            
+            <div class="services-circular-wrapper">
+                <div class="center-hub">
+                    MANSI ZALA
+                    <span>SERVICES</span>
+                </div>
+                
+                <!-- Service Nodes arranged in orbital circles -->
+                <div class="orbiting-service-card glass-card" id="orbit-node-1">
+                    <div class="orbit-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <span class="orbit-title">Website Dev</span>
+                </div>
+                <div class="orbiting-service-card glass-card" id="orbit-node-2">
+                    <div class="orbit-icon"><i class="fa-brands fa-wordpress"></i></div>
+                    <span class="orbit-title">WordPress</span>
+                </div>
+                <div class="orbiting-service-card glass-card" id="orbit-node-3">
+                    <div class="orbit-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+                    <span class="orbit-title">Web Redesign</span>
+                </div>
+                <div class="orbiting-service-card glass-card" id="orbit-node-4">
+                    <div class="orbit-icon"><i class="fa-solid fa-server"></i></div>
+                    <span class="orbit-title">Full Stack Development</span>
+                </div>
+                <div class="orbiting-service-card glass-card" id="orbit-node-5">
+                    <div class="orbit-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                    <span class="orbit-title">Digital Marketing</span>
+                </div>
+                <div class="orbiting-service-card glass-card" id="orbit-node-6">
+                    <div class="orbit-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <span class="orbit-title">Social Media Management</span>
+                </div>
+                <div class="orbiting-service-card glass-card" id="orbit-node-7">
+                    <div class="orbit-icon"><i class="fa-brands fa-facebook-f"></i></div>
+                    <span class="orbit-title">Meta Ads Manager</span>
+                </div>
+                <div class="orbiting-service-card glass-card" id="orbit-node-8">
+                    <div class="orbit-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                    <span class="orbit-title">Freelance Consult</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FEATURED PROJECTS (Zig-Zag) -->
+    <section id="featured-projects">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <span class="section-tag">Showcase</span>
+                <h2 class="section-headline" style="margin: 0 auto;">Featured Case Studies</h2>
+            </div>
+            
+            <div class="projects-zigzag-container">
+                <!-- Project 1 (Left Aligned) -->
+                <div class="project-block left-aligned">
+                    <div class="project-img-frame">
+                        <svg width="100%" height="100%" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="background:#081F4D;">
+                            <rect x="30" y="40" width="340" height="220" rx="12" fill="#1D4ED8" opacity="0.8"/>
+                            <circle cx="80" cy="110" r="40" fill="#38BDF8" opacity="0.6"/>
+                            <rect x="140" y="80" width="200" height="16" rx="4" fill="#ffffff"/>
+                            <rect x="140" y="110" width="130" height="10" rx="4" fill="#F8FAFC" opacity="0.7"/>
+                        </svg>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-info-row">
-                            <span class="skill-name">MySQL Database Architecture</span>
-                            <span class="skill-percent">85%</span>
+                    <div class="project-content-col">
+                        <span class="project-num">01</span>
+                        <h3 class="project-heading">VEA Impex Website Redesign</h3>
+                        <p class="project-details-text">
+                            A complete layout engineering overhaul for a corporate medical catalog export website, restructuring database search indexes and backend queries to speed up product lookup.
+                        </p>
+                        <div class="project-spec-tags">
+                            <span class="project-spec-tag">PHP Laravel</span>
+                            <span class="project-spec-tag">MySQL</span>
+                            <span class="project-spec-tag">Speed Tuning</span>
                         </div>
-                        <div class="skill-progress-track">
-                            <div class="skill-progress-bar-fill" data-width="85%"></div>
+                        <div>
+                            <a href="#contact" class="btn btn-secondary">Inquire Details</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="skills-category-card glass-card" data-aos="fade-left">
-                    <h3 class="skills-category-title"><i class="fa-solid fa-chart-line"></i> Marketing & Design</h3>
-                    <div class="skill-item">
-                        <div class="skill-info-row">
-                            <span class="skill-name">Meta Ads Campaign Management</span>
-                            <span class="skill-percent">90%</span>
+                <!-- Project 2 (Right Aligned) -->
+                <div class="project-block right-aligned">
+                    <div class="project-img-frame">
+                        <svg width="100%" height="100%" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="background:#f1f5f9;">
+                            <circle cx="200" cy="150" r="70" fill="#1D4ED8" opacity="0.08"/>
+                            <path d="M200 90 C166.8 90 140 116.8 140 150 C140 183.2 166.8 210 200 210 Z" fill="#21759B" opacity="0.85"/>
+                        </svg>
+                    </div>
+                    <div class="project-content-col">
+                        <span class="project-num">02</span>
+                        <h3 class="project-heading">WordPress Business Platforms</h3>
+                        <p class="project-details-text">
+                            Transforming slow-loading corporate templates into highly responsive interfaces featuring custom visual grids, WooCommerce billing, and page speed index gains.
+                        </p>
+                        <div class="project-spec-tags">
+                            <span class="project-spec-tag">WordPress CMS</span>
+                            <span class="project-spec-tag">Custom CSS Grid</span>
+                            <span class="project-spec-tag">SEO Pack</span>
                         </div>
-                        <div class="skill-progress-track">
-                            <div class="skill-progress-bar-fill" data-width="90%"></div>
+                        <div>
+                            <a href="#contact" class="btn btn-secondary">Inquire Details</a>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-info-row">
-                            <span class="skill-name">Social Media & Content Strategy</span>
-                            <span class="skill-percent">85%</span>
-                        </div>
-                        <div class="skill-progress-track">
-                            <div class="skill-progress-bar-fill" data-width="85%"></div>
-                        </div>
+                </div>
+
+                <!-- Project 3 (Left Aligned) -->
+                <div class="project-block left-aligned">
+                    <div class="project-img-frame">
+                        <svg width="100%" height="100%" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="background:#e0f2fe;">
+                            <rect x="50" y="50" width="300" height="200" rx="16" fill="#ffffff" stroke="#1D4ED8" stroke-width="3"/>
+                            <path d="M90 180 L160 130 L230 160 L310 100" fill="none" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>
+                        </svg>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-info-row">
-                            <span class="skill-name">Branding, Banners & Canva Design</span>
-                            <span class="skill-percent">90%</span>
+                    <div class="project-content-col">
+                        <span class="project-num">03</span>
+                        <h3 class="project-heading">Meta Advertising Campaigns</h3>
+                        <p class="project-details-text">
+                            Setting up targeted conversion marketing campaigns, setting up pixel actions, analyzing customer segment statistics, and producing high-converting visual media hooks.
+                        </p>
+                        <div class="project-spec-tags">
+                            <span class="project-spec-tag">Meta Ads Manager</span>
+                            <span class="project-spec-tag">Pixel Events</span>
+                            <span class="project-spec-tag">Canva Assets</span>
                         </div>
-                        <div class="skill-progress-track">
-                            <div class="skill-progress-bar-fill" data-width="90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info-row">
-                            <span class="skill-name">SEO Audits & Optimization</span>
-                            <span class="skill-percent">80%</span>
-                        </div>
-                        <div class="skill-progress-track">
-                            <div class="skill-progress-bar-fill" data-width="80%"></div>
+                        <div>
+                            <a href="#contact" class="btn btn-secondary">Inquire Details</a>
                         </div>
                     </div>
                 </div>
@@ -345,421 +336,100 @@
         </div>
     </section>
 
-    <!-- 6. SERVICES SECTION -->
-    <section id="services" style="background-color: var(--bg-secondary);">
+    <!-- 7. WHY WORK WITH ME -->
+    <section id="why-me" style="background-color: var(--bg-secondary);">
         <div class="container">
-            <div style="text-align: center;">
-                <span class="section-badge">Solutions I Deliver</span>
-                <h2 class="section-title">Value-Driven Digital Offerings</h2>
-                <p class="section-desc">Tailor-made solutions to establish strong brand equity and drive continuous
-                    customer sign-ups.</p>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon-wrapper"><i class="fa-solid fa-laptop-code"></i></div>
-                    <h3 class="service-card-title">Custom Website Dev</h3>
-                    <p class="service-card-desc">Modern business websites designed from scratch with PHP, HTML5, CSS3,
-                        and JavaScript, fully optimized for performance.</p>
+            <h2 class="why-statement">
+                YOUR WEBSITE SHOULD <span class="text-gradient">GENERATE BUSINESS</span>, NOT JUST LOOK GOOD.
+            </h2>
+            
+            <div class="why-features-grid">
+                <div class="why-feature-block glass-card">
+                    <div class="why-feature-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <h3 class="why-feature-title">Modern Design</h3>
+                    <p class="why-feature-desc">Apple &amp; Framer inspired minimalist structure representing business branding.</p>
                 </div>
-                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon-wrapper"><i class="fa-brands fa-wordpress"></i></div>
-                    <h3 class="service-card-title">WordPress Solutions</h3>
-                    <p class="service-card-desc">CMS structure setups, custom child themes, plugin configurations, and
-                        WooCommerce store integration.</p>
+                <div class="why-feature-block glass-card">
+                    <div class="why-feature-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                    <h3 class="why-feature-title">Fast Performance</h3>
+                    <p class="why-feature-desc">Optimizing static parameters, assets loading, and caching to ensure rapid loads.</p>
                 </div>
-                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon-wrapper"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3 class="service-card-title">Website Redesign</h3>
-                    <p class="service-card-desc">Transform your outdated site into an elegant responsive layout with
-                        fast performance metrics.</p>
+                <div class="why-feature-block glass-card">
+                    <div class="why-feature-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h3 class="why-feature-title">SEO Friendly</h3>
+                    <p class="why-feature-desc">Structuring semantic HTML tags and page speed components to trigger search rankings.</p>
                 </div>
-                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-icon-wrapper"><i class="fa-solid fa-server"></i></div>
-                    <h3 class="service-card-title">Full Stack Solutions</h3>
-                    <p class="service-card-desc">Robust web apps using Laravel and MySQL, integrating complex backend
-                        logic and databases.</p>
-                </div>
-                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="service-icon-wrapper"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                    <h3 class="service-card-title">Digital Marketing</h3>
-                    <p class="service-card-desc">High-ROI marketing strategies and targeted Meta Ads campaigns designed
-                        to scale leads.</p>
-                </div>
-                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="service-icon-wrapper"><i class="fa-solid fa-share-nodes"></i></div>
-                    <h3 class="service-card-title">Social Media Management</h3>
-                    <p class="service-card-desc">Coordinating organic brand social grids, scheduling publication flows,
-                        and designing assets via Canva.</p>
+                <div class="why-feature-block glass-card">
+                    <div class="why-feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="why-feature-title">Marketing Focused</h3>
+                    <p class="why-feature-desc">Engineered with proper lead captures, analytics pixels, and copywriting layout hooks.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. PORTFOLIO SECTION -->
-    <section id="portfolio">
-        <div class="container">
-            <div style="text-align: center;">
-                <span class="section-badge">Featured Success Stories</span>
-                <h2 class="section-title">My Creative Showcase</h2>
-                <p class="section-desc">Discover actual case studies and projects delivered across web design and
-                    advertising domains.</p>
-            </div>
-
-            <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="dev">Development</button>
-                <button class="filter-btn" data-filter="wp">WordPress</button>
-                <button class="filter-btn" data-filter="marketing">Marketing</button>
-                <button class="filter-btn" data-filter="design">Branding & Design</button>
-            </div>
-
-            <div class="portfolio-grid">
-                <!-- Project 1 -->
-                <div class="portfolio-card glass-card" data-category="dev" data-aos="fade-up">
-                    <div class="portfolio-img-container">
-                        <!-- Conceptual vector visual for Pharmaceutical Corporate site -->
-                        <svg width="100%" height="100%" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"
-                            style="background:#0B1F3A;">
-                            <rect x="20" y="30" width="260" height="150" rx="8" fill="#1E3A8A" />
-                            <circle cx="60" cy="90" r="30" fill="#38BDF8" opacity="0.8" />
-                            <rect x="110" y="70" width="130" height="12" rx="4" fill="#FFFFFF" />
-                            <rect x="110" y="95" width="90" height="8" rx="4" fill="#64748B" />
-                            <rect x="110" y="115" width="110" height="8" rx="4" fill="#64748B" />
-                            <circle cx="220" cy="140" r="15" fill="#34D399" opacity="0.6" />
-                        </svg>
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-zoom-icon"><i class="fa-solid fa-plus"></i></div>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-card-category">Development</span>
-                        <h3 class="portfolio-card-title">VEA Impex Portal</h3>
-                        <p class="portfolio-card-desc">Redesigned a responsive corporate catalog website optimizing
-                            product display and page speed.</p>
-                        <div class="portfolio-card-footer">
-                            <div class="portfolio-tags">
-                                <span class="portfolio-tag">PHP Laravel</span>
-                                <span class="portfolio-tag">MySQL</span>
-                            </div>
-                            <button class="portfolio-detail-trigger" data-project="veaimpex"><i
-                                    class="fa-solid fa-arrow-right"></i></button>
-                        </div>
-                    </div>
+    <!-- 8. CLIENT READY CONTACT CARD -->
+    <section id="contact">
+        <div class="container connect-container">
+            <div class="connect-panel-card glass-card">
+                <div class="connect-text-col">
+                    <h2 class="connect-large-header">LET'S BUILD<br>SOMETHING AMAZING.</h2>
+                    <ul class="connect-directory">
+                        <li>
+                            <strong>Call / Telegram</strong>
+                            <a href="tel:917758940589">+91 7758940589</a>
+                        </li>
+                        <li>
+                            <strong>Email Address</strong>
+                            <a href="mailto:zalamansi025@gmail.com">zalamansi025@gmail.com</a>
+                        </li>
+                        <li>
+                            <strong>Locations</strong>
+                            <span style="font-weight: 700; color: var(--color-primary);">Mumbai (MH) &amp; Vadodara (GJ)</span>
+                        </li>
+                    </ul>
                 </div>
-
-                <!-- Project 2 -->
-                <div class="portfolio-card glass-card" data-category="wp" data-aos="fade-up" data-aos-delay="100">
-                    <div class="portfolio-img-container">
-                        <!-- WordPress SVG Visual -->
-                        <svg width="100%" height="100%" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"
-                            style="background:#f1f5f9;">
-                            <circle cx="150" cy="100" r="50" fill="#1E88E5" opacity="0.1" />
-                            <path
-                                d="M150 60 C127.9 60 110 77.9 110 100 C110 122.1 127.9 140 150 140 C172.1 140 190 122.1 190 100 C190 77.9 172.1 60 150 60 Z M181.8 104 C181.8 111.4 177.3 119.5 171.1 125.6 L159.2 92 L177.2 92 C180.2 96.1 181.8 100 181.8 104 Z M150 134.5 C141.2 134.5 133.4 131.2 127.4 125.8 L142.1 82.5 L150.3 108.6 L143.6 128 C144 128.1 149.2 134.5 150 134.5 Z M121 116.5 C115.6 110.8 112.5 103.2 112.5 95 C112.5 93 113 90.7 113.8 88.5 L129.5 125 L121 116.5 Z M150 65.5 C156.4 65.5 162.2 67.5 167 70.8 L152 111.8 L138 72 C142 67.7 146.4 65.5 150 65.5 Z"
-                                fill="#21759B" />
-                        </svg>
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-zoom-icon"><i class="fa-solid fa-plus"></i></div>
+                
+                <div class="connect-form-col">
+                    <form id="portfolio-contact-form">
+                        <div class="connect-input-group">
+                            <label for="c-name" class="connect-label">Full Name</label>
+                            <input type="text" id="c-name" class="connect-field" placeholder="Jane Doe" required>
                         </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-card-category">WordPress</span>
-                        <h3 class="portfolio-card-title">Corporate Redesign</h3>
-                        <p class="portfolio-card-desc">Redesigned standard business layouts with customizable element
-                            grids and optimized UX paths.</p>
-                        <div class="portfolio-card-footer">
-                            <div class="portfolio-tags">
-                                <span class="portfolio-tag">WordPress</span>
-                                <span class="portfolio-tag">Custom CSS</span>
-                            </div>
-                            <button class="portfolio-detail-trigger" data-project="wpredesign"><i
-                                    class="fa-solid fa-arrow-right"></i></button>
+                        <div class="connect-input-group">
+                            <label for="c-email" class="connect-label">Email Address</label>
+                            <input type="email" id="c-email" class="connect-field" placeholder="jane@example.com" required>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="portfolio-card glass-card" data-category="marketing" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <div class="portfolio-img-container">
-                        <!-- Ads Campaign SVG Visual -->
-                        <svg width="100%" height="100%" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"
-                            style="background:#e0f2fe;">
-                            <rect x="40" y="40" width="220" height="120" rx="10" fill="#ffffff" stroke="#38BDF8"
-                                stroke-width="2" />
-                            <path d="M70 120 L110 90 L160 110 L220 70" fill="none" stroke="#1E88E5" stroke-width="4"
-                                stroke-linecap="round" />
-                            <circle cx="220" cy="70" r="6" fill="#0B1F3A" />
-                            <circle cx="160" cy="110" r="4" fill="#38BDF8" />
-                            <circle cx="110" cy="90" r="4" fill="#38BDF8" />
-                            <circle cx="70" cy="120" r="4" fill="#38BDF8" />
-                        </svg>
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-zoom-icon"><i class="fa-solid fa-plus"></i></div>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-card-category">Digital Marketing</span>
-                        <h3 class="portfolio-card-title">Meta Lead Campaigns</h3>
-                        <p class="portfolio-card-desc">Managed end-to-end Facebook & Instagram advertising structure
-                            driving conversion pixel setups.</p>
-                        <div class="portfolio-card-footer">
-                            <div class="portfolio-tags">
-                                <span class="portfolio-tag">Meta Ads</span>
-                                <span class="portfolio-tag">Copywriting</span>
-                            </div>
-                            <button class="portfolio-detail-trigger" data-project="metaload"><i
-                                    class="fa-solid fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="portfolio-card glass-card" data-category="design" data-aos="fade-up" data-aos-delay="300">
-                    <div class="portfolio-img-container">
-                        <!-- Canva Branding SVG Visual -->
-                        <svg width="100%" height="100%" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"
-                            style="background:#fae8ff;">
-                            <polygon points="150,40 240,160 60,160" fill="#38BDF8" opacity="0.6" />
-                            <circle cx="150" cy="110" r="45" fill="#c084fc" opacity="0.7" />
-                            <rect x="90" y="90" width="120" height="40" rx="20" fill="#0B1F3A" opacity="0.9" />
-                            <text x="150" y="115" font-family="'Sora', sans-serif" font-size="14" fill="#ffffff"
-                                text-anchor="middle" font-weight="bold">DESIGN</text>
-                        </svg>
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-zoom-icon"><i class="fa-solid fa-plus"></i></div>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-card-category">Branding & Design</span>
-                        <h3 class="portfolio-card-title">Logo & Graphic Branding</h3>
-                        <p class="portfolio-card-desc">Designed modern client corporate identities, vector logo symbols,
-                            and banner assets utilizing Canva.</p>
-                        <div class="portfolio-card-footer">
-                            <div class="portfolio-tags">
-                                <span class="portfolio-tag">Canva Pro</span>
-                                <span class="portfolio-tag">Branding</span>
-                            </div>
-                            <button class="portfolio-detail-trigger" data-project="branding"><i
-                                    class="fa-solid fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. WHY CHOOSE ME SECTION -->
-    <section id="why-choose-me" style="background-color: var(--bg-secondary);">
-        <div class="container">
-            <div style="text-align: center;">
-                <span class="section-badge">Why Clients Trust Me</span>
-                <h2 class="section-title">A Higher Standard of Delivery</h2>
-                <p class="section-desc">Committed to engineering software systems that support business growth metrics
-                    directly.</p>
-            </div>
-
-            <div class="why-grid">
-                <div class="why-card glass-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="why-icon-box"><i class="fa-regular fa-lightbulb"></i></div>
-                    <h3 class="why-card-title">Creative Thinking</h3>
-                    <p class="why-card-desc">Integrating visual branding with logic frameworks to deliver highly
-                        intuitive conversion journeys.</p>
-                </div>
-                <div class="why-card glass-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="why-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
-                    <h3 class="why-card-title">Modern Development</h3>
-                    <p class="why-card-desc">Structuring light, maintainable frontend structures and backend layers
-                        according to standards.</p>
-                </div>
-                <div class="why-card glass-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="why-icon-box"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3 class="why-card-title">Marketing Knowledge</h3>
-                    <p class="why-card-desc">Building structures with proper conversion pixel optimization, lead capture
-                        pages, and SEO paths.</p>
-                </div>
-                <div class="why-card glass-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="why-icon-box"><i class="fa-solid fa-handshake-angle"></i></div>
-                    <h3 class="why-card-title">Reliable Delivery</h3>
-                    <p class="why-card-desc">Professional and punctual communications, providing weekly reports and
-                        client satisfaction loops.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9. CONTACT SECTION -->
-    <section id="connect">
-        <div class="container">
-            <div style="text-align: center;">
-                <span class="section-badge">Let's Create Something Amazing</span>
-                <h2 class="section-title">Initiate Your Digital Project</h2>
-                <p class="section-desc">Reach out directly or fill out the glassmorphism form. I will reply within 24
-                    business hours.</p>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-info-col" data-aos="fade-right">
-                    <div class="contact-info-list">
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
-                            <div>
-                                <h4 class="contact-info-title">Call / Telegram</h4>
-                                <a href="tel:917758940589" class="contact-info-value">+91 7758940589</a>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon"><i class="fa-regular fa-envelope"></i></div>
-                            <div>
-                                <h4 class="contact-info-title">Email</h4>
-                                <a href="mailto:zalamansi025@gmail.com"
-                                    class="contact-info-value">zalamansi025@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
-                            <div>
-                                <h4 class="contact-info-title">Locations</h4>
-                                <span class="contact-info-value" style="display:block;">Mumbai, Maharashtra</span>
-                                <span class="contact-info-value" style="display:block;">Vadodara, Gujarat</span>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon"><i class="fa-brands fa-linkedin-in"></i></div>
-                            <div>
-                                <h4 class="contact-info-title">LinkedIn</h4>
-                                <a href="https://linkedin.com/in/mansizala2509" target="_blank" rel="noopener"
-                                    class="contact-info-value">linkedin.com/in/mansizala2509</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form-card glass-card" data-aos="fade-left">
-                    <form id="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="form-name" class="form-label">Full Name</label>
-                                <input type="text" id="form-name" class="form-control" placeholder="Jane Doe" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="form-email" class="form-label">Email Address</label>
-                                <input type="email" id="form-email" class="form-control" placeholder="jane@example.com"
-                                    required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="form-phone" class="form-label">Phone Number</label>
-                                <input type="tel" id="form-phone" class="form-control" placeholder="+91 9876543210">
-                            </div>
-                            <div class="form-group">
-                                <label for="form-service" class="form-label">Service Required</label>
-                                <select id="form-service" class="form-control">
-                                    <option value="development">Custom Web Development</option>
-                                    <option value="wordpress">WordPress Redesign/setup</option>
-                                    <option value="marketing">Meta Ads Campaigns</option>
-                                    <option value="smm">Social Media Management</option>
-                                    <option value="other">Other Inquiries</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="form-message" class="form-label">Message Details</label>
-                            <textarea id="form-message" class="form-control"
-                                placeholder="Describe your web objectives..." required></textarea>
+                        <div class="connect-input-group">
+                            <label for="c-message" class="connect-label">Project Scope</label>
+                            <textarea id="c-message" class="connect-field" placeholder="Describe your web objectives..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Start Your Project</button>
-                        <div class="form-status" id="form-status"></div>
+                        <div class="form-status" id="form-status" style="margin-top: 1rem; display: none;"></div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 10. FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div>
-                    <a href="#home" class="footer-brand">Mansi<span>Verse</span></a>
-                    <p class="footer-tagline">Crafting Digital Experiences Through High-Performance Code & ROI-Focused
-                        Marketing Campaigns.</p>
-                </div>
-                <div>
-                    <h4 class="footer-col-title">Navigation</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home" class="footer-link">Home</a></li>
-                        <li><a href="#journey" class="footer-link">Journey</a></li>
-                        <li><a href="#expertise" class="footer-link">Expertise</a></li>
-                        <li><a href="#services" class="footer-link">Services</a></li>
-                        <li><a href="#portfolio" class="footer-link">Portfolio</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="footer-col-title">Social Links</h4>
-                    <div class="footer-socials">
-                        <a href="https://linkedin.com/in/mansizala2509" target="_blank" rel="noopener"
-                            class="footer-social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="mailto:zalamansi025@gmail.com" class="footer-social-btn"><i
-                                class="fa-regular fa-envelope"></i></a>
-                        <a href="https://wa.me/917758940589" target="_blank" rel="noopener" class="footer-social-btn"><i
-                                class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://github.com/MansiZala25" target="_blank" rel="noopener"
-                            class="footer-social-btn"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p class="copyright-text">&copy; 2026 Mansi Zala. All Rights Reserved.</p>
-                <p class="copyright-text">Code • Create • Market • Grow</p>
-            </div>
+    <!-- MINIMAL FOOTER -->
+    <footer class="minimal-footer">
+        <div class="container footer-flex-row">
+            <a href="#hero-split" class="footer-logo-text">MANSIZALA</a>
+            <p class="footer-tagline-text">Building Digital Experiences That Grow Businesses &copy; 2026</p>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
-
-    <!-- Project Detail Modal Popup -->
-    <div class="modal-overlay" id="project-modal">
-        <div class="modal-content">
-            <button class="modal-close-btn" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
-            <div class="modal-header-img" id="modal-img-container">
-                <!-- Injected dynamically -->
-            </div>
-            <div class="modal-body">
-                <span class="modal-cat" id="modal-cat">Category</span>
-                <h3 class="modal-title" id="modal-title">Project Title</h3>
-                <p class="modal-desc" id="modal-desc">Project details and scope highlights.</p>
-                <div class="modal-details">
-                    <div class="modal-detail-item">
-                        <h5>Deliverables</h5>
-                        <p id="modal-deliverables">Design, Development</p>
-                    </div>
-                    <div class="modal-detail-item">
-                        <h5>Client Tech</h5>
-                        <p id="modal-tech">PHP Laravel, MySQL</p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <a href="#connect" class="btn btn-primary" id="modal-cta-btn">Start Project Like This</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Core CDNs -->
-    <!-- Three.js for Animated Particle Background -->
+    <!-- CDNs -->
+    <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <!-- GSAP for Micro Interactions & Tweens -->
+    <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <!-- AOS Scroll Effect library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- Custom JavaScript Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    
+    <!-- Main Script File -->
     <script src="script.js"></script>
 </body>
-
 </html>
