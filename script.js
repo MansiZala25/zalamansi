@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // 7. Typewriter & Contact Forms
     initTypewriter();
     initContactForm();
+
+    // 8. Responsive Glassmorphic Header Navigation
+    initHeaderNav(lenis);
 });
 
 /* ==========================================================================
@@ -483,5 +486,107 @@ function initContactForm() {
             status.style.color = "#1d4ed8";
             status.style.border = "1px solid rgba(29, 78, 216, 0.2)";
         }
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE GLASSMORPHIC HEADER NAVIGATION
+   ========================================================================== */
+function initHeaderNav(lenis) {
+    const header = document.getElementById("main-header");
+    const mobileToggle = document.getElementById("mobile-toggle");
+    const mobileOverlay = document.getElementById("mobile-nav-overlay");
+    const navLinks = document.querySelectorAll(".nav-link, .mobile-nav-link, .header-logo");
+
+    if (!header) return;
+
+    // 1. Shrink header background on scroll
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+
+    // 2. Toggle Mobile Drawer Menu
+    if (mobileToggle && mobileOverlay) {
+        mobileToggle.addEventListener("click", () => {
+            mobileToggle.classList.toggle("active");
+            mobileOverlay.classList.toggle("active");
+            // Prevent scrolling on body when mobile nav is open
+            if (mobileOverlay.classList.contains("active")) {
+                document.body.style.overflow = "hidden";
+                if (lenis) lenis.stop();
+            } else {
+                document.body.style.overflow = "";
+                if (lenis) lenis.start();
+            }
+        });
+    }
+
+    // 3. Smooth Scroll to Sections using Lenis
+    navLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+            const targetId = link.getAttribute("href");
+            if (targetId && targetId.startsWith("#")) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                if (mobileOverlay && mobileOverlay.classList.contains("active")) {
+                    mobileToggle.classList.remove("active");
+                    mobileOverlay.classList.remove("active");
+                    document.body.style.overflow = "";
+                    if (lenis) lenis.start();
+                }
+
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    if (lenis) {
+                        // Offset by header height
+                        const offset = header.offsetHeight || 70;
+                        lenis.scrollTo(targetEl, {
+                            offset: -offset,
+                            duration: 1.2
+                        });
+                    } else {
+                        targetEl.scrollIntoView({ behavior: "smooth" });
+                    }
+                }
+            }
+        });
+    });
+
+    // 4. Scroll Active State Highlighting via ScrollTrigger
+    if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+        const sections = [
+            { id: "hero-split", linkId: "#hero-split" },
+            { id: "horizontal-about", linkId: "#horizontal-about" },
+            { id: "services-ecosystem", linkId: "#services-ecosystem" },
+            { id: "featured-projects", linkId: "#featured-projects" },
+            { id: "contact", linkId: "#contact" }
+        ];
+
+        sections.forEach(sec => {
+            const el = document.getElementById(sec.id);
+            if (el) {
+                ScrollTrigger.create({
+                    trigger: el,
+                    start: "top 40%",
+                    end: "bottom 40%",
+                    onToggle: (self) => {
+                        if (self.isActive) {
+                            // Deactivate all
+                            document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
+                            // Activate matching desktop link
+                            const activeLink = document.querySelector(`.desktop-nav a[href="${sec.linkId}"]`);
+                            if (activeLink) {
+                                activeLink.classList.add("active");
+                            }
+                        }
+                    }
+                });
+            }
+        });
     }
 }
