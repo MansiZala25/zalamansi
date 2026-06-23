@@ -38,13 +38,13 @@
 
     <!-- Interactive Cursor Background Glow -->
     <div class="cursor-glow" id="cursor-glow"></div>
-    <div class="dev-cursor" id="dev-cursor"><span class="cursor-sym">&lt;/&gt;</span></div>
+    <canvas id="cursor-canvas" style="position: fixed; inset: 0; pointer-events: none; z-index: 99999;"></canvas>
 
     <!-- Header Navigation -->
     <header class="main-header" id="main-header">
         <div class="container header-container">
             <a href="#hero-split" class="header-logo">Mansi Zala<span class="logo-dot">•</span></a>
-            
+
             <nav class="desktop-nav">
                 <a href="#hero-split" class="nav-link active">Home</a>
                 <a href="#horizontal-about" class="nav-link">About</a>
@@ -80,10 +80,12 @@
         <div class="container">
             <div class="hero-grid-split">
                 <div class="hero-content-col">
-                    <div class="hero-status-wrapper" id="hero-tag-anim" style="opacity: 0; transform: translateY(20px);">
+                    <div class="hero-status-wrapper" id="hero-tag-anim"
+                        style="opacity: 0; transform: translateY(20px);">
                         <span class="status-indicator"></span>
                         <span class="status-pill">OPEN TO FREELANCE PROJECTS</span>
-                        <span class="status-location"><i class="fa-solid fa-location-dot"></i> Mumbai / Gujarat, India</span>
+                        <span class="status-location"><i class="fa-solid fa-location-dot"></i> Mumbai / Gujarat,
+                            India</span>
                     </div>
                     <h1 class="hero-huge-title" id="hero-title-anim">
                         <span class="title-solid">HELLO,</span>
@@ -95,7 +97,8 @@
                     </div>
                     <div class="hero-action-buttons" id="hero-btn-anim">
                         <a href="#contact" class="btn btn-primary">Start Project</a>
-                        <a href="Mansi_Zala_Resume.pdf" download class="btn btn-secondary"><i class="fa-solid fa-download"></i> Download Resume</a>
+                        <a href="Mansi_Zala_Resume.pdf" download class="btn btn-secondary"><i
+                                class="fa-solid fa-download"></i> Download Resume</a>
                     </div>
                 </div>
 
@@ -127,40 +130,61 @@
             <!-- Slide 1 -->
             <div class="story-panel">
                 <span class="section-tag"
-                    style="color: #38BDF8; border-color: rgba(56, 189, 248, 0.2); background: rgba(56, 189, 248, 0.05);">Who Am I?</span>
+                    style="color: #38BDF8; border-color: rgba(56, 189, 248, 0.2); background: rgba(56, 189, 248, 0.05);">Who
+                    Am I?</span>
                 <h2 class="story-big-text">PASSIONATE DEVELOPER &amp; MARKETER</h2>
                 <p class="story-body" style="margin-bottom: 1.5rem;">
-                    I'm <strong>Mansi Zala</strong>, a passionate <strong>Junior Software Developer, Full Stack Developer, and Digital Marketing Enthusiast</strong> with hands-on experience in web development, WordPress customization, and digital solutions.
+                    I'm <strong>Mansi Zala</strong>, a passionate <strong>Junior Software Developer, Full Stack
+                        Developer, and Digital Marketing Enthusiast</strong> with hands-on experience in web
+                    development, WordPress customization, and digital solutions.
                 </p>
                 <p class="story-body">
-                    Over the past <strong>1.5 years</strong>, I have worked on various website development and digital projects, helping businesses establish a strong online presence. I have successfully completed <strong>10+ self-managed projects</strong> with a focus on modern design, functionality, and user experience, achieving <strong>99% client satisfaction</strong> through quality work and timely delivery.
+                    Over the past <strong>1.5 years</strong>, I have worked on various website development and digital
+                    projects, helping businesses establish a strong online presence. I have successfully completed
+                    <strong>10+ self-managed projects</strong> with a focus on modern design, functionality, and user
+                    experience, achieving <strong>99% client satisfaction</strong> through quality work and timely
+                    delivery.
                 </p>
-                <div class="story-stats-row" style="display: flex; gap: 3rem; margin-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; margin-bottom: 2rem;">
+                <div class="story-stats-row"
+                    style="display: flex; gap: 3rem; margin-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; margin-bottom: 2rem;">
                     <div>
-                        <span style="display: block; font-family: var(--font-title); font-size: 2.25rem; font-weight: 800; color: #38BDF8;">1.5+</span>
-                        <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 0.05em;">Years Experience</span>
+                        <span
+                            style="display: block; font-family: var(--font-title); font-size: 2.25rem; font-weight: 800; color: #38BDF8;">1.5+</span>
+                        <span
+                            style="font-size: 0.8rem; color: rgba(255,255,255,0.6); font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 0.05em;">Years
+                            Experience</span>
                     </div>
                     <div>
-                        <span style="display: block; font-family: var(--font-title); font-size: 2.25rem; font-weight: 800; color: #38BDF8;">10+</span>
-                        <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 0.05em;">Projects Completed</span>
+                        <span
+                            style="display: block; font-family: var(--font-title); font-size: 2.25rem; font-weight: 800; color: #38BDF8;">10+</span>
+                        <span
+                            style="font-size: 0.8rem; color: rgba(255,255,255,0.6); font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 0.05em;">Projects
+                            Completed</span>
                     </div>
                     <div>
-                        <span style="display: block; font-family: var(--font-title); font-size: 2.25rem; font-weight: 800; color: #38BDF8;">99%</span>
-                        <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6); font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 0.05em;">Satisfied Clients</span>
+                        <span
+                            style="display: block; font-family: var(--font-title); font-size: 2.25rem; font-weight: 800; color: #38BDF8;">99%</span>
+                        <span
+                            style="font-size: 0.8rem; color: rgba(255,255,255,0.6); font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 0.05em;">Satisfied
+                            Clients</span>
                     </div>
                 </div>
-                <div style="font-size: 0.9rem; color: rgba(255,255,255,0.45);">Scroll Down or Swipe to continue story →</div>
+                <div style="font-size: 0.9rem; color: rgba(255,255,255,0.45);">Scroll Down or Swipe to continue story →
+                </div>
             </div>
 
             <!-- Slide 2 -->
             <div class="story-panel">
                 <span class="section-tag"
-                    style="color: #38BDF8; border-color: rgba(56, 189, 248, 0.2); background: rgba(56, 189, 248, 0.05);">What I Do</span>
+                    style="color: #38BDF8; border-color: rgba(56, 189, 248, 0.2); background: rgba(56, 189, 248, 0.05);">What
+                    I Do</span>
                 <h2 class="story-big-text">CORE SKILLS &amp; CAPABILITIES</h2>
-                <div class="story-grid-details" style="max-width: 900px; grid-template-columns: repeat(2, 1fr); margin-bottom: 1.5rem;">
+                <div class="story-grid-details"
+                    style="max-width: 900px; grid-template-columns: repeat(2, 1fr); margin-bottom: 1.5rem;">
                     <div class="story-detail-card" style="padding: 1.5rem;">
                         <h3 style="font-size: 1.15rem; color: #38BDF8; margin-bottom: 0.5rem;">Web Development</h3>
-                        <ul style="list-style: none; font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.6;">
+                        <ul
+                            style="list-style: none; font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.6;">
                             <li>• Full Stack Web Development</li>
                             <li>• WordPress Development &amp; Customization</li>
                             <li>• Frontend (HTML, CSS, JS, React)</li>
@@ -168,16 +192,20 @@
                         </ul>
                     </div>
                     <div class="story-detail-card" style="padding: 1.5rem;">
-                        <h3 style="font-size: 1.15rem; color: #38BDF8; margin-bottom: 0.5rem;">Optimization &amp; Marketing</h3>
-                        <ul style="list-style: none; font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.6;">
+                        <h3 style="font-size: 1.15rem; color: #38BDF8; margin-bottom: 0.5rem;">Optimization &amp;
+                            Marketing</h3>
+                        <ul
+                            style="list-style: none; font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.6;">
                             <li>• Digital Marketing &amp; SEO</li>
                             <li>• Website Optimization &amp; Maintenance</li>
                             <li>• UI/UX Performance Upgrades</li>
                         </ul>
                     </div>
                 </div>
-                <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); max-width: 800px; line-height: 1.6; font-style: italic; border-left: 3px solid #38BDF8; padding-left: 1rem;">
-                    I am continuously learning new technologies and building innovative digital solutions that help businesses grow and succeed online.
+                <p
+                    style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); max-width: 800px; line-height: 1.6; font-style: italic; border-left: 3px solid #38BDF8; padding-left: 1rem;">
+                    I am continuously learning new technologies and building innovative digital solutions that help
+                    businesses grow and succeed online.
                 </p>
             </div>
         </div>
@@ -204,8 +232,10 @@
                         <h4 class="journey-org">VEA Impex</h4>
                         <ul class="journey-bullets">
                             <li>Working on website development, redesign, and maintenance projects.</li>
-                            <li>Managing web technologies, digital marketing activities, and online business presence.</li>
-                            <li>Contributing to UI/UX improvements, performance optimization, and business growth initiatives.</li>
+                            <li>Managing web technologies, digital marketing activities, and online business presence.
+                            </li>
+                            <li>Contributing to UI/UX improvements, performance optimization, and business growth
+                                initiatives.</li>
                         </ul>
                     </div>
                 </div>
@@ -234,7 +264,8 @@
                 <span class="skills-tag-label">EXPERTISE</span>
                 <h2 class="skills-heading">Technical <span class="skills-italic-highlight">Skills</span></h2>
                 <p class="skills-subtitle">
-                    Building modern websites, web applications, databases, and digital marketing solutions with performance-focused development.
+                    Building modern websites, web applications, databases, and digital marketing solutions with
+                    performance-focused development.
                 </p>
             </div>
 
@@ -261,41 +292,58 @@
                     <div class="skill-pane active" id="pane-frontend">
                         <h3 class="pane-title">Frontend Development</h3>
                         <p class="pane-desc">
-                            Creating responsive, user-friendly, and modern web interfaces with clean code and performance optimization.
+                            Creating responsive, user-friendly, and modern web interfaces with clean code and
+                            performance optimization.
                         </p>
-                        
+
                         <div class="skills-progress-grid">
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>HTML5</span><span>95%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="95%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="95%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>CSS3</span><span>92%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="92%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="92%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>JavaScript</span><span>85%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="85%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Laravel Blade</span><span>88%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="88%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="88%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Responsive Design</span><span>90%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="90%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Bootstrap</span><span>90%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="90%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>WordPress Development</span><span>92%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="92%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="92%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>UI/UX Implementation</span><span>85%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="85%"></div>
+                                </div>
                             </div>
                         </div>
 
@@ -317,39 +365,55 @@
                         <p class="pane-desc">
                             Developing scalable backend systems, optimized databases, and secure web applications.
                         </p>
-                        
+
                         <div class="skills-progress-grid">
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>PHP Laravel</span><span>90%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="90%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>MySQL</span><span>92%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="92%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="92%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Database Optimization</span><span>85%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="85%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>REST API Development</span><span>82%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="82%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="82%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Authentication &amp; Security</span><span>80%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="80%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="80%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>CRUD Applications</span><span>95%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="95%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="95%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Performance Optimization</span><span>84%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="84%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="84%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Server Management</span><span>75%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="75%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="75%"></div>
+                                </div>
                             </div>
                         </div>
 
@@ -369,41 +433,58 @@
                     <div class="skill-pane" id="pane-tools">
                         <h3 class="pane-title">Tools &amp; Technologies</h3>
                         <p class="pane-desc">
-                            Using industry-standard tools for development, deployment, collaboration, and project management.
+                            Using industry-standard tools for development, deployment, collaboration, and project
+                            management.
                         </p>
-                        
+
                         <div class="skills-progress-grid">
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Git</span><span>90%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="90%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>GitHub</span><span>92%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="92%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="92%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Postman</span><span>85%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="85%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Figma</span><span>80%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="80%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="80%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>VS Code</span><span>95%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="95%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="95%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>cPanel</span><span>85%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="85%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Vercel</span><span>82%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="82%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="82%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Hostinger</span><span>85%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="85%"></div>
+                                </div>
                             </div>
                         </div>
 
@@ -423,41 +504,59 @@
                     <div class="skill-pane" id="pane-marketing">
                         <h3 class="pane-title">Digital Marketing</h3>
                         <p class="pane-desc">
-                            Helping businesses grow online through social media marketing, advertising, SEO, and lead generation strategies.
+                            Helping businesses grow online through social media marketing, advertising, SEO, and lead
+                            generation strategies.
                         </p>
-                        
+
                         <div class="skills-progress-grid">
                             <div class="skill-progress-wrapper">
-                                <div class="skill-info"><span>Meta Ads (Facebook &amp; Instagram)</span><span>90%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90%"></div></div>
+                                <div class="skill-info"><span>Meta Ads (Facebook &amp; Instagram)</span><span>90%</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="90%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Social Media Management</span><span>92%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="92%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="92%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Lead Generation</span><span>88%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="88%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="88%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>SEO Optimization</span><span>80%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="80%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="80%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Google Business Profile</span><span>85%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="85%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Content Marketing</span><span>82%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="82%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="82%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>WhatsApp Marketing</span><span>90%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="90%"></div>
+                                </div>
                             </div>
                             <div class="skill-progress-wrapper">
                                 <div class="skill-info"><span>Analytics &amp; Reporting</span><span>78%</span></div>
-                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="78%"></div></div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-width="78%"></div>
+                                </div>
                             </div>
                         </div>
 
@@ -536,7 +635,7 @@
                 <span class="section-tag">Showcase</span>
                 <h2 class="section-headline" style="margin: 0 auto;">Featured Projects</h2>
             </div>
-            
+
             <div class="projects-horizontal-container">
                 <div class="projects-scroller" id="projects-scroller">
                     <!-- Project 1 -->
@@ -553,11 +652,13 @@
                         <div class="project-card-content">
                             <div class="project-meta">
                                 <span class="project-num">01</span>
-                                <span class="project-status-badge code-badge"><i class="fa-solid fa-code"></i> Source Code Only</span>
+                                <span class="project-status-badge code-badge"><i class="fa-solid fa-code"></i> Source
+                                    Code Only</span>
                             </div>
                             <h3 class="project-heading">VEA Impex Website Redesign</h3>
                             <p class="project-details-text">
-                                A complete layout engineering overhaul for a corporate medical catalog export website, restructuring database search indexes and backend queries to speed up product lookup.
+                                A complete layout engineering overhaul for a corporate medical catalog export website,
+                                restructuring database search indexes and backend queries to speed up product lookup.
                             </p>
                             <div class="project-spec-tags">
                                 <span class="project-spec-tag">PHP Laravel</span>
@@ -565,7 +666,8 @@
                                 <span class="project-spec-tag">Speed Tuning</span>
                             </div>
                             <div class="project-actions">
-                                <a href="https://github.com/MansiZala25/veaimpex-redesign" target="_blank" class="btn btn-project-action btn-code"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="https://github.com/MansiZala25/veaimpex-redesign" target="_blank"
+                                    class="btn btn-project-action btn-code"><i class="fa-brands fa-github"></i> Code</a>
                             </div>
                         </div>
                     </div>
@@ -576,18 +678,20 @@
                             <svg width="100%" height="100%" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"
                                 style="background:#f1f5f9;">
                                 <circle cx="200" cy="150" r="70" fill="#1D4ED8" opacity="0.08" />
-                                <path d="M200 90 C166.8 90 140 116.8 140 150 C140 183.2 166.8 210 200 210 Z" fill="#21759B"
-                                    opacity="0.85" />
+                                <path d="M200 90 C166.8 90 140 116.8 140 150 C140 183.2 166.8 210 200 210 Z"
+                                    fill="#21759B" opacity="0.85" />
                             </svg>
                         </div>
                         <div class="project-card-content">
                             <div class="project-meta">
                                 <span class="project-num">02</span>
-                                <span class="project-status-badge live-badge"><i class="fa-solid fa-globe"></i> Live Project</span>
+                                <span class="project-status-badge live-badge"><i class="fa-solid fa-globe"></i> Live
+                                    Project</span>
                             </div>
                             <h3 class="project-heading">WordPress Business Platforms</h3>
                             <p class="project-details-text">
-                                Transforming slow-loading corporate templates into highly responsive interfaces featuring custom visual grids, WooCommerce billing, and page speed index gains.
+                                Transforming slow-loading corporate templates into highly responsive interfaces
+                                featuring custom visual grids, WooCommerce billing, and page speed index gains.
                             </p>
                             <div class="project-spec-tags">
                                 <span class="project-spec-tag">WordPress CMS</span>
@@ -595,7 +699,8 @@
                                 <span class="project-spec-tag">SEO Pack</span>
                             </div>
                             <div class="project-actions">
-                                <a href="https://mansizala.com/wordpress-showcase" target="_blank" class="btn btn-project-action btn-view"><i class="fa-solid fa-globe"></i> View</a>
+                                <a href="https://mansizala.com/wordpress-showcase" target="_blank"
+                                    class="btn btn-project-action btn-view"><i class="fa-solid fa-globe"></i> View</a>
                             </div>
                         </div>
                     </div>
@@ -607,18 +712,20 @@
                                 style="background:#e0f2fe;">
                                 <rect x="50" y="50" width="300" height="200" rx="16" fill="#ffffff" stroke="#1D4ED8"
                                     stroke-width="3" />
-                                <path d="M90 180 L160 130 L230 160 L310 100" fill="none" stroke="#38BDF8" stroke-width="6"
-                                    stroke-linecap="round" />
+                                <path d="M90 180 L160 130 L230 160 L310 100" fill="none" stroke="#38BDF8"
+                                    stroke-width="6" stroke-linecap="round" />
                             </svg>
                         </div>
                         <div class="project-card-content">
                             <div class="project-meta">
                                 <span class="project-num">03</span>
-                                <span class="project-status-badge code-badge"><i class="fa-solid fa-code"></i> Source Code Only</span>
+                                <span class="project-status-badge code-badge"><i class="fa-solid fa-code"></i> Source
+                                    Code Only</span>
                             </div>
                             <h3 class="project-heading">Meta Advertising Campaigns</h3>
                             <p class="project-details-text">
-                                Setting up targeted conversion marketing campaigns, setting up pixel actions, analyzing customer segment statistics, and producing high-converting visual media hooks.
+                                Setting up targeted conversion marketing campaigns, setting up pixel actions, analyzing
+                                customer segment statistics, and producing high-converting visual media hooks.
                             </p>
                             <div class="project-spec-tags">
                                 <span class="project-spec-tag">Meta Ads Manager</span>
@@ -626,13 +733,15 @@
                                 <span class="project-spec-tag">Canva Assets</span>
                             </div>
                             <div class="project-actions">
-                                <a href="https://github.com/MansiZala25/meta-ads-tracking" target="_blank" class="btn btn-project-action btn-code"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="https://github.com/MansiZala25/meta-ads-tracking" target="_blank"
+                                    class="btn btn-project-action btn-code"><i class="fa-brands fa-github"></i> Code</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>        </div>
             </div>
+        </div>
+        </div>
         </div>
     </section>
 

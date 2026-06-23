@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 6. Magnetic Cards & Parallax Glow
     initMagneticCards();
-    initCursorGlow();
+    initThreeCursor();
 
     // 7. Typewriter & Contact Forms
     initTypewriter();
@@ -111,7 +111,7 @@ function initThreeMesh() {
     let lineMesh;
     const maxParticles = 65;
     const minDistance = 110;
-    
+
     let mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
 
     // Function to generate glowing code characters canvas textures
@@ -120,17 +120,17 @@ function initThreeMesh() {
         canvas.width = 64;
         canvas.height = 64;
         const ctx = canvas.getContext('2d');
-        
+
         ctx.clearRect(0, 0, 64, 64);
         ctx.font = 'bold 22px monospace';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        
+
         ctx.shadowBlur = 12;
         ctx.shadowColor = 'rgba(56, 189, 248, 0.9)';
         ctx.fillStyle = 'rgba(56, 189, 248, 0.95)';
         ctx.fillText(text, 32, 32);
-        
+
         return new THREE.CanvasTexture(canvas);
     }
 
@@ -158,7 +158,7 @@ function initThreeMesh() {
         for (let i = 0; i < maxParticles; i++) {
             const mat = materials[Math.floor(Math.random() * materials.length)];
             const mesh = new THREE.Mesh(planeGeom, mat);
-            
+
             mesh.position.set(
                 (Math.random() - 0.5) * bounds * 2,
                 (Math.random() - 0.5) * bounds * 2,
@@ -497,27 +497,76 @@ function initMagneticCards() {
     });
 }
 
-function initCursorGlow() {
+function initThreeCursor() {
+    const canvas = document.getElementById('cursor-canvas');
     const glow = document.getElementById("cursor-glow");
-    const devCursor = document.getElementById("dev-cursor");
-    const cursorSym = devCursor ? devCursor.querySelector(".cursor-sym") : null;
+    if (!canvas || typeof THREE === "undefined") return;
 
-    if (!glow && !devCursor) return;
+    const scene = new THREE.Scene();
+    const camera = new THREE.OrthographicCamera(0, window.innerWidth, 0, window.innerHeight, 1, 1000);
+    camera.position.z = 100;
 
-    document.addEventListener("mousemove", (e) => {
+    const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    const particles = [];
+    const symbols = ['</>', '{ }', '=>', 'func', 'git', '&&', 'var'];
+    
+    // Create textures for symbols
+    const textures = symbols.map(sym => {
+        const c = document.createElement('canvas');
+        c.width = 128;
+        c.height = 128;
+        const ctx = c.getContext('2d');
+        ctx.fillStyle = 'rgba(0,0,0,0)';
+        ctx.fillRect(0,0,128,128);
+        ctx.font = 'bold 36px monospace';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.shadowBlur = 15;
+        ctx.shadowColor = 'rgba(56, 189, 248, 0.8)';
+        ctx.fillStyle = 'rgba(56, 189, 248, 0.95)';
+        ctx.fillText(sym, 64, 64);
+        return new THREE.CanvasTexture(c);
+    });
+
+    // Create a glowing dot texture for the cursor tip
+    const dotTexture = (() => {
+        const c = document.createElement('canvas');
+        c.width = 64;
+        c.height = 64;
+        const ctx = c.getContext('2d');
+        const grad = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+        grad.addColorStop(0, 'rgba(29, 78, 216, 1)');
+        grad.addColorStop(0.3, 'rgba(56, 189, 248, 0.8)');
+        grad.addColorStop(1, 'rgba(56, 189, 248, 0)');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, 64, 64);
+        return new THREE.CanvasTexture(c);
+    })();
+
+    // Main cursor tip mesh
+    const tipGeometry = new THREE.PlaneGeometry(24, 24);
+    const tipMaterial = new THREE.MeshBasicMaterial({ map: dotTexture, transparent: true, blending: THREE.AdditiveBlending });
+    const tipMesh = new THREE.Mesh(tipGeometry, tipMaterial);
+    scene.add(tipMesh);
+
+    let mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    let targetMouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    let lastMouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    let cursorScale = 1;
+    let targetScale = 1;
+
+    window.addEventListener('mousemove', (e) => {
+        targetMouse.x = e.clientX;
+        targetMouse.y = e.clientY;
+
         if (glow) {
             gsap.to(glow, {
                 x: e.clientX,
                 y: e.clientY,
                 duration: 0.15
-            });
-        }
-
-        if (devCursor) {
-            gsap.to(devCursor, {
-                x: e.clientX,
-                y: e.clientY,
-                duration: 0.08
             });
         }
 
@@ -532,22 +581,111 @@ function initCursorGlow() {
         });
     });
 
-    // Hover effect on links and buttons
-    const hoverables = document.querySelectorAll("a, button, .skill-category-tab, .glass-card, .center-hub, .orbiting-service-card");
-    hoverables.forEach(item => {
-        item.addEventListener("mouseenter", () => {
-            if (devCursor) {
-                devCursor.classList.add("cursor-hover");
-                if (cursorSym) cursorSym.textContent = "{ }";
-            }
-        });
-        item.addEventListener("mouseleave", () => {
-            if (devCursor) {
-                devCursor.classList.remove("cursor-hover");
-                if (cursorSym) cursorSym.textContent = "</>";
-            }
-        });
+    // Handle Resize
+    window.addEventListener('resize', () => {
+        camera.right = window.innerWidth;
+        camera.bottom = window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
     });
+
+    // Hover listeners
+    function setupHoverListeners() {
+        const hoverables = document.querySelectorAll("a, button, .skill-category-tab, .glass-card, .center-hub, .orbiting-service-card");
+        hoverables.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                targetScale = 1.8;
+            });
+            item.addEventListener('mouseleave', () => {
+                targetScale = 1.0;
+            });
+        });
+    }
+
+    // Call hover listeners setup and also periodically in case new cards load
+    setupHoverListeners();
+    setInterval(setupHoverListeners, 3000);
+
+    const particleGeom = new THREE.PlaneGeometry(32, 32);
+
+    function spawnParticle(x, y) {
+        const textTexture = textures[Math.floor(Math.random() * textures.length)];
+        const mat = new THREE.MeshBasicMaterial({
+            map: textTexture,
+            transparent: true,
+            blending: THREE.AdditiveBlending,
+            depthWrite: false
+        });
+        const mesh = new THREE.Mesh(particleGeom, mat);
+        
+        mesh.position.set(x, y, 0);
+        
+        // Random drift direction and speed
+        const angle = Math.random() * Math.PI * 2;
+        const speed = 0.5 + Math.random() * 1.2;
+        
+        mesh.userData = {
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed,
+            life: 1.0,
+            decay: 0.015 + Math.random() * 0.02,
+            rotSpeed: (Math.random() - 0.5) * 0.05
+        };
+
+        scene.add(mesh);
+        particles.push(mesh);
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+
+        // Smoothly interpolate cursor position
+        mouse.x += (targetMouse.x - mouse.x) * 0.25;
+        mouse.y += (targetMouse.y - mouse.y) * 0.25;
+
+        // Position main tip mesh (invert Y for Three.js coordinates)
+        tipMesh.position.set(mouse.x, window.innerHeight - mouse.y, 0);
+        
+        // Scale tip on hover
+        cursorScale += (targetScale - cursorScale) * 0.15;
+        tipMesh.scale.set(cursorScale, cursorScale, 1);
+
+        // Spawn code particles based on movement distance
+        const dx = targetMouse.x - lastMouse.x;
+        const dy = targetMouse.y - lastMouse.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        
+        if (dist > 8 && Math.random() < 0.4) {
+            spawnParticle(mouse.x, window.innerHeight - mouse.y);
+            lastMouse.x = targetMouse.x;
+            lastMouse.y = targetMouse.y;
+        } else if (Math.random() < 0.03) {
+            // Spawn occasionally when idle
+            spawnParticle(mouse.x + (Math.random() - 0.5) * 10, window.innerHeight - mouse.y + (Math.random() - 0.5) * 10);
+        }
+
+        // Update active particles
+        for (let i = particles.length - 1; i >= 0; i--) {
+            const p = particles[i];
+            p.position.x += p.userData.vx;
+            p.position.y += p.userData.vy;
+            p.rotation.z += p.userData.rotSpeed;
+            
+            p.userData.life -= p.userData.decay;
+            p.material.opacity = p.userData.life;
+
+            if (p.userData.life <= 0) {
+                scene.remove(p);
+                p.geometry.dispose();
+                p.material.dispose();
+                particles.splice(i, 1);
+            }
+        }
+
+        renderer.render(scene, camera);
+    }
+
+    animate();
 }
 
 /* ==========================================================================
