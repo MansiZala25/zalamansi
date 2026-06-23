@@ -511,7 +511,8 @@ function initThreeCursor() {
     document.body.appendChild(canvas);
 
     const scene = new THREE.Scene();
-    const camera = new THREE.OrthographicCamera(0, window.innerWidth, 0, window.innerHeight, 1, 1000);
+    // Use centered standard clip-space Orthographic projection coordinates
+    const camera = new THREE.OrthographicCamera(-window.innerWidth / 2, window.innerWidth / 2, window.innerHeight / 2, -window.innerHeight / 2, 1, 1000);
     camera.position.z = 100;
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
@@ -539,13 +540,14 @@ function initThreeCursor() {
         return new THREE.CanvasTexture(c);
     });
 
-    let mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-    let targetMouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-    let lastMouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    let mouse = { x: 0, y: 0 };
+    let targetMouse = { x: 0, y: 0 };
+    let lastMouse = { x: 0, y: 0 };
 
     window.addEventListener('mousemove', (e) => {
-        targetMouse.x = e.clientX;
-        targetMouse.y = e.clientY;
+        // Map mouse coordinates to Three.js centered coordinate space
+        targetMouse.x = e.clientX - window.innerWidth / 2;
+        targetMouse.y = -e.clientY + window.innerHeight / 2;
 
         if (glow) {
             gsap.to(glow, {
@@ -568,8 +570,10 @@ function initThreeCursor() {
 
     // Handle Resize
     window.addEventListener('resize', () => {
-        camera.right = window.innerWidth;
-        camera.bottom = window.innerHeight;
+        camera.left = -window.innerWidth / 2;
+        camera.right = window.innerWidth / 2;
+        camera.top = window.innerHeight / 2;
+        camera.bottom = -window.innerHeight / 2;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
     });
@@ -617,7 +621,7 @@ function initThreeCursor() {
         const dist = Math.sqrt(dx * dx + dy * dy);
         
         if (dist > 10 && Math.random() < 0.35) {
-            spawnParticle(mouse.x, window.innerHeight - mouse.y);
+            spawnParticle(mouse.x, mouse.y);
             lastMouse.x = targetMouse.x;
             lastMouse.y = targetMouse.y;
         }
