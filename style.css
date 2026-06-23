@@ -719,11 +719,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.2em;
-    color: #FF6B35;
+    color: #1E3A8A;
     margin-bottom: 1rem;
     padding: 0.4rem 1.2rem;
-    background: rgba(255, 107, 53, 0.06);
-    border: 1px solid rgba(255, 107, 53, 0.15);
+    background: rgba(30, 58, 138, 0.06);
+    border: 1px solid rgba(30, 58, 138, 0.15);
     border-radius: 99px;
 }
 
@@ -738,7 +738,7 @@ h1, h2, h3, h4, h5, h6 {
 .skills-italic-highlight {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    color: #FF6B35;
+    color: #1E3A8A;
     font-weight: 600;
     letter-spacing: 0px;
 }
@@ -806,9 +806,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .skill-category-tab.active {
     background: #ffffff;
-    border-color: #FF6B35;
-    color: #FF6B35;
-    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.06), 0 1px 3px rgba(255, 107, 53, 0.02);
+    border-color: #1E3A8A;
+    color: #1E3A8A;
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.06), 0 1px 3px rgba(30, 58, 138, 0.02);
 }
 
 /* Content Area */
@@ -890,7 +890,7 @@ h1, h2, h3, h4, h5, h6 {
 .progress-bar-fill {
     width: 0%;
     height: 100%;
-    background: linear-gradient(90deg, #FF6B35, #FFA07A);
+    background: linear-gradient(90deg, #1E3A8A, #38BDF8);
     border-radius: 99px;
     transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -918,9 +918,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skill-tag-badge:hover {
-    color: #FF6B35;
-    background-color: rgba(255, 107, 53, 0.05);
-    border-color: rgba(255, 107, 53, 0.3);
+    color: #1E3A8A;
+    background-color: rgba(30, 58, 138, 0.05);
+    border-color: rgba(30, 58, 138, 0.3);
     transform: translateY(-2px);
 }
 
