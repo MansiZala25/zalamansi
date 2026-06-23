@@ -93,62 +93,103 @@ function initLenis() {
 }
 
 /* ==========================================================================
-   THREE.JS ANIMATED GRADIENT MESH BACKGROUND
+   THREE.JS ANIMATED INTERACTIVE CONSTELLATION NETWORK BACKGROUND
    ========================================================================== */
 function initThreeMesh() {
     const container = document.getElementById('mesh-canvas');
     if (!container || typeof THREE === "undefined") return;
 
-    let scene, camera, renderer, geometry, material, mesh;
-    let lights = [];
-    const clock = new THREE.Clock();
+    let scene, camera, renderer;
+    let particles, particlePositions, particleVelocities;
+    let linesGeometry, linePositions, lineColors;
+    let lineMesh;
+    const maxParticles = 90;
+    const minDistance = 100;
+    
+    let mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
 
     function init() {
         scene = new THREE.Scene();
 
-        camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 1, 1000);
-        camera.position.z = 220;
+        camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 1, 1000);
+        camera.position.z = 250;
 
-        // Plane geometry with segments to create waves
-        geometry = new THREE.PlaneGeometry(600, 400, 24, 24);
+        // Particle generation
+        const positions = new Float32Array(maxParticles * 3);
+        particleVelocities = [];
 
-        // White material with high roughness to reflect light colors
-        material = new THREE.MeshLambertMaterial({
-            color: 0xffffff,
-            side: THREE.DoubleSide,
-            flatShading: true
+        // Box size to contain particles
+        const r = 250;
+        for (let i = 0; i < maxParticles; i++) {
+            positions[i * 3] = (Math.random() - 0.5) * r * 2;
+            positions[i * 3 + 1] = (Math.random() - 0.5) * r * 2;
+            positions[i * 3 + 2] = (Math.random() - 0.5) * r * 2;
+
+            particleVelocities.push(new THREE.Vector3(
+                (Math.random() - 0.5) * 0.4,
+                (Math.random() - 0.5) * 0.4,
+                (Math.random() - 0.5) * 0.4
+            ));
+        }
+
+        const particleGeometry = new THREE.BufferGeometry();
+        particleGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        particlePositions = particleGeometry.attributes.position;
+
+        // Custom canvas texture for round glowing particles
+        const canvas = document.createElement('canvas');
+        canvas.width = 16;
+        canvas.height = 16;
+        const ctx = canvas.getContext('2d');
+        const gradient = ctx.createRadialGradient(8, 8, 0, 8, 8, 8);
+        gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
+        gradient.addColorStop(0.3, 'rgba(56, 189, 248, 0.8)');
+        gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 16, 16);
+        const texture = new THREE.CanvasTexture(canvas);
+
+        const particleMaterial = new THREE.PointsMaterial({
+            size: 6,
+            map: texture,
+            transparent: true,
+            blending: THREE.AdditiveBlending,
+            depthWrite: false
         });
 
-        mesh = new THREE.Mesh(geometry, material);
-        mesh.rotation.x = -Math.PI / 3;
-        mesh.position.y = -50;
-        scene.add(mesh);
+        particles = new THREE.Points(particleGeometry, particleMaterial);
+        scene.add(particles);
 
-        // Colorful lights rotating to form a liquid mesh gradient
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.45);
-        scene.add(ambientLight);
+        // Lines setup
+        linesGeometry = new THREE.BufferGeometry();
+        const maxConnections = maxParticles * maxParticles * 3;
+        linePositions = new Float32Array(maxConnections);
+        lineColors = new Float32Array(maxConnections);
 
-        // Accent Blue
-        const blueLight = new THREE.PointLight(0x1D4ED8, 2.5, 500);
-        scene.add(blueLight);
-        lights.push({ obj: blueLight, angle: 0, speed: 0.8, radius: 150, height: 80 });
+        linesGeometry.setAttribute('position', new THREE.BufferAttribute(linePositions, 3));
+        linesGeometry.setAttribute('color', new THREE.BufferAttribute(lineColors, 3));
 
-        // Sky Blue
-        const skyLight = new THREE.PointLight(0x38BDF8, 2.0, 500);
-        scene.add(skyLight);
-        lights.push({ obj: skyLight, angle: Math.PI * 0.7, speed: 0.6, radius: 120, height: 60 });
+        const lineMaterial = new THREE.LineBasicMaterial({
+            vertexColors: true,
+            transparent: true,
+            blending: THREE.AdditiveBlending
+        });
 
-        // Deep Navy Light
-        const navyLight = new THREE.PointLight(0x081F4D, 3.0, 600);
-        scene.add(navyLight);
-        lights.push({ obj: navyLight, angle: Math.PI * 1.4, speed: 0.5, radius: 180, height: 100 });
+        lineMesh = new THREE.LineSegments(linesGeometry, lineMaterial);
+        scene.add(lineMesh);
 
-        renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         renderer.setSize(container.clientWidth, container.clientHeight);
         container.appendChild(renderer.domElement);
 
         window.addEventListener('resize', onWindowResize);
+        document.addEventListener('mousemove', onMouseMove);
+    }
+
+    function onMouseMove(e) {
+        mouse.targetX = (e.clientX / window.innerWidth - 0.5) * 60;
+        mouse.targetY = (e.clientY / window.innerHeight - 0.5) * 60;
     }
 
     function onWindowResize() {
@@ -160,27 +201,81 @@ function initThreeMesh() {
     function animate() {
         requestAnimationFrame(animate);
 
-        const elapsedTime = clock.getElapsedTime();
+        // Parallax mouse interaction
+        mouse.x += (mouse.targetX - mouse.x) * 0.05;
+        mouse.y += (mouse.targetY - mouse.y) * 0.05;
+        camera.position.x = mouse.x;
+        camera.position.y = -mouse.y;
+        camera.lookAt(scene.position);
 
-        // 1. Move Light orbits
-        lights.forEach(light => {
-            light.angle += light.speed * 0.01;
-            light.obj.position.x = Math.cos(light.angle) * light.radius;
-            light.obj.position.y = Math.sin(light.angle * 1.5) * light.height;
-            light.obj.position.z = Math.sin(light.angle) * 50 + 50;
-        });
+        let vertexIdx = 0;
+        let colorIdx = 0;
+        let numConnected = 0;
 
-        // 2. Animate vertices to create waves
-        const pos = geometry.attributes.position;
-        for (let i = 0; i < pos.count; i++) {
-            const x = pos.getX(i);
-            const y = pos.getY(i);
-            // mathematical noise
-            const z = Math.sin(x / 60 + elapsedTime * 0.8) * Math.cos(y / 60 + elapsedTime * 0.5) * 16;
-            pos.setZ(i, z);
+        const bounds = 250;
+
+        for (let i = 0; i < maxParticles; i++) {
+            let px = particlePositions.getX(i) + particleVelocities[i].x;
+            let py = particlePositions.getY(i) + particleVelocities[i].y;
+            let pz = particlePositions.getZ(i) + particleVelocities[i].z;
+
+            if (px < -bounds || px > bounds) particleVelocities[i].x *= -1;
+            if (py < -bounds || py > bounds) particleVelocities[i].y *= -1;
+            if (pz < -bounds || pz > bounds) particleVelocities[i].z *= -1;
+
+            particlePositions.setXYZ(i, px, py, pz);
         }
-        pos.needsUpdate = true;
-        geometry.computeVertexNormals();
+        particlePositions.needsUpdate = true;
+
+        for (let i = 0; i < maxParticles; i++) {
+            const x1 = particlePositions.getX(i);
+            const y1 = particlePositions.getY(i);
+            const z1 = particlePositions.getZ(i);
+
+            for (let j = i + 1; j < maxParticles; j++) {
+                const x2 = particlePositions.getX(j);
+                const y2 = particlePositions.getY(j);
+                const z2 = particlePositions.getZ(j);
+
+                const dx = x1 - x2;
+                const dy = y1 - y2;
+                const dz = z1 - z2;
+                const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+
+                if (dist < minDistance) {
+                    const alpha = (1.0 - (dist / minDistance)) * 0.25;
+
+                    linePositions[vertexIdx++] = x1;
+                    linePositions[vertexIdx++] = y1;
+                    linePositions[vertexIdx++] = z1;
+                    linePositions[vertexIdx++] = x2;
+                    linePositions[vertexIdx++] = y2;
+                    linePositions[vertexIdx++] = z2;
+
+                    // Mapped to blue/sky blue theme colors: 29, 78, 216
+                    const r = (29 / 255) * alpha;
+                    const g = (78 / 255) * alpha;
+                    const b = (216 / 255) * alpha;
+
+                    lineColors[colorIdx++] = r;
+                    lineColors[colorIdx++] = g;
+                    lineColors[colorIdx++] = b;
+
+                    lineColors[colorIdx++] = r;
+                    lineColors[colorIdx++] = g;
+                    lineColors[colorIdx++] = b;
+
+                    numConnected++;
+                }
+            }
+        }
+
+        lineMesh.geometry.setDrawRange(0, numConnected * 2);
+        lineMesh.geometry.attributes.position.needsUpdate = true;
+        lineMesh.geometry.attributes.color.needsUpdate = true;
+
+        particles.rotation.y += 0.0004;
+        lineMesh.rotation.y += 0.0004;
 
         renderer.render(scene, camera);
     }
