@@ -227,61 +227,251 @@
     </section>
 
     <!-- 4. EXPERTISE WALL -->
-    <section id="expertise-wall">
+    <section id="expertise-wall" class="skills-light-theme">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 5rem;">
-                <span class="section-tag">Technical Arsenal</span>
-                <h2 class="section-headline" style="margin: 0 auto;">Floating Expertise Grid</h2>
+            <div class="skills-section-header">
+                <span class="skills-tag-label">EXPERTISE</span>
+                <h2 class="skills-heading">Technical <span class="skills-italic-highlight">Skills</span></h2>
+                <p class="skills-subtitle">
+                    Building modern websites, web applications, databases, and digital marketing solutions with performance-focused development.
+                </p>
             </div>
 
-            <div class="expertise-wall-grid">
-                <div class="skill-wall-card glass-card">
-                    <div class="skill-card-icon"><i class="fa-brands fa-html5"></i></div><span
-                        class="skill-card-title">HTML5</span>
+            <div class="skills-layout-grid">
+                <!-- Sidebar Category Tabs -->
+                <div class="skills-sidebar">
+                    <button class="skill-category-tab active" data-category="frontend">
+                        <span class="tab-icon">💻</span> Frontend Development
+                    </button>
+                    <button class="skill-category-tab" data-category="backend">
+                        <span class="tab-icon">⚙</span> Backend Development
+                    </button>
+                    <button class="skill-category-tab" data-category="tools">
+                        <span class="tab-icon">🛠</span> Tools &amp; Technologies
+                    </button>
+                    <button class="skill-category-tab" data-category="marketing">
+                        <span class="tab-icon">📈</span> Digital Marketing
+                    </button>
                 </div>
-                <div class="skill-wall-card glass-card">
-                    <div class="skill-card-icon"><i class="fa-brands fa-css3-alt"></i></div><span
-                        class="skill-card-title">CSS3</span>
-                </div>
-                <div class="skill-wall-card glass-card">
-                    <div class="skill-card-icon"><i class="fa-brands fa-js"></i></div><span
-                        class="skill-card-title">JavaScript</span>
-                </div>
-                <div class="skill-wall-card glass-card">
-                    <div class="skill-card-icon"><i class="fa-brands fa-php"></i></div><span
-                        class="skill-card-title">PHP</span>
-                </div>
-                <div class="skill-wall-card glass-card">
-                    <div class="skill-card-icon"><i class="fa-brands fa-laravel"></i></div><span
-                        class="skill-card-title">Laravel</span>
-                </div>
-                <div class="skill-wall-card glass-card">
-                    <div class="skill-card-icon"><i class="fa-solid fa-database"></i></div><span
-                        class="skill-card-title">MySQL</span>
-                </div>
-                <div class="skill-wall-card glass-card">
-                    <div class="skill-card-icon"><i class="fa-brands fa-wordpress"></i></div><span
-                        class="skill-card-title">WordPress</span>
-                </div>
-                <div class="skill-wall-card glass-card">
-                    <div class="skill-card-icon"><i class="fa-solid fa-bullhorn"></i></div><span
-                        class="skill-card-title">Digital Marketing</span>
-                </div>
-                <div class="skill-wall-card glass-card">
-                    <div class="skill-card-icon"><i class="fa-brands fa-facebook"></i></div><span
-                        class="skill-card-title">Meta Ads</span>
-                </div>
-                <div class="skill-wall-card glass-card">
-                    <div class="skill-card-icon"><i class="fa-solid fa-chart-simple"></i></div><span
-                        class="skill-card-title">SMM</span>
-                </div>
-                <div class="skill-wall-card glass-card">
-                    <div class="skill-card-icon"><i class="fa-solid fa-pen-nib"></i></div><span
-                        class="skill-card-title">Canva Design</span>
-                </div>
-                <div class="skill-wall-card glass-card">
-                    <div class="skill-card-icon"><i class="fa-solid fa-arrows-rotate"></i></div><span
-                        class="skill-card-title">Web Redesign</span>
+
+                <!-- Skill Content Panels -->
+                <div class="skills-content-area">
+                    <!-- Panel 1: Frontend -->
+                    <div class="skill-pane active" id="pane-frontend">
+                        <h3 class="pane-title">Frontend Development</h3>
+                        <p class="pane-desc">
+                            Creating responsive, user-friendly, and modern web interfaces with clean code and performance optimization.
+                        </p>
+                        
+                        <div class="skills-progress-grid">
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>HTML5</span><span>95%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="95%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>CSS3</span><span>92%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="92%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>JavaScript</span><span>85%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Laravel Blade</span><span>88%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="88%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Responsive Design</span><span>90%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Bootstrap</span><span>90%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>WordPress Development</span><span>92%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="92%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>UI/UX Implementation</span><span>85%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skills-tags-container">
+                            <span class="skill-tag-badge">HTML</span>
+                            <span class="skill-tag-badge">CSS</span>
+                            <span class="skill-tag-badge">JavaScript</span>
+                            <span class="skill-tag-badge">Laravel</span>
+                            <span class="skill-tag-badge">Bootstrap</span>
+                            <span class="skill-tag-badge">WordPress</span>
+                            <span class="skill-tag-badge">Responsive Design</span>
+                            <span class="skill-tag-badge">SEO Friendly</span>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Backend -->
+                    <div class="skill-pane" id="pane-backend">
+                        <h3 class="pane-title">Backend Development</h3>
+                        <p class="pane-desc">
+                            Developing scalable backend systems, optimized databases, and secure web applications.
+                        </p>
+                        
+                        <div class="skills-progress-grid">
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>PHP Laravel</span><span>90%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>MySQL</span><span>92%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="92%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Database Optimization</span><span>85%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>REST API Development</span><span>82%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="82%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Authentication &amp; Security</span><span>80%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="80%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>CRUD Applications</span><span>95%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="95%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Performance Optimization</span><span>84%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="84%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Server Management</span><span>75%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="75%"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skills-tags-container">
+                            <span class="skill-tag-badge">PHP</span>
+                            <span class="skill-tag-badge">Laravel</span>
+                            <span class="skill-tag-badge">MySQL</span>
+                            <span class="skill-tag-badge">Database Design</span>
+                            <span class="skill-tag-badge">API Integration</span>
+                            <span class="skill-tag-badge">Authentication</span>
+                            <span class="skill-tag-badge">Server Management</span>
+                            <span class="skill-tag-badge">Performance</span>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: Tools -->
+                    <div class="skill-pane" id="pane-tools">
+                        <h3 class="pane-title">Tools &amp; Technologies</h3>
+                        <p class="pane-desc">
+                            Using industry-standard tools for development, deployment, collaboration, and project management.
+                        </p>
+                        
+                        <div class="skills-progress-grid">
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Git</span><span>90%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>GitHub</span><span>92%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="92%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Postman</span><span>85%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Figma</span><span>80%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="80%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>VS Code</span><span>95%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="95%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>cPanel</span><span>85%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Vercel</span><span>82%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="82%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Hostinger</span><span>85%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skills-tags-container">
+                            <span class="skill-tag-badge">Git</span>
+                            <span class="skill-tag-badge">GitHub</span>
+                            <span class="skill-tag-badge">Postman</span>
+                            <span class="skill-tag-badge">Figma</span>
+                            <span class="skill-tag-badge">VS Code</span>
+                            <span class="skill-tag-badge">Vercel</span>
+                            <span class="skill-tag-badge">Hostinger</span>
+                            <span class="skill-tag-badge">cPanel</span>
+                        </div>
+                    </div>
+
+                    <!-- Panel 4: Marketing -->
+                    <div class="skill-pane" id="pane-marketing">
+                        <h3 class="pane-title">Digital Marketing</h3>
+                        <p class="pane-desc">
+                            Helping businesses grow online through social media marketing, advertising, SEO, and lead generation strategies.
+                        </p>
+                        
+                        <div class="skills-progress-grid">
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Meta Ads (Facebook &amp; Instagram)</span><span>90%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Social Media Management</span><span>92%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="92%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Lead Generation</span><span>88%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="88%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>SEO Optimization</span><span>80%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="80%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Google Business Profile</span><span>85%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="85%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Content Marketing</span><span>82%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="82%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>WhatsApp Marketing</span><span>90%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="90%"></div></div>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-info"><span>Analytics &amp; Reporting</span><span>78%</span></div>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" data-width="78%"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skills-tags-container">
+                            <span class="skill-tag-badge">Meta Ads</span>
+                            <span class="skill-tag-badge">Facebook Ads</span>
+                            <span class="skill-tag-badge">Instagram Marketing</span>
+                            <span class="skill-tag-badge">SEO</span>
+                            <span class="skill-tag-badge">Lead Generation</span>
+                            <span class="skill-tag-badge">Google Business</span>
+                            <span class="skill-tag-badge">Content Strategy</span>
+                            <span class="skill-tag-badge">WhatsApp Marketing</span>
+                            <span class="skill-tag-badge">Analytics</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

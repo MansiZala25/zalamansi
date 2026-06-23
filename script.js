@@ -28,6 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 8. Responsive Glassmorphic Header Navigation
     initHeaderNav(lenis);
+
+    // 9. Technical Skills Section Tabs & Progress Animations
+    initSkillsSection();
 });
 
 /* ==========================================================================
@@ -589,4 +592,64 @@ function initHeaderNav(lenis) {
             }
         });
     }
+}
+
+/* ==========================================================================
+   TECHNICAL SKILLS DYNAMIC TAB INTERACTION
+   ========================================================================== */
+function initSkillsSection() {
+    const tabs = document.querySelectorAll(".skill-category-tab");
+    const panes = document.querySelectorAll(".skill-pane");
+
+    if (tabs.length === 0) return;
+
+    // Animate progress bar fills in the active pane
+    function animatePaneBars(pane) {
+        const fills = pane.querySelectorAll(".progress-bar-fill");
+        fills.forEach(fill => {
+            fill.style.width = "0%";
+        });
+        setTimeout(() => {
+            fills.forEach(fill => {
+                const targetWidth = fill.getAttribute("data-width") || "0%";
+                fill.style.width = targetWidth;
+            });
+        }, 100);
+    }
+
+    // Trigger initial animation when section enters viewport
+    const activePane = document.querySelector(".skill-pane.active");
+    if (activePane) {
+        if (typeof ScrollTrigger !== "undefined") {
+            ScrollTrigger.create({
+                trigger: "#expertise-wall",
+                start: "top 75%",
+                once: true,
+                onEnter: () => animatePaneBars(activePane)
+            });
+        } else {
+            animatePaneBars(activePane);
+        }
+    }
+
+    // Handle Category Tab Switches
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            const category = tab.getAttribute("data-category");
+            const targetPane = document.getElementById(`pane-${category}`);
+
+            if (!targetPane) return;
+
+            // Remove active states from all tabs and panes
+            tabs.forEach(t => t.classList.remove("active"));
+            panes.forEach(p => p.classList.remove("active"));
+
+            // Set clicked tab and pane active
+            tab.classList.add("active");
+            targetPane.classList.add("active");
+
+            // Animate progress bars for newly opened tab
+            animatePaneBars(targetPane);
+        });
+    });
 }
