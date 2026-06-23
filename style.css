@@ -540,7 +540,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .horizontal-scroll-container {
     display: flex;
-    width: 300vw; /* 3 screens wide */
+    width: 200vw; /* 2 screens wide */
     transition: transform 0.1s linear;
 }
 
