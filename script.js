@@ -498,9 +498,17 @@ function initMagneticCards() {
 }
 
 function initThreeCursor() {
-    const canvas = document.getElementById('cursor-canvas');
     const glow = document.getElementById("cursor-glow");
-    if (!canvas || typeof THREE === "undefined") return;
+    if (typeof THREE === "undefined") return;
+
+    // Create cursor canvas dynamically
+    const canvas = document.createElement('canvas');
+    canvas.id = 'cursor-canvas';
+    canvas.style.position = 'fixed';
+    canvas.style.inset = '0';
+    canvas.style.pointerEvents = 'none';
+    canvas.style.zIndex = '99999';
+    document.body.appendChild(canvas);
 
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(0, window.innerWidth, 0, window.innerHeight, 1, 1000);
@@ -531,32 +539,9 @@ function initThreeCursor() {
         return new THREE.CanvasTexture(c);
     });
 
-    // Create a glowing dot texture for the cursor tip
-    const dotTexture = (() => {
-        const c = document.createElement('canvas');
-        c.width = 64;
-        c.height = 64;
-        const ctx = c.getContext('2d');
-        const grad = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
-        grad.addColorStop(0, 'rgba(29, 78, 216, 1)');
-        grad.addColorStop(0.3, 'rgba(56, 189, 248, 0.8)');
-        grad.addColorStop(1, 'rgba(56, 189, 248, 0)');
-        ctx.fillStyle = grad;
-        ctx.fillRect(0, 0, 64, 64);
-        return new THREE.CanvasTexture(c);
-    })();
-
-    // Main cursor tip mesh
-    const tipGeometry = new THREE.PlaneGeometry(24, 24);
-    const tipMaterial = new THREE.MeshBasicMaterial({ map: dotTexture, transparent: true, blending: THREE.AdditiveBlending });
-    const tipMesh = new THREE.Mesh(tipGeometry, tipMaterial);
-    scene.add(tipMesh);
-
     let mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
     let targetMouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
     let lastMouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-    let cursorScale = 1;
-    let targetScale = 1;
 
     window.addEventListener('mousemove', (e) => {
         targetMouse.x = e.clientX;
@@ -589,24 +574,7 @@ function initThreeCursor() {
         renderer.setSize(window.innerWidth, window.innerHeight);
     });
 
-    // Hover listeners
-    function setupHoverListeners() {
-        const hoverables = document.querySelectorAll("a, button, .skill-category-tab, .glass-card, .center-hub, .orbiting-service-card");
-        hoverables.forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                targetScale = 1.8;
-            });
-            item.addEventListener('mouseleave', () => {
-                targetScale = 1.0;
-            });
-        });
-    }
-
-    // Call hover listeners setup and also periodically in case new cards load
-    setupHoverListeners();
-    setInterval(setupHoverListeners, 3000);
-
-    const particleGeom = new THREE.PlaneGeometry(32, 32);
+    const particleGeom = new THREE.PlaneGeometry(28, 28);
 
     function spawnParticle(x, y) {
         const textTexture = textures[Math.floor(Math.random() * textures.length)];
@@ -622,14 +590,14 @@ function initThreeCursor() {
         
         // Random drift direction and speed
         const angle = Math.random() * Math.PI * 2;
-        const speed = 0.5 + Math.random() * 1.2;
+        const speed = 0.4 + Math.random() * 1.0;
         
         mesh.userData = {
             vx: Math.cos(angle) * speed,
             vy: Math.sin(angle) * speed,
             life: 1.0,
-            decay: 0.015 + Math.random() * 0.02,
-            rotSpeed: (Math.random() - 0.5) * 0.05
+            decay: 0.018 + Math.random() * 0.02,
+            rotSpeed: (Math.random() - 0.5) * 0.04
         };
 
         scene.add(mesh);
@@ -643,25 +611,15 @@ function initThreeCursor() {
         mouse.x += (targetMouse.x - mouse.x) * 0.25;
         mouse.y += (targetMouse.y - mouse.y) * 0.25;
 
-        // Position main tip mesh (invert Y for Three.js coordinates)
-        tipMesh.position.set(mouse.x, window.innerHeight - mouse.y, 0);
-        
-        // Scale tip on hover
-        cursorScale += (targetScale - cursorScale) * 0.15;
-        tipMesh.scale.set(cursorScale, cursorScale, 1);
-
         // Spawn code particles based on movement distance
         const dx = targetMouse.x - lastMouse.x;
         const dy = targetMouse.y - lastMouse.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         
-        if (dist > 8 && Math.random() < 0.4) {
+        if (dist > 10 && Math.random() < 0.35) {
             spawnParticle(mouse.x, window.innerHeight - mouse.y);
             lastMouse.x = targetMouse.x;
             lastMouse.y = targetMouse.y;
-        } else if (Math.random() < 0.03) {
-            // Spawn occasionally when idle
-            spawnParticle(mouse.x + (Math.random() - 0.5) * 10, window.innerHeight - mouse.y + (Math.random() - 0.5) * 10);
         }
 
         // Update active particles

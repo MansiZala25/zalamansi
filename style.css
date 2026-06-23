@@ -248,9 +248,6 @@ h6 {
     .cursor-glow {
         display: block;
     }
-    body, a, button, .skill-category-tab, .why-feature-block, .glass-card, .connect-field {
-        cursor: none !important;
-    }
 }
 
 .glass-card {
